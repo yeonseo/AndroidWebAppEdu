@@ -21,6 +21,7 @@
     <ClCompile Include="Exercise02-1.cpp" />
     <ClCompile Include="Exercise02-2.cpp" />
     <ClCompile Include="Exercise02-3.cpp" />
+    <ClCompile Include="Exercise02-4.cpp" />
     <ClCompile Include="Exercise02-6.cpp" />
     <ClCompile Include="Exercise05-1.cpp" />
     <ClCompile Include="Exercise05-2.cpp" />
