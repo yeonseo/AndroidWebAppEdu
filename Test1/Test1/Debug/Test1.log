@@ -1,4 +1,4 @@
-﻿빌드 시작: 2019-07-02 오후 4:42:36
+﻿빌드 시작: 2019-07-03 오후 5:48:30
      1>2 노드의 "C:\Users\BOBBY\MyProject\Test1\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Test1.unsuccessfulbuild"을(를) 만들고 있습니다.
@@ -15,4 +15,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:00.09
+경과 시간: 00:00:00.14
