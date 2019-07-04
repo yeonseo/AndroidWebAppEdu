@@ -9,14 +9,14 @@ Exercise02-3.c
 #include <stdio.h>
 int main()
 {
-	int a, b;
+	int widht, height;
 	printf("가로 길이를 입력하세요 : ");
-	scanf("%d",&a);
+	scanf("%d",&widht);
 
 	printf("\n세로 길이를 입력하세요 : ");
-	scanf("%d",&b);
+	scanf("%d",&height);
 
-	printf("\n직사각형의 넓이는 %d 입니다.",a*b);
+	printf("\n직사각형의 넓이는 %d 입니다.",widht*height);
 
 	return 0;
 }

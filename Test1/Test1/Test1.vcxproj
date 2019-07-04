@@ -11,17 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chap2-42.cpp" />
     <ClCompile Include="chap2_50.cpp" />
     <ClCompile Include="chap2_48.cpp" />
-    <ClCompile Include="2-8rewrite.cpp" />
-    <ClCompile Include="7-6.cpp" />
-    <ClCompile Include="2-10.cpp" />
-    <ClCompile Include="2-9.cpp" />
-    <ClCompile Include="2-1special.cpp" />
-    <ClCompile Include="2-4cal1.cpp" />
-    <ClCompile Include="2-5cal2-3.cpp" />
-    <ClCompile Include="2-7.cpp" />
-    <ClCompile Include="2-8.cpp" />
+    <ClCompile Include="chap2-44rewrite.cpp" />
+    <ClCompile Include="chap7_181.cpp" />
+    <ClCompile Include="chap2_46.cpp" />
+    <ClCompile Include="chap2-45.cpp" />
+    <ClCompile Include="chap2_34_special.cpp" />
+    <ClCompile Include="chap2_39_cal1.cpp" />
+    <ClCompile Include="chap2-41_cal2-3.cpp" />
+    <ClCompile Include="chap2_43.cpp" />
+    <ClCompile Include="chap2_44.cpp" />
     <ClCompile Include="chap2_51.cpp" />
     <ClCompile Include="Exercise02-1.cpp" />
     <ClCompile Include="Exercise02-2.cpp" />
@@ -46,16 +47,16 @@
     <ClCompile Include="Exercise02-6.cpp" />
     <ClCompile Include="Exercise05-1.cpp" />
     <ClCompile Include="Exercise05-2.cpp" />
-    <ClCompile Include="1-1hello.cpp" />
+    <ClCompile Include="chap1_20_hello.cpp" />
     <ClCompile Include="problem2-108_1.cpp" />
     <ClCompile Include="problem2-108_2.cpp" />
     <ClCompile Include="problem2-108_3.cpp" />
     <ClCompile Include="problem2-108_4.cpp" />
     <ClCompile Include="problem2-108_5.cpp" />
-    <ClCompile Include="problem2-77_1.cpp" />
-    <ClCompile Include="problem2-77_2.cpp" />
-    <ClCompile Include="problem2-77_3.cpp" />
-    <ClCompile Include="problem2-77_4.cpp" />
+    <ClCompile Include="problem2-077_1.cpp" />
+    <ClCompile Include="problem2-077_2.cpp" />
+    <ClCompile Include="problem2-077_3.cpp" />
+    <ClCompile Include="problem2-077_4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

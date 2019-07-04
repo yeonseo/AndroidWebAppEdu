@@ -7,15 +7,16 @@ Exercise02-4.c
 **************************/
 /*
 #include <stdio.h>
+#define PI 3.141592
+
 int main()
 {
-	int r;
-	double pi=3.14;
+	int radius;
 
 	printf("반지름 길이를 입력하세요 : ");
-	scanf("%d",&r);
+	scanf("%d",&radius);
 
-	printf("원의 넓이는 %lf 입니다.\n",r*pi);
+	printf("원의 넓이는 %lf 입니다.\n",radius*radius*PI);
 
 	return 0;
 }

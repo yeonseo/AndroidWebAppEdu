@@ -5,18 +5,18 @@ Problem2-108_5.c
 입력:없음(void)
 출력:return값(0)
 **************************/
-/**/
+/*
 #include <stdio.h>
 int main()
 {
 	double dXvalue,dResult;
 
-	char *star="******************";
+	char *star="*********************";
 	char *line="--------";
 	char *str="o★o";
 
-	printf("%s\n*    %s    *\n%s\n",star,"계산기",star);
-	printf("%s\n%s %s %s\n%s\n",star,str,"다항식",str,star);
+	printf("%s\n*      %s      *\n%s\n",star,"계산기",star);
+	printf("%s\n%s   %s   %s\n%s\n%s %s %s\n%s\n",star,str,"다항식",str,star,str,"3*x2+7*x+11",str,star);
 	printf("실수를 입력하시오 : ");
 	scanf("%lf",&dXvalue);
 
@@ -24,3 +24,4 @@ int main()
 	printf("다항식의 계산 결과값은 %lf 입니다.",dResult);
 	return 0;
 }
+*/

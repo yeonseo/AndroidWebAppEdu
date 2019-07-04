@@ -30,30 +30,6 @@
     <ClCompile Include="Exercise02-3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2-4cal1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-5cal2-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-1special.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1-1hello.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-10.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Exercise02-6.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -63,28 +39,10 @@
     <ClCompile Include="Exercise02-5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="7-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2-8rewrite.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-77_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-77_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-77_3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="chap2_50.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="chap2_48.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-77_4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem2-108_1.cpp">
@@ -103,6 +61,51 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="problem2-108_5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7_181.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap1_20_hello.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2_46.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2_34_special.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2_39_cal1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2_43.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2-41_cal2-3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2_44.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2-44rewrite.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2-45.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap2-42.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
