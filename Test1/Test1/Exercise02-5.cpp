@@ -9,13 +9,13 @@ Exercise02-5.c
 #include <stdio.h>
 int main()
 {
+	int inputNum1, inputNum2;
+	
 	printf("더하고 싶은 두 개의 정수를 입력하세요.\n첫 번째 정수 : ");
-
-	int Num1, Num2;
-	scanf("%d",&Num1);
+	scanf("%d",&inputNum1);
 	printf("두 번째 정수 : ");
-	scanf("%d", &Num2);
-	printf("두 정수의 합은 : %d 입니다.\n",Num1+Num2);
+	scanf("%d", &inputNum2);
+	printf("두 정수의 합은 : %d 입니다.\n",inputNum1+inputNum2);
 
 	return 0;
 }

@@ -1,15 +1,18 @@
-﻿빌드 시작: 2019-07-04 오후 2:06:59
+﻿빌드 시작: 2019-07-04 오후 4:58:34
      1>2 노드의 "C:\Users\BOBBY\MyProject\Test1\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Test1.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Exercise02-4.cpp" "chap2-42.cpp"
-         chap2-42.cpp
-         Exercise02-4.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Exercise03-1.cpp" "Exercise03-2.cpp" "Exercise03-3.cpp" "Exercise03-4.cpp"
+         Exercise03-4.cpp
+         Exercise03-3.cpp
+         Exercise03-2.cpp
+         Exercise03-1.cpp
          코드를 생성하고 있습니다...
          모든 출력이 최신 상태입니다.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.lib" /MACHINE:X86 "Debug\chap2-42.obj"
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.lib" /MACHINE:X86 "Debug\chap3-62.obj"
+         "Debug\chap2-42.obj"
          Debug\chap2_50.obj
          Debug\chap2_48.obj
          "Debug\chap2-44rewrite.obj"
@@ -28,6 +31,10 @@
          "Debug\Exercise02-4.obj"
          "Debug\Exercise02-5.obj"
          "Debug\Exercise02-6.obj"
+         "Debug\Exercise03-1.obj"
+         "Debug\Exercise03-2.obj"
+         "Debug\Exercise03-3.obj"
+         "Debug\Exercise03-4.obj"
          "Debug\Exercise05-1.obj"
          "Debug\Exercise05-2.obj"
          Debug\chap1_20_hello.obj
@@ -50,4 +57,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.38
+경과 시간: 00:00:01.59

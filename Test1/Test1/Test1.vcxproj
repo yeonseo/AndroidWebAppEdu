@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chap3-62.cpp" />
     <ClCompile Include="chap2-42.cpp" />
     <ClCompile Include="chap2_50.cpp" />
     <ClCompile Include="chap2_48.cpp" />
@@ -45,6 +46,10 @@
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
     <ClCompile Include="Exercise02-6.cpp" />
+    <ClCompile Include="Exercise03-1.cpp" />
+    <ClCompile Include="Exercise03-2.cpp" />
+    <ClCompile Include="Exercise03-3.cpp" />
+    <ClCompile Include="Exercise03-4.cpp" />
     <ClCompile Include="Exercise05-1.cpp" />
     <ClCompile Include="Exercise05-2.cpp" />
     <ClCompile Include="chap1_20_hello.cpp" />
