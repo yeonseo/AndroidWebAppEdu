@@ -1,30 +1,38 @@
-﻿빌드 시작: 2019-07-04 오후 4:58:34
+﻿빌드 시작: 2019-07-05 오후 4:41:44
      1>2 노드의 "C:\Users\BOBBY\MyProject\Test1\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Test1.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Exercise03-1.cpp" "Exercise03-2.cpp" "Exercise03-3.cpp" "Exercise03-4.cpp"
-         Exercise03-4.cpp
-         Exercise03-3.cpp
-         Exercise03-2.cpp
-         Exercise03-1.cpp
-         코드를 생성하고 있습니다...
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "problem3-153_9.cpp"
+         problem3-153_9.cpp
+     1>problem3-153_9.cpp(14): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(843) : '_sleep' 선언을 참조하십시오.
+     1>problem3-153_9.cpp(16): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(843) : '_sleep' 선언을 참조하십시오.
          모든 출력이 최신 상태입니다.
        Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.lib" /MACHINE:X86 "Debug\chap3-62.obj"
-         "Debug\chap2-42.obj"
-         Debug\chap2_50.obj
-         Debug\chap2_48.obj
-         "Debug\chap2-44rewrite.obj"
-         Debug\chap7_181.obj
-         Debug\chap2_46.obj
-         "Debug\chap2-45.obj"
-         Debug\chap2_34_special.obj
-         Debug\chap2_39_cal1.obj
-         "Debug\chap2-41_cal2-3.obj"
-         Debug\chap2_43.obj
-         Debug\chap2_44.obj
-         Debug\chap2_51.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.lib" /MACHINE:X86 "Debug\chap03-62.obj"
+         "Debug\chap02-42.obj"
+         Debug\chap02_50.obj
+         Debug\chap02_48.obj
+         "Debug\chap02-44rewrite.obj"
+         "Debug\chap04-81.obj"
+         Debug\chap04_79.obj
+         Debug\chap04_80_2.obj
+         Debug\chap04_82.obj
+         "Debug\chap04_84-2.obj"
+         Debug\chap04_84.obj
+         Debug\chap04_85.obj
+         Debug\chap07_181.obj
+         Debug\chap02_46.obj
+         "Debug\chap02-45.obj"
+         Debug\chap02_34_special.obj
+         Debug\chap02_39_cal1.obj
+         "Debug\chap02-41_cal2-3.obj"
+         Debug\chap02_43.obj
+         Debug\chap02_44.obj
+         Debug\chap02_51.obj
+         Debug\chap04_80.obj
          "Debug\Exercise02-1.obj"
          "Debug\Exercise02-2.obj"
          "Debug\Exercise02-3.obj"
@@ -35,9 +43,12 @@
          "Debug\Exercise03-2.obj"
          "Debug\Exercise03-3.obj"
          "Debug\Exercise03-4.obj"
+         "Debug\Exercise04-1.obj"
+         "Debug\Exercise04-2.obj"
+         "Debug\Exercise04-3.obj"
          "Debug\Exercise05-1.obj"
          "Debug\Exercise05-2.obj"
-         Debug\chap1_20_hello.obj
+         Debug\chap01_20_hello.obj
          "Debug\problem2-108_1.obj"
          "Debug\problem2-108_2.obj"
          "Debug\problem2-108_3.obj"
@@ -47,6 +58,16 @@
          "Debug\problem2-077_2.obj"
          "Debug\problem2-077_3.obj"
          "Debug\problem2-077_4.obj"
+         "Debug\problem3-152_1.obj"
+         "Debug\problem3-152_2.obj"
+         "Debug\problem3-152_3.obj"
+         "Debug\problem3-152_4.obj"
+         "Debug\problem3-152_5.obj"
+         "Debug\problem3-153_10.obj"
+         "Debug\problem3-153_6.obj"
+         "Debug\problem3-153_7.obj"
+         "Debug\problem3-153_8.obj"
+         "Debug\problem3-153_9.obj"
          Test1.vcxproj -> C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe.manifest" /manifest Debug\Test1.exe.intermediate.manifest
@@ -57,4 +78,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.59
+경과 시간: 00:00:01.48

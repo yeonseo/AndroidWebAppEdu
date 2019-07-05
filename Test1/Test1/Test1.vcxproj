@@ -11,20 +11,43 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="chap3-62.cpp" />
-    <ClCompile Include="chap2-42.cpp" />
-    <ClCompile Include="chap2_50.cpp" />
-    <ClCompile Include="chap2_48.cpp" />
-    <ClCompile Include="chap2-44rewrite.cpp" />
-    <ClCompile Include="chap7_181.cpp" />
-    <ClCompile Include="chap2_46.cpp" />
-    <ClCompile Include="chap2-45.cpp" />
-    <ClCompile Include="chap2_34_special.cpp" />
-    <ClCompile Include="chap2_39_cal1.cpp" />
-    <ClCompile Include="chap2-41_cal2-3.cpp" />
-    <ClCompile Include="chap2_43.cpp" />
-    <ClCompile Include="chap2_44.cpp" />
-    <ClCompile Include="chap2_51.cpp" />
+    <ClCompile Include="chap03-62.cpp" />
+    <ClCompile Include="chap02-42.cpp" />
+    <ClCompile Include="chap02_50.cpp" />
+    <ClCompile Include="chap02_48.cpp" />
+    <ClCompile Include="chap02-44rewrite.cpp" />
+    <ClCompile Include="chap04-81.cpp" />
+    <ClCompile Include="chap04_79.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MinimalRebuild>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Async</ExceptionHandling>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MinimalRebuild>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
+    </ClCompile>
+    <ClCompile Include="chap04_80_2.cpp" />
+    <ClCompile Include="chap04_82.cpp" />
+    <ClCompile Include="chap04_84-2.cpp" />
+    <ClCompile Include="chap04_84.cpp" />
+    <ClCompile Include="chap04_85.cpp" />
+    <ClCompile Include="chap07_181.cpp" />
+    <ClCompile Include="chap02_46.cpp" />
+    <ClCompile Include="chap02-45.cpp" />
+    <ClCompile Include="chap02_34_special.cpp" />
+    <ClCompile Include="chap02_39_cal1.cpp" />
+    <ClCompile Include="chap02-41_cal2-3.cpp" />
+    <ClCompile Include="chap02_43.cpp" />
+    <ClCompile Include="chap02_44.cpp" />
+    <ClCompile Include="chap02_51.cpp" />
+    <ClCompile Include="chap04_80.cpp" />
     <ClCompile Include="Exercise02-1.cpp" />
     <ClCompile Include="Exercise02-2.cpp" />
     <ClCompile Include="Exercise02-3.cpp" />
@@ -50,9 +73,12 @@
     <ClCompile Include="Exercise03-2.cpp" />
     <ClCompile Include="Exercise03-3.cpp" />
     <ClCompile Include="Exercise03-4.cpp" />
+    <ClCompile Include="Exercise04-1.cpp" />
+    <ClCompile Include="Exercise04-2.cpp" />
+    <ClCompile Include="Exercise04-3.cpp" />
     <ClCompile Include="Exercise05-1.cpp" />
     <ClCompile Include="Exercise05-2.cpp" />
-    <ClCompile Include="chap1_20_hello.cpp" />
+    <ClCompile Include="chap01_20_hello.cpp" />
     <ClCompile Include="problem2-108_1.cpp" />
     <ClCompile Include="problem2-108_2.cpp" />
     <ClCompile Include="problem2-108_3.cpp" />
@@ -62,6 +88,16 @@
     <ClCompile Include="problem2-077_2.cpp" />
     <ClCompile Include="problem2-077_3.cpp" />
     <ClCompile Include="problem2-077_4.cpp" />
+    <ClCompile Include="problem3-152_1.cpp" />
+    <ClCompile Include="problem3-152_2.cpp" />
+    <ClCompile Include="problem3-152_3.cpp" />
+    <ClCompile Include="problem3-152_4.cpp" />
+    <ClCompile Include="problem3-152_5.cpp" />
+    <ClCompile Include="problem3-153_10.cpp" />
+    <ClCompile Include="problem3-153_6.cpp" />
+    <ClCompile Include="problem3-153_7.cpp" />
+    <ClCompile Include="problem3-153_8.cpp" />
+    <ClCompile Include="problem3-153_9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
