@@ -5,7 +5,7 @@ Problem3-153_9.c
 입력:없음(void)
 출력:return값(0)
 **************************/
-/**/
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -18,3 +18,4 @@ void main()
 
 	return;
 }
+*/

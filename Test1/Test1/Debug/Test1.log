@@ -1,14 +1,10 @@
-﻿빌드 시작: 2019-07-05 오후 4:41:44
+﻿빌드 시작: 2019-07-08 오후 5:48:17
      1>2 노드의 "C:\Users\BOBBY\MyProject\Test1\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Test1.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "problem3-153_9.cpp"
-         problem3-153_9.cpp
-     1>problem3-153_9.cpp(14): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(843) : '_sleep' 선언을 참조하십시오.
-     1>problem3-153_9.cpp(16): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(843) : '_sleep' 선언을 참조하십시오.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt chap05_125.cpp
+         chap05_125.cpp
          모든 출력이 최신 상태입니다.
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Test1\Debug\Test1.lib" /MACHINE:X86 "Debug\chap03-62.obj"
@@ -23,6 +19,22 @@
          "Debug\chap04_84-2.obj"
          Debug\chap04_84.obj
          Debug\chap04_85.obj
+         Debug\chap05_105.obj
+         Debug\chap05_094.obj
+         Debug\chap05_096.obj
+         Debug\chap05_098.obj
+         Debug\chap05_100.obj
+         Debug\chap05_104.obj
+         Debug\chap05_106.obj
+         Debug\chap05_107.obj
+         Debug\chap05_109.obj
+         Debug\chap05_111.obj
+         Debug\chap05_119.obj
+         Debug\chap05_120.obj
+         Debug\chap05_122.obj
+         Debug\chap05_123.obj
+         Debug\chap05_124.obj
+         Debug\chap05_125.obj
          Debug\chap07_181.obj
          Debug\chap02_46.obj
          "Debug\chap02-45.obj"
@@ -78,4 +90,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.48
+경과 시간: 00:00:01.51

@@ -38,6 +38,37 @@
     <ClCompile Include="chap04_84-2.cpp" />
     <ClCompile Include="chap04_84.cpp" />
     <ClCompile Include="chap04_85.cpp" />
+    <ClCompile Include="chap05_105.cpp" />
+    <ClCompile Include="chap05_094.cpp" />
+    <ClCompile Include="chap05_096.cpp" />
+    <ClCompile Include="chap05_098.cpp" />
+    <ClCompile Include="chap05_100.cpp" />
+    <ClCompile Include="chap05_104.cpp" />
+    <ClCompile Include="chap05_106.cpp" />
+    <ClCompile Include="chap05_107.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MinimalRebuild>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Async</ExceptionHandling>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MinimalRebuild>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
+    </ClCompile>
+    <ClCompile Include="chap05_109.cpp" />
+    <ClCompile Include="chap05_111.cpp" />
+    <ClCompile Include="chap05_119.cpp" />
+    <ClCompile Include="chap05_120.cpp" />
+    <ClCompile Include="chap05_122.cpp" />
+    <ClCompile Include="chap05_123.cpp" />
+    <ClCompile Include="chap05_124.cpp" />
+    <ClCompile Include="chap05_125.cpp" />
     <ClCompile Include="chap07_181.cpp" />
     <ClCompile Include="chap02_46.cpp" />
     <ClCompile Include="chap02-45.cpp" />
