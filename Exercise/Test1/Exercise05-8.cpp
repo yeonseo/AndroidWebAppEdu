@@ -8,7 +8,7 @@ Exercise05-8.c
 /*
 #include <stdio.h>
 #include <time.h>
-struct inputT
+struct inputT							//구조체 구조 선언
 	{
 		double year;
 		double mounth;
@@ -20,27 +20,31 @@ struct inputT
 
 int	main(void)
 {
-	time_t currentTime=time(NULL);
-	struct tm *currentT;
-	struct inputT i;
+	time_t currentTime=time(NULL);		//시스템의 현재시간 받기
+	struct tm *currentT;				//현재시간 구조체로 변환
+	struct inputT i;					//사용자의 입력을 받을 구조체 선언
 
-	currentT = localtime(&currentTime);// 초 단위의 시간을 분리하여 구조체에 넣기
+	currentT = localtime(&currentTime);	//시스템에서 가져온 시간 : 초 단위의 시간을 분리하여 구조체에 넣기
 	
-	scanf("%lf",&i.year);
+	scanf("%lf",&i.year);				//입력받기
 	scanf("%lf",&i.mounth);
 	scanf("%lf",&i.day);
 	scanf("%lf",&i.hour);
 	scanf("%lf",&i.min);
 	scanf("%lf",&i.sec);
 
-	printf("현재 시간 : %d : %d : %d\n",currentT->tm_hour,currentT->tm_min,currentT->tm_sec);
-	printf("입력 시간 : %.0lf : %.0lf : %.0lf\n", i.hour, i.min, i.sec);
+	printf("현재 시간 : %d : %d : %d\n",currentT->tm_hour,currentT->tm_min,currentT->tm_sec);	// -> 사용 ??왜지??
+	printf("입력 시간 : %.0lf : %.0lf : %.0lf\n", i.hour, i.min, i.sec);						// . 사용  ??왜지??
 
 	printf("경과 초 : %lf\n",(((i.hour*60*60)+(i.min*60)+(i.sec)))-((currentT->tm_hour)*60*60+(currentT->tm_min)*60+(currentT->tm_sec)));
 	//printf("(현재-입력) 시간 : %d : %d : %d\n",(currentT->tm_hour)-(inputT.input_hour),(currentT->tm_min)-(inputT.input_min),(currentT->tm_sec)-(inputT.input_sec));
 }//*/
 
-/*
+
+
+
+/******************** 이전의 시도들**************************
+// 배열로 받기
 void main(void)
 {
 	time_t currentTime=time(NULL);
@@ -75,9 +79,9 @@ void main(void)
 	printf("(현재-입력) 시간 : %.0lf : %.0lf : %.0lf\n",currentT->tm_hour-input[3],currentT->tm_min-input[4],currentT->tm_sec-input[5]);
 	return;
 }
-//*/
 
-/*
+
+//인터넷에서 참고한 자료
 int main()
 {
    time_t     tm_st;
