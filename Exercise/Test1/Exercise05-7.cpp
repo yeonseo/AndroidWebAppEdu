@@ -9,18 +9,11 @@ Exercise05-10.c
 #include <stdio.h>
 int main()
 {
-	int bi1=0, bi2=0, bi3=0, bi4=0;
-	printf ("0000부터 1111사이의 이진수를 입력하세요.\n");
-	printf ("첫번째 000x :");
-	scanf("%d",&bi1);
-	printf ("두번째 00x0 :");
-	scanf("%d",&bi2);
-	printf ("세번째 0x00 :");
-	scanf("%d",&bi3);
-	printf ("네번째 x000 :");
-	scanf("%d",&bi4);
-
-	printf("입력하신 %d%d%d%d는 10진수로 %d입니다.",bi1, bi2, bi3, bi4, (bi1<<3)+(bi2<<2)+(bi3<<1)+bi4);
+	int binary[4]={},input=0;
+	//int	decimal=0;
+	printf ("0000부터 1111사이의 이진수를 입력하세요.ex)1,0,0,1\n");
+	scanf("%d,%d,%d,%d",&binary[3],&binary[2],&binary[1],&binary[0]);
+	printf("10진수로 %d입니다.\n",((binary[3]<<3)+(binary[2]<<2)+(binary[1]<<1)+binary[0]));
 	return 0;
 }
 */

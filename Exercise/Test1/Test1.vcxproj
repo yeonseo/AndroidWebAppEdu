@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chap5_130.cpp" />
     <ClCompile Include="Exercise02-1.cpp" />
     <ClCompile Include="Exercise02-2.cpp" />
     <ClCompile Include="Exercise02-3.cpp" />
@@ -84,6 +85,7 @@
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
+    <ClCompile Include="problem5-199_10.cpp" />
     <ClCompile Include="problem5-199_2.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -102,6 +104,11 @@
     </ClCompile>
     <ClCompile Include="problem5-199_3.cpp" />
     <ClCompile Include="problem5-199_4.cpp" />
+    <ClCompile Include="problem5-199_5.cpp" />
+    <ClCompile Include="problem5-199_6.cpp" />
+    <ClCompile Include="problem5-199_7.cpp" />
+    <ClCompile Include="problem5-199_8.cpp" />
+    <ClCompile Include="problem5-199_9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

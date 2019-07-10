@@ -1,15 +1,20 @@
 /*
 #include <stdio.h>
+
 int main()
 {
-	int num1=0, num2=0, num3=0, result=0; //함수명 나눠지는 수 나누는 수로 바꿔보기
-
-	printf("3개의 정수를 입력하시오 : ");
-	scanf("%d %d %d", &num1,&num2,&num3);
-
-	result=(num1+num3>num2+num3)?((num1>num3)?(num1):(num3)):((num2>num3)?(num2):(num3));
-
-	printf("최댓값은 %d입니다",result);
+	double length=0.0; //함수명 나눠지는 수 나누는 수로 바꿔보기
+	const double cmInch=2.54;
+	const double fitInch=12.0;
+	printf("키를 입력하시오 : ");
+	scanf("%lf", &length);
+	
+	//형변환.. 개고생고생
+	printf("%d cm키는 %d피트 %lf인치입니다.",(int)length,(int)(length/(fitInch*cmInch)),(double)(length/cmInch));
+	
+	//형변환없이 자릿수 표시로 하기
+	//printf("%d cm키는 %0.lf피트 %lf인치입니다.",(int)length,(length/(fitInch*cmInch)),(double)(length/cmInch));
+	//->163 cm키는 5피트 64.173228인치입니다.
 	return 0;
 }
 */
