@@ -69,8 +69,9 @@
     <ClCompile Include="chap05_123.cpp" />
     <ClCompile Include="chap05_124.cpp" />
     <ClCompile Include="chap05_125.cpp" />
-    <ClCompile Include="chap06-137.cpp" />
-    <ClCompile Include="chap06-142.cpp" />
+    <ClCompile Include="chap06_137.cpp" />
+    <ClCompile Include="chap06_142.cpp" />
+    <ClCompile Include="chap06_163.cpp" />
     <ClCompile Include="chap06_140.cpp" />
     <ClCompile Include="chap06_145.cpp" />
     <ClCompile Include="chap06_149.cpp" />
@@ -81,6 +82,11 @@
     <ClCompile Include="chap06_158.cpp" />
     <ClCompile Include="chap06_159.cpp" />
     <ClCompile Include="chap06_161.cpp" />
+    <ClCompile Include="chap07_173.cpp" />
+    <ClCompile Include="chap07_174.cpp" />
+    <ClCompile Include="chap07_176.cpp" />
+    <ClCompile Include="chap07_177.cpp" />
+    <ClCompile Include="chap07_179.cpp" />
     <ClCompile Include="chap07_181.cpp" />
     <ClCompile Include="chap02_46.cpp" />
     <ClCompile Include="chap02-45.cpp" />
@@ -93,6 +99,8 @@
     <ClCompile Include="chap04_80.cpp" />
     <ClCompile Include="chap01_20_hello.cpp" />
     <ClCompile Include="chap06_148.cpp" />
+    <ClCompile Include="chap07_183.cpp" />
+    <ClCompile Include="chap07_184.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -20,11 +20,11 @@ struct inputT							//구조체 구조 선언
 
 int	main(void)
 {
-	time_t currentTime=time(NULL);		//시스템의 현재시간 받기
-	struct tm *currentT;				//현재시간 구조체로 변환
+	time_t currentTime=time(NULL);		//time_t 변수선언, 1900.00.00.부터 흐른 시간을 받기
+	struct tm* currentT;				//현재시간 구조체 선언, `` *는 포인터 변수
 	struct inputT i;					//사용자의 입력을 받을 구조체 선언
 
-	currentT = localtime(&currentTime);	//시스템에서 가져온 시간 : 초 단위의 시간을 분리하여 구조체에 넣기
+	currentT = localtime(&currentTime);	//시스템시간의 초 시간을 분리하여 구조체에 넣기 (번지값으로 넣기)
 	
 	scanf("%lf",&i.year);				//입력받기
 	scanf("%lf",&i.mounth);
@@ -33,8 +33,8 @@ int	main(void)
 	scanf("%lf",&i.min);
 	scanf("%lf",&i.sec);
 
-	printf("현재 시간 : %d : %d : %d\n",currentT->tm_hour,currentT->tm_min,currentT->tm_sec);	// -> 사용 ??왜지??
-	printf("입력 시간 : %.0lf : %.0lf : %.0lf\n", i.hour, i.min, i.sec);						// . 사용  ??왜지??
+	printf("현재 시간 : %d : %d : %d\n",currentT->tm_hour,currentT->tm_min,currentT->tm_sec);	// -> tm 구조체 멤버를 불러온다
+																													printf("입력 시간 : %.0lf : %.0lf : %.0lf\n", i.hour, i.min, i.sec);						// . 사용  ??왜지??
 
 	printf("경과 초 : %lf\n",(((i.hour*60*60)+(i.min*60)+(i.sec)))-((currentT->tm_hour)*60*60+(currentT->tm_min)*60+(currentT->tm_sec)));
 	//printf("(현재-입력) 시간 : %d : %d : %d\n",(currentT->tm_hour)-(inputT.input_hour),(currentT->tm_min)-(inputT.input_min),(currentT->tm_sec)-(inputT.input_sec));

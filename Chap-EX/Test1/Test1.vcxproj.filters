@@ -135,13 +135,7 @@
     <ClCompile Include="chap06_140.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="chap06-137.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="chap06_145.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap06-142.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="chap06_148.cpp">
@@ -169,6 +163,36 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="chap06_161.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_163.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_142.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_137.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_173.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_174.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_176.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_177.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_179.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_183.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_184.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

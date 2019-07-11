@@ -1,11 +1,11 @@
-﻿빌드 시작: 2019-07-10 오후 5:05:38
+﻿빌드 시작: 2019-07-11 오후 5:19:25
      1>2 노드의 "C:\Users\BOBBY\MyProject\Chap-EX\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Chap-EX.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt chap06_159.cpp chap06_161.cpp
-         chap06_161.cpp
-         chap06_159.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt chap07_173.cpp chap07_174.cpp
+         chap07_174.cpp
+         chap07_173.cpp
          코드를 생성하고 있습니다...
          모든 출력이 최신 상태입니다.
        Link:
@@ -37,8 +37,9 @@
          Debug\chap05_123.obj
          Debug\chap05_124.obj
          Debug\chap05_125.obj
-         "Debug\chap06-137.obj"
-         "Debug\chap06-142.obj"
+         Debug\chap06_137.obj
+         Debug\chap06_142.obj
+         Debug\chap06_163.obj
          Debug\chap06_140.obj
          Debug\chap06_145.obj
          Debug\chap06_149.obj
@@ -49,6 +50,11 @@
          Debug\chap06_158.obj
          Debug\chap06_159.obj
          Debug\chap06_161.obj
+         Debug\chap07_173.obj
+         Debug\chap07_174.obj
+         Debug\chap07_176.obj
+         Debug\chap07_177.obj
+         Debug\chap07_179.obj
          Debug\chap07_181.obj
          Debug\chap02_46.obj
          "Debug\chap02-45.obj"
@@ -61,6 +67,8 @@
          Debug\chap04_80.obj
          Debug\chap01_20_hello.obj
          Debug\chap06_148.obj
+         Debug\chap07_183.obj
+         Debug\chap07_184.obj
          Test1.vcxproj -> C:\Users\BOBBY\MyProject\Chap-EX\Debug\Chap-EX.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"C:\Users\BOBBY\MyProject\Chap-EX\Debug\Chap-EX.exe.manifest" /manifest "Debug\Chap-EX.exe.intermediate.manifest"
@@ -71,4 +79,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:02.41
+경과 시간: 00:00:01.59
