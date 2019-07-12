@@ -1,40 +1,22 @@
 /**************************
-chap6_183.c
+chap7_183.c
 남연서
-예제 6-12
+예제 7-7
 입력:없음(void)
 출력:return값(0)
 **************************/
 /*
 #include <stdio.h>
-struct type							//구조체 구조 선언
-	{
-		char cnum;
-		char cnum1;
-		char cnum2;
-		char result;
-
-		int inum;
-		int inum1;
-		int inum2;
-		int result;
-
-		float fnum;
-		float fnum1;
-		float fnum2;
-		float result;
-
-		double dnum;
-		double dnum1;
-		double dnum2;
-		double result;
-	};
-
 int	main(void)
 {
-	struct type t;					//변수선언 구조체 불러오기
+	int i=0, sum=0;
 
-	scanf("%lf",&t.cnum);
+	for(i=1;i<=10;i++)
+	{
+		sum=sum+i;
+		printf("i = %d, sum = %d\n", i, sum);
+	}
 
-	printf("입력 시간 : %.0lf :\n",t.cnum);	// . 사용  ??왜지??
+	printf("총 합계는 %d\n", sum);
+	return 0;
 }//*/

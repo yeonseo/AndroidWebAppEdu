@@ -42,3 +42,19 @@ int	main(void)
 
 	return 0;
 }//*/
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	int num=0;
+
+	for(;num<5;num++)
+	{
+		printf("반복내용 : %d\n",num);
+	}
+
+	printf("반복을 종료한 후 %d\n",num);
+
+	return 0;
+}//*/

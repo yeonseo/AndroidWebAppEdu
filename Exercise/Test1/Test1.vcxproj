@@ -57,6 +57,12 @@
     <ClCompile Include="Exercise06-5.cpp" />
     <ClCompile Include="Exercise06-6.cpp" />
     <ClCompile Include="Exercise06-7.cpp" />
+    <ClCompile Include="Exercise07-1.cpp" />
+    <ClCompile Include="Exercise07-4.cpp" />
+    <ClCompile Include="Exercise07-5.cpp" />
+    <ClCompile Include="Exercise07-6.cpp" />
+    <ClCompile Include="Exercise07-7.cpp" />
+    <ClCompile Include="Exercise07-8.cpp" />
     <ClCompile Include="problem2-108_1.cpp" />
     <ClCompile Include="problem2-108_2.cpp" />
     <ClCompile Include="problem2-108_3.cpp" />

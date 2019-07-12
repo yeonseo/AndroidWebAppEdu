@@ -13,186 +13,210 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\chap02">
+      <UniqueIdentifier>{a27b6cf7-90a7-48ba-9a08-bcec7a1c26fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\chap03">
+      <UniqueIdentifier>{5310b735-ea0e-4b90-a728-0a904fad75e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\chap04">
+      <UniqueIdentifier>{c02f0757-4ea4-45c1-97a5-5e73bffa0156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\chap05">
+      <UniqueIdentifier>{fab7f074-b5e8-4f12-83a4-e7c9b3a90eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\chap06">
+      <UniqueIdentifier>{3a9f7477-2a73-45d3-ae25-ea3fb4a664ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\chap07">
+      <UniqueIdentifier>{5f68a410-fbd2-47f5-b615-23b09794ee8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chap01_20_hello.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02-41_cal2-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02-42.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02-44rewrite.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02-45.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_34_special.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_39_cal1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_43.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_44.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_46.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap02_48.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap02</Filter>
     </ClCompile>
     <ClCompile Include="chap02_50.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02-41_cal2-3.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02-42.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02-44rewrite.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02-45.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_34_special.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_39_cal1.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_43.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_44.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_46.cpp">
+      <Filter>소스 파일\chap02</Filter>
+    </ClCompile>
+    <ClCompile Include="chap02_48.cpp">
+      <Filter>소스 파일\chap02</Filter>
     </ClCompile>
     <ClCompile Include="chap02_51.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap02</Filter>
     </ClCompile>
     <ClCompile Include="chap03-62.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_79.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap07_181.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_80.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_80_2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap03</Filter>
     </ClCompile>
     <ClCompile Include="chap04-81.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_82.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_84.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap04_84-2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap04</Filter>
     </ClCompile>
     <ClCompile Include="chap04_85.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap04</Filter>
     </ClCompile>
-    <ClCompile Include="chap05_104.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap04_79.cpp">
+      <Filter>소스 파일\chap04</Filter>
     </ClCompile>
-    <ClCompile Include="chap05_100.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap04_80.cpp">
+      <Filter>소스 파일\chap04</Filter>
     </ClCompile>
-    <ClCompile Include="chap05_105.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap04_80_2.cpp">
+      <Filter>소스 파일\chap04</Filter>
+    </ClCompile>
+    <ClCompile Include="chap04_82.cpp">
+      <Filter>소스 파일\chap04</Filter>
+    </ClCompile>
+    <ClCompile Include="chap04_84-2.cpp">
+      <Filter>소스 파일\chap04</Filter>
+    </ClCompile>
+    <ClCompile Include="chap04_84.cpp">
+      <Filter>소스 파일\chap04</Filter>
     </ClCompile>
     <ClCompile Include="chap05_094.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_096.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_098.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_107.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_109.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_111.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_119.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_120.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_122.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_123.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_106.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chap05_124.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
     <ClCompile Include="chap05_125.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_140.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_096.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_145.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_098.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_148.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_100.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_149.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_104.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_155.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_105.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_150.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_106.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_152.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_107.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_154.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_109.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_158.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_111.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_159.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_119.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_161.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_120.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_163.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_122.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
-    <ClCompile Include="chap06_142.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="chap05_123.cpp">
+      <Filter>소스 파일\chap05</Filter>
+    </ClCompile>
+    <ClCompile Include="chap05_124.cpp">
+      <Filter>소스 파일\chap05</Filter>
     </ClCompile>
     <ClCompile Include="chap06_137.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_163.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_140.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_142.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_145.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_148.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_149.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_150.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_152.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_154.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_155.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_158.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_159.cpp">
+      <Filter>소스 파일\chap06</Filter>
+    </ClCompile>
+    <ClCompile Include="chap06_161.cpp">
+      <Filter>소스 파일\chap06</Filter>
     </ClCompile>
     <ClCompile Include="chap07_173.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_190.cpp">
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_174.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_176.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_177.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_179.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_181.cpp">
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_183.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap07</Filter>
     </ClCompile>
     <ClCompile Include="chap07_184.cpp">
+      <Filter>소스 파일\chap07</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07_193.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
