@@ -211,19 +211,37 @@
       <Filter>소스 파일\Exercise</Filter>
     </ClCompile>
     <ClCompile Include="Exercise07-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-7.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Exercise</Filter>
     </ClCompile>
     <ClCompile Include="Exercise07-8.cpp">
+      <Filter>소스 파일\Exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-5.cpp">
+      <Filter>소스 파일\Exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-6.cpp">
+      <Filter>소스 파일\Exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-7.cpp">
+      <Filter>소스 파일\Exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_1.cpp">
+      <Filter>소스 파일\problem</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_5.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem07-286_6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_7.cpp">
+      <Filter>소스 파일\Exercise</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

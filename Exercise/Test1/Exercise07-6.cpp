@@ -5,7 +5,7 @@ Exercise07-6.c
 입력:없음(void)
 출력:return값(0)
 **************************/
-///*
+/*
 #include <stdio.h>
 int main()
 {

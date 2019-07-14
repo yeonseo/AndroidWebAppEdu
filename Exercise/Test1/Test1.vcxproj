@@ -63,6 +63,7 @@
     <ClCompile Include="Exercise07-6.cpp" />
     <ClCompile Include="Exercise07-7.cpp" />
     <ClCompile Include="Exercise07-8.cpp" />
+    <ClCompile Include="problem07-286_6.cpp" />
     <ClCompile Include="problem2-108_1.cpp" />
     <ClCompile Include="problem2-108_2.cpp" />
     <ClCompile Include="problem2-108_3.cpp" />
@@ -72,6 +73,8 @@
     <ClCompile Include="problem2-077_2.cpp" />
     <ClCompile Include="problem2-077_3.cpp" />
     <ClCompile Include="problem2-077_4.cpp" />
+    <ClCompile Include="problem7-285_4.cpp" />
+    <ClCompile Include="problem7-285_2.cpp" />
     <ClCompile Include="problem3-152_1.cpp" />
     <ClCompile Include="problem3-152_2.cpp" />
     <ClCompile Include="problem3-152_3.cpp" />
@@ -122,6 +125,9 @@
     <ClCompile Include="problem5-199_7.cpp" />
     <ClCompile Include="problem5-199_8.cpp" />
     <ClCompile Include="problem5-199_9.cpp" />
+    <ClCompile Include="problem7-285_1.cpp" />
+    <ClCompile Include="problem7-286_5.cpp" />
+    <ClCompile Include="problem7-286_7.cpp" />
     <ClCompile Include="Test0711-time.cpp" />
     <ClCompile Include="Test10711-if삼항.cpp" />
   </ItemGroup>

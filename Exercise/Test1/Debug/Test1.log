@@ -1,14 +1,10 @@
-﻿빌드 시작: 2019-07-12 오후 4:31:30
+﻿빌드 시작: 2019-07-14 오후 5:11:46
      1>2 노드의 "C:\Users\BOBBY\MyProject\Exercise\Test1\Test1.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Exercise.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Exercise07-6.cpp"
-         Exercise07-6.cpp
-     1>Exercise07-6.cpp(18): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
-     1>Exercise07-6.cpp(20): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "problem7-286_7.cpp"
+         problem7-286_7.cpp
          모든 출력이 최신 상태입니다.
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\Exercise\Debug\Exercise.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Exercise.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\Exercise\Debug\Exercise.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\Exercise\Debug\Exercise.lib" /MACHINE:X86 Debug\chap5_130.obj
@@ -48,6 +44,7 @@
          "Debug\Exercise07-6.obj"
          "Debug\Exercise07-7.obj"
          "Debug\Exercise07-8.obj"
+         "Debug\problem07-286_6.obj"
          "Debug\problem2-108_1.obj"
          "Debug\problem2-108_2.obj"
          "Debug\problem2-108_3.obj"
@@ -57,6 +54,8 @@
          "Debug\problem2-077_2.obj"
          "Debug\problem2-077_3.obj"
          "Debug\problem2-077_4.obj"
+         "Debug\problem7-285_4.obj"
+         "Debug\problem7-285_2.obj"
          "Debug\problem3-152_1.obj"
          "Debug\problem3-152_2.obj"
          "Debug\problem3-152_3.obj"
@@ -77,6 +76,9 @@
          "Debug\problem5-199_7.obj"
          "Debug\problem5-199_8.obj"
          "Debug\problem5-199_9.obj"
+         "Debug\problem7-285_1.obj"
+         "Debug\problem7-286_5.obj"
+         "Debug\problem7-286_7.obj"
          "Debug\Test0711-time.obj"
          "Debug\Test10711-if삼항.obj"
          Test1.vcxproj -> C:\Users\BOBBY\MyProject\Exercise\Debug\Exercise.exe
@@ -89,4 +91,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:02.45
+경과 시간: 00:00:02.93
