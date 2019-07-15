@@ -22,7 +22,7 @@ int main()
 		else if( (i>0&&i<=100) && (j>0&&j<=100) )
 		{
 			printf("%d + %d = %d\n\n",i,j,i+j);
-			break;
+			continue;
 		}else continue;
 		
 		
