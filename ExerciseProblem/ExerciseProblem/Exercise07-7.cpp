@@ -1,9 +1,9 @@
 /**************************
 Exercise07-7.c
-³²¿¬¼­
-¿¬½À¹®Á¦ 7-7
-ÀÔ·Â:¾øÀ½(void)
-Ãâ·Â:return°ª(0)
+ë‚¨ì—°ì„œ
+ì—°ìŠµë¬¸ì œ 7-7
+ì…ë ¥:ì—†ìŒ(void)
+ì¶œë ¥:returnê°’(0)
 **************************/
 /*
 #include <stdio.h>
@@ -15,18 +15,53 @@ int main()
 
 	for(i=0;i<10;i++)
 	{
-		printf("**********%d¹ø °ú¸ñ**********\n",i+1);
+		printf("**********%dë²ˆ ê³¼ëª©**********\n",i+1);
 		do
 		{
-			printf("%d¹ø °ú¸ñÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ",i+1);
+			printf("%dë²ˆ ê³¼ëª©ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” : ",i+1);
 			scanf("%d",&grade[i]);
 
-			printf("ÀÔ·ÂÇÑ ¼ö°¡ %d ¸Â½À´Ï±î?\n¸ÂÀ¸¸é 0, Æ²¸®¸é 1 ÀÔ·Â",grade[i]);
+			printf("ì…ë ¥í•œ ìˆ˜ê°€ %d ë§ìŠµë‹ˆê¹Œ?\në§ìœ¼ë©´ 0, í‹€ë¦¬ë©´ 1 ì…ë ¥",grade[i]);
 			scanf("%d",&next);
 		}while(next>0);
 		totalGrade=grade[i];
 	}
 
-	printf("¿­ °ú¸ñ Á¡¼öÀÇ Æò±ÕÀº %lfÀÔ´Ï´Ù.\n",totalGrade);
+	printf("ì—´ ê³¼ëª© ì ìˆ˜ì˜ í‰ê· ì€ %lfì…ë‹ˆë‹¤.\n",totalGrade);
 	return 0;
 }//*/
+
+/* //flag ì‚¬ìš©
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int i=0,grade=0, sum=0, flag2=0;
+	
+	for(i=1;i<=10;i++)
+	{
+		do
+		{
+			
+			if (grade==-1)
+			{
+				exit(1);
+			}else if(flag2!=0)
+			{
+				printf("ìˆ«ìë¥¼ ì˜ëª»ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤ %d\n",grade);
+			}else
+			{
+				flag2=1;
+			}
+			printf("%dë²ˆì§¸ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.",i);
+			scanf("%d",&grade);
+
+		}while(grade<0||grade>100);
+		sum=sum+grade;
+		printf("%dë²ˆì§¸ ê³¼ëª©ê¹Œì§€ í•©ì€ %d, í‰ê· ì€%d ì…ë‹ˆë‹¤.\n",i,sum,sum/i);
+		flag2=0;
+	}
+	return 0;
+}
+
+//*/
