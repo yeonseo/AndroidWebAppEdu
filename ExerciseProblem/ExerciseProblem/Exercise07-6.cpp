@@ -29,3 +29,37 @@ int main()
 	}
 	return 0;
 }//*/
+
+/* //flag 사용
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int num1=0, num2=0, flag2=0;
+	for(;1;)
+	{
+		do
+		{
+			
+			if (num1==-1||num2==-1)
+			{
+				exit(1);
+			}else if(flag2!=0)
+			{
+				printf("숫자를 잘못입력하셨습니다 %d %d\n", num1, num2);
+			}else
+			{
+				flag2=1;
+			}
+			printf("두수를 입력하세요.");
+			scanf("%d %d",&num1,&num2);
+
+		}while(num1<0||num1>100||num2<0||num2>100);
+
+		printf("합은 %d 입니다.\n",num1+num2);
+		flag2=0;
+	}
+	return 0;
+}
+
+//*/
