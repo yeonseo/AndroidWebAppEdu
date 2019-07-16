@@ -43,6 +43,7 @@
     <ClCompile Include="Exercise06-6.cpp" />
     <ClCompile Include="Exercise06-7.cpp" />
     <ClCompile Include="Exercise07-1.cpp" />
+    <ClCompile Include="Exercise07-2.cpp" />
     <ClCompile Include="Exercise07-4.cpp" />
     <ClCompile Include="Exercise07-5.cpp" />
     <ClCompile Include="Exercise07-6.cpp" />
@@ -83,6 +84,7 @@
     <ClCompile Include="problem7-286_5.cpp" />
     <ClCompile Include="problem7-286_6.cpp" />
     <ClCompile Include="problem7-286_7.cpp" />
+    <ClCompile Include="problem7-286_8.cpp" />
     <ClCompile Include="problem7-287_10.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -116,8 +118,12 @@
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
+    <ClCompile Include="problem7-287_9.cpp" />
+    <ClCompile Include="problem7-288_13.cpp" />
+    <ClCompile Include="problem7-288_14.cpp" />
     <ClCompile Include="Test0711-time.cpp" />
     <ClCompile Include="Test10711-if삼항.cpp" />
+    <ClCompile Include="Test190716-rnrn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
