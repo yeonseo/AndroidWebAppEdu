@@ -36,3 +36,62 @@ int	main(void)
 	printf("연산 결과 %번째 피보나치 값은 %d입니다.\n",inputNum,fNum3);
 	return 0;
 }//*/
+
+/*
+#include <stdio.h>
+int main()
+{
+	int  i=0,j=1,k=0,count=0, num=0, flag=0;
+
+	do
+	{
+		printf("1-100 사이의 숫자를 입력하세요 : ");
+		scanf("%d",&num);
+	}while(num<1||num>100);
+
+	for(i=0 ; i<=num ;)
+	{
+		k=i+j;
+		printf("%d ",k);
+		i=j;
+		j=k;
+	}
+	return 0;
+}//*/
+
+/*
+#include <stdio.h>
+int main()
+{
+	int  i=0,j=1,k=0,count=0, num=0, flag=0;
+
+	do
+	{
+		printf("1-100 사이의 숫자를 입력하세요 : ");
+		scanf("%d",&num);
+	}while(num<1||num>100);
+
+	for(i=0 ; i+j<=num ;)
+	{
+		k=i+j;
+		printf("%d \n",k);
+		//k=i+j;
+		//printf("%d ",k);
+		//i=j;
+		//j=k;
+		if(flag==0)
+		{
+			k=i+j;
+			flag=1;
+		}else if(flag==1)
+		{
+			i=k;
+			flag=2;
+		}else if(flag==2){
+			j=k;
+			flag=1;
+		}
+	}
+	return 0;
+}
+//*/

@@ -124,6 +124,8 @@
     <ClCompile Include="Test0711-time.cpp" />
     <ClCompile Include="Test10711-if삼항.cpp" />
     <ClCompile Include="Test190716-rnrn.cpp" />
+    <ClCompile Include="Test190717.cpp" />
+    <ClCompile Include="TestMovingText.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
