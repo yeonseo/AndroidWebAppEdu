@@ -13,86 +13,50 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Exercise">
+      <UniqueIdentifier>{78e7a2a5-8e77-4cbd-9bf1-d73f02f345cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem">
+      <UniqueIdentifier>{72132e05-04bb-42a3-aa69-3562977e5205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem\problem02">
+      <UniqueIdentifier>{b982b047-8e20-454d-9068-48fa35a60f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem\problem03">
+      <UniqueIdentifier>{ae74e699-c528-4286-b154-55d885c1e9aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem\problem05">
+      <UniqueIdentifier>{5e8f3959-dbef-432a-b2bc-0c30e4a07f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem\problem07">
+      <UniqueIdentifier>{643276c9-a012-4851-9145-419048ddda00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise02">
+      <UniqueIdentifier>{0e5298f3-d4af-488b-927c-22793a53257b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise03">
+      <UniqueIdentifier>{c8228966-4bfb-4c42-85a0-92c0c098a470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise04">
+      <UniqueIdentifier>{7bd21261-22bb-417e-ba85-105bb574e539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise05">
+      <UniqueIdentifier>{9716d40b-14fd-4cb9-bdc6-4f1434633ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise06">
+      <UniqueIdentifier>{31f65047-06cf-4f3d-8b9b-257fe1ed7db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise07">
+      <UniqueIdentifier>{b74bc15e-37f5-4e5b-be2f-3c509ccd47a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise08">
+      <UniqueIdentifier>{1a076f17-87e9-41d9-bcc9-e1b29d0257a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\problem\problem06">
+      <UniqueIdentifier>{e669f612-b061-4ad6-a300-350fd91dd59e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="problem3-152_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-152_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-152_3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-152_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-152_5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-153_6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-153_7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-153_8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-153_9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3-153_10.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5-199_10.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-285_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-285_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-285_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-286_5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-286_6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-286_7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Test0711-time.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -102,166 +66,7 @@
     <ClCompile Include="chap5_130.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise02-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise02-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise02-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise02-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise02-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise02-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise03-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise03-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise03-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise03-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise04-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise04-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise04-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise05-10.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise06-7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-077_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-077_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-077_3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-077_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-108_1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-108_2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-108_3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-108_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2-108_5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-287_11.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-287_10.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-287_12.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Test190716-rnrn.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercise07-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-286_8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-287_9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-288_13.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7-288_14.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Test190717.cpp">
@@ -269,6 +74,273 @@
     </ClCompile>
     <ClCompile Include="TestMovingText.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_1.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-108_5.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_2.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_3.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-077_4.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-108_1.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-108_2.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-108_3.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2-108_4.cpp">
+      <Filter>소스 파일\problem\problem02</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-152_1.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-153_9.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-152_2.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-152_3.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-152_4.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-152_5.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-153_10.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-153_6.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-153_7.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3-153_8.cpp">
+      <Filter>소스 파일\problem\problem03</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_1.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_9.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_10.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_2.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_3.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_4.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_5.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_6.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_7.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5-199_8.cpp">
+      <Filter>소스 파일\problem\problem05</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_1.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-288_14.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_2.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-285_4.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_5.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_6_calculator.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_7.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-286_8.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-287_10.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-287_11.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-287_12.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-287_9.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7-288_13.cpp">
+      <Filter>소스 파일\problem\problem07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-6.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise02-5.cpp">
+      <Filter>소스 파일\Exercise\Exercise02</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise03-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise03</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise03-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise03</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise03-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise03</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise03-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise03</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise04-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise04</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise04-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise04</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise04-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise04</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-9.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-10.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-5.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-6.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-7.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise05-8.cpp">
+      <Filter>소스 파일\Exercise\Exercise05</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-7.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-5.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise06-6.cpp">
+      <Filter>소스 파일\Exercise\Exercise06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-8.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-5.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-6.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-7.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise08-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise08</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise08-2.cpp">
+      <Filter>소스 파일\Exercise\Exercise08</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise08-5.cpp">
+      <Filter>소스 파일\Exercise\Exercise08</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise08-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise08</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise08-4.cpp">
+      <Filter>소스 파일\Exercise\Exercise08</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06_235-1.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06_235-2.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06_235-5.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06_235-3.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06_235-4.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise07-2_star.cpp">
+      <Filter>소스 파일\Exercise\Exercise07</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

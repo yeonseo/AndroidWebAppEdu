@@ -20,7 +20,7 @@ int main()
 }
 //*/
 
-  /* //색깔넣기 뇸뇸뇸~
+/* //색깔넣기 하투~
 #include <stdio.h>
 #include <windows.h>
 int main()
@@ -29,7 +29,6 @@ int main()
 	printf("출력에 활용할 별 숫자를 입력하세요 : ");
 	scanf("%d",&input);
 
-	printf("\n\n========용용번========\n\n");
 	SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE), 4);
 	for(i=5;i<=input;i++)
 	{
@@ -50,7 +49,75 @@ int main()
 			printf("*");
 		}
 		printf("\n");
-		Sleep(500);
+		Sleep(200);
+	}
+	for(i=1;i<=input;i++)
+	{
+		for(j=1;j<=i*2;j++)
+		{
+			printf(" ");
+		}
+		for(k=(input-i)*4+1;k>=1;k--)
+		{
+			printf("*");
+		}
+		for(j=1;j<=i;j++)
+		{
+			printf(" ");
+		}
+		printf("\n");
+	}
+	SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE), 7);
+
+	return 0;
+}
+//*/
+
+/* //교수님 박카스
+#include <stdio.h>
+#include <windows.h>
+int main()
+{
+	int input=0, i=0, j=0,k=0;
+	printf("출력에 활용할 별 숫자를 입력하세요 : ");
+	scanf("%d",&input);
+
+	//printf("\n\n========용용번========\n\n");
+	printf("        교 ");
+	Sleep(200);
+	printf("수 ");
+	Sleep(200);
+	printf("님 ");
+	Sleep(200);
+	printf("힘 ");
+	Sleep(200);
+	printf("내 ");
+	Sleep(200);
+	printf("세 ");
+	Sleep(200);
+	printf("요 \n");
+	Sleep(200);
+	SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE), 4);
+	for(i=5;i<=input;i++)
+	{
+		for(k=(input-i)+1;k>=1;k--)
+		{
+			printf(" ");
+		}
+		for(j=1;j<=i*2-1;j++)
+		{
+			printf("*");
+		}
+		for(k=(input-i)*2+1;k>=1;k--)
+		{
+			printf(" ");
+		}
+		for(j=1;j<=i*2-1;j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+		Sleep(200);
 	}
 	for(i=1;i<=input;i++)
 	{

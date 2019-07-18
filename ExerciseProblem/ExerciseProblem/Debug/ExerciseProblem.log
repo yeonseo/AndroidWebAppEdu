@@ -1,17 +1,11 @@
-﻿빌드 시작: 2019-07-18 오전 8:32:04
+﻿빌드 시작: 2019-07-18 오후 3:20:15
      1>2 노드의 "C:\Users\BOBBY\MyProject\ExerciseProblem\ExerciseProblem\ExerciseProblem.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\ExerciseProblem.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "problem7-286_6.cpp"
-         problem7-286_6.cpp
-     1>problem7-286_6.cpp(87): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
-     1>problem7-286_6.cpp(100): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
-     1>problem7-286_6.cpp(114): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
-     1>problem7-286_6.cpp(126): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Exercise07-2.cpp"
+         Exercise07-2.cpp
+     1>Exercise07-2.cpp(30): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
          모든 출력이 최신 상태입니다.
        ManifestResourceCompile:
@@ -56,6 +50,16 @@
          "Debug\Exercise07-6.obj"
          "Debug\Exercise07-7.obj"
          "Debug\Exercise07-8.obj"
+         "Debug\Exercise08-1.obj"
+         "Debug\Exercise08-2.obj"
+         "Debug\Exercise08-3.obj"
+         "Debug\Exercise08-4.obj"
+         "Debug\Exercise08-5.obj"
+         "Debug\problem06_235-1.obj"
+         "Debug\problem06_235-2.obj"
+         "Debug\problem06_235-3.obj"
+         "Debug\problem06_235-4.obj"
+         "Debug\problem06_235-5.obj"
          "Debug\problem2-077_1.obj"
          "Debug\problem2-077_2.obj"
          "Debug\problem2-077_3.obj"
@@ -89,7 +93,7 @@
          "Debug\problem7-285_2.obj"
          "Debug\problem7-285_4.obj"
          "Debug\problem7-286_5.obj"
-         "Debug\problem7-286_6.obj"
+         "Debug\problem7-286_6_calculator.obj"
          "Debug\problem7-286_7.obj"
          "Debug\problem7-286_8.obj"
          "Debug\problem7-287_10.obj"
@@ -116,4 +120,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:02.83
+경과 시간: 00:00:03.59

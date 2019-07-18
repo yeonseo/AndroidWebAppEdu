@@ -118,6 +118,13 @@
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
     <ClCompile Include="chap07_193.cpp" />
+    <ClCompile Include="chap08_205.cpp" />
+    <ClCompile Include="chap08_204.cpp" />
+    <ClCompile Include="chap08_206.cpp" />
+    <ClCompile Include="chap08_208.cpp" />
+    <ClCompile Include="chap08_210_if.cpp" />
+    <ClCompile Include="chap08_216.cpp" />
+    <ClCompile Include="chap8_213_case.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
