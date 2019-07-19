@@ -86,11 +86,15 @@
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Async</ExceptionHandling>
     </ClCompile>
+    <ClCompile Include="problem06-236_7.cpp" />
+    <ClCompile Include="problem06-236_8.cpp" />
+    <ClCompile Include="problem06-236_9.cpp" />
     <ClCompile Include="problem06_235-1.cpp" />
     <ClCompile Include="problem06_235-2.cpp" />
     <ClCompile Include="problem06_235-3.cpp" />
     <ClCompile Include="problem06_235-4.cpp" />
     <ClCompile Include="problem06_235-5.cpp" />
+    <ClCompile Include="problem06_236-6.cpp" />
     <ClCompile Include="problem2-077_1.cpp" />
     <ClCompile Include="problem2-077_2.cpp" />
     <ClCompile Include="problem2-077_3.cpp" />

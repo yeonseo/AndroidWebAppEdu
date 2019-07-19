@@ -351,5 +351,17 @@
     <ClCompile Include="Exercise09-3.cpp">
       <Filter>소스 파일\Exercise\Exercise09</Filter>
     </ClCompile>
+    <ClCompile Include="problem06_236-6.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06-236_7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06-236_8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem06-236_9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

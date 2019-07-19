@@ -1,17 +1,14 @@
-﻿빌드 시작: 2019-07-19 오후 4:32:48
+﻿빌드 시작: 2019-07-19 오후 5:44:46
      1>2 노드의 "C:\Users\BOBBY\MyProject\ExerciseProblem\ExerciseProblem\ExerciseProblem.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\ExerciseProblem.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         모든 출력이 최신 상태입니다.
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt "Exercise09-3.cpp"
-         Exercise09-3.cpp
-     1>c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.0\system.core.dll : warning C4945: 'ExtensionAttribute' : 'c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.0\system.core.dll'에서 기호를 가져올 수 없습니다. 'System::Runtime::CompilerServices::ExtensionAttribute'을(를) 다른 어셈블리 'mscorlib'에서 이미 가져왔습니다.
-                 c:\windows\microsoft.net\framework\v4.0.30319\mscorlib.dll : 'System::Runtime::CompilerServices::ExtensionAttribute' 선언을 참조하십시오.
-                 처음 표시된 형식이 사용됩니다. 현재 형식을 사용하려면 가져온 어셈블리의 순서를 변경하십시오.
-                 'System.Runtime.CompilerServices.ExtensionAttribute' 형식을 'System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 어셈블리에서 가져오는 동안 이 진단이 수행되었습니다.
-     1>Exercise09-3.cpp(63): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "problem06-236_9.cpp"
+         problem06-236_9.cpp
+     1>problem06-236_9.cpp(35): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+     1>problem06-236_9.cpp(42): warning C4101: 'result' :참조되지 않은 지역 변수입니다.
+         모든 출력이 최신 상태입니다.
        ManifestResourceCompile:
          모든 출력이 최신 상태입니다.
        Link:
@@ -61,11 +58,15 @@
          "Debug\Exercise08-5.obj"
          "Debug\Exercise09-1.obj"
          "Debug\Exercise09-3.obj"
+         "Debug\problem06-236_7.obj"
+         "Debug\problem06-236_8.obj"
+         "Debug\problem06-236_9.obj"
          "Debug\problem06_235-1.obj"
          "Debug\problem06_235-2.obj"
          "Debug\problem06_235-3.obj"
          "Debug\problem06_235-4.obj"
          "Debug\problem06_235-5.obj"
+         "Debug\problem06_236-6.obj"
          "Debug\problem2-077_1.obj"
          "Debug\problem2-077_2.obj"
          "Debug\problem2-077_3.obj"
@@ -126,4 +127,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:04.32
+경과 시간: 00:00:03.24
