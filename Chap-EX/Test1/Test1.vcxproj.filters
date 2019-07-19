@@ -34,6 +34,9 @@
     <Filter Include="소스 파일\chap08">
       <UniqueIdentifier>{cb36127a-b9fa-43ac-b42b-91cf6c68dc3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\chap09">
+      <UniqueIdentifier>{e16022ba-2a79-4f17-a94b-99826160cb4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chap01_20_hello.cpp">
@@ -241,7 +244,19 @@
       <Filter>소스 파일\chap08</Filter>
     </ClCompile>
     <ClCompile Include="chap08_216.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\chap08</Filter>
+    </ClCompile>
+    <ClCompile Include="chap09_231.cpp">
+      <Filter>소스 파일\chap09</Filter>
+    </ClCompile>
+    <ClCompile Include="chap09_236.cpp">
+      <Filter>소스 파일\chap09</Filter>
+    </ClCompile>
+    <ClCompile Include="chap09_239.cpp">
+      <Filter>소스 파일\chap09</Filter>
+    </ClCompile>
+    <ClCompile Include="chap09_240.cpp">
+      <Filter>소스 파일\chap09</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

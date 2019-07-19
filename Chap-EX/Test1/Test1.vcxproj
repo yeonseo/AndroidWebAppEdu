@@ -124,6 +124,10 @@
     <ClCompile Include="chap08_208.cpp" />
     <ClCompile Include="chap08_210_if.cpp" />
     <ClCompile Include="chap08_216.cpp" />
+    <ClCompile Include="chap09_231.cpp" />
+    <ClCompile Include="chap09_236.cpp" />
+    <ClCompile Include="chap09_239.cpp" />
+    <ClCompile Include="chap09_240.cpp" />
     <ClCompile Include="chap8_213_case.cpp" />
   </ItemGroup>
   <ItemGroup>
