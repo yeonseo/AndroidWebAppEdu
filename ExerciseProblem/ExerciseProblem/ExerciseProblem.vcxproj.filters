@@ -55,6 +55,9 @@
     <Filter Include="소스 파일\problem\problem06">
       <UniqueIdentifier>{e669f612-b061-4ad6-a300-350fd91dd59e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Exercise\Exercise09">
+      <UniqueIdentifier>{6a0d1970-94eb-4259-9e96-adfba8f2805d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Test0711-time.cpp">
@@ -341,6 +344,12 @@
     </ClCompile>
     <ClCompile Include="Exercise07-2_star.cpp">
       <Filter>소스 파일\Exercise\Exercise07</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise09-1.cpp">
+      <Filter>소스 파일\Exercise\Exercise09</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise09-3.cpp">
+      <Filter>소스 파일\Exercise\Exercise09</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
