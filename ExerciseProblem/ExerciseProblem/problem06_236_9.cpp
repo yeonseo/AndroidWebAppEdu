@@ -5,7 +5,7 @@ Problem6-236_9.c
 입력:없음(void)
 출력:return값(0)
 **************************/
-///* 
+/* 
 #include <stdio.h>
 int numInput(int a, int b);
 int calculator(int a);

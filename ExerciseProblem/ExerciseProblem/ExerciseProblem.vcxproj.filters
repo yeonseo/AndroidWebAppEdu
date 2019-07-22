@@ -354,14 +354,14 @@
     <ClCompile Include="problem06_236-6.cpp">
       <Filter>소스 파일\problem\problem06</Filter>
     </ClCompile>
-    <ClCompile Include="problem06-236_7.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem06_236_9.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
     </ClCompile>
-    <ClCompile Include="problem06-236_8.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem06_236_8.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
     </ClCompile>
-    <ClCompile Include="problem06-236_9.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="problem06_236_7.cpp">
+      <Filter>소스 파일\problem\problem06</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
