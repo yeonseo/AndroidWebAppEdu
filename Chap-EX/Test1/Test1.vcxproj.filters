@@ -258,5 +258,8 @@
     <ClCompile Include="chap09_240.cpp">
       <Filter>소스 파일\chap09</Filter>
     </ClCompile>
+    <ClCompile Include="chap09_246_pointarr.cpp">
+      <Filter>소스 파일\chap09</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

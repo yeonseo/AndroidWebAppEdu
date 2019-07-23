@@ -128,6 +128,7 @@
     <ClCompile Include="chap09_236.cpp" />
     <ClCompile Include="chap09_239.cpp" />
     <ClCompile Include="chap09_240.cpp" />
+    <ClCompile Include="chap09_246_pointarr.cpp" />
     <ClCompile Include="chap8_213_case.cpp" />
   </ItemGroup>
   <ItemGroup>
