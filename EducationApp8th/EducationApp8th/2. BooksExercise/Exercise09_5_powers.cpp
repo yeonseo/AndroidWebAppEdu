@@ -9,10 +9,13 @@ Exercise09-5.c
 #include <stdio.h>
 #include <string.h>
 
-int numInput(int a, int b);
-int numInputMulti(int *arr, int a, int b);
-int area(int a, int b);
-void powers(int input);
+int numInput(int numMin, int numMax);
+int numInputMulti(int *pointArr, int numMin, int numMax);
+void powersOutput(int num);
+int square(int num);
+int cube(int num);
+int quartic(int num);
+int quintic(int num);
 
 int main()
 {
@@ -25,37 +28,31 @@ int main()
 		multiNum[i]=&arr[i];
 		numInputMulti(multiNum[i],1, 100);
 	}
-
-	powers(*multiNum[0]);
+	powersOutput(*multiNum[0]);
 	return 0;
 }
-int numInput(int a, int b)		// 리턴값 변수에 저장
+int numInput(int numMin, int numMax)		// 리턴값 변수에 저장
 {
 	int result;
 	do
 	{
 		printf("수를 입력하시오 : ");
 		scanf("%d",&result);
-	}while(result<a||result>b);
+	}while(result<numMin||result>numMin);
 	printf("값이 %d로 입력되었습니다.\n",result);
 	return result;
 }
-int numInputMulti(int *arr,int a, int b) // 리턴값 포인터 배열에 저장
+int numInputMulti(int *pointArr, int numMin, int numMax) // 리턴값 포인터 배열에 저장
 {
 	do
 	{
 		printf("수를 입력하시오 : ");
-		scanf("%d",arr);
-	}while(*arr<a||*arr>b);
-	printf("값이 %d로 입력되었습니다.\n",*arr);
+		scanf("%d",pointArr);
+	}while(*pointArr<numMin||*pointArr>numMax);
+	printf("값이 %d로 입력되었습니다.\n",*pointArr);
 	return 0;
 }
-int area(int a, int b)
-{
-	printf("\n\n******넓이******\n");
-	return a*b;
-}
-void powers(int input)
+void powersOutput(int num)
 {
 	int j=0, a=0;
 	printf("A TABLE OF POWERS\n");
@@ -65,9 +62,24 @@ void powers(int input)
 	
 	for(j=0 ; j<3 ; j++)
 	{
-		a=input+j;
-		printf("       %3d         %3d         %3d         %3d         %3d\n",a,a*a,a*a*a,a*a*a*a,a*a*a*a*a);
+		a=num+j;
+		printf("     %5d       %5d       %5d       %5d       %5d\n",a,square(a),cube(a),quartic(a),quintic(a));
 	}
-	
+}
+int square(int num)
+{
+	return num*num;
+}
+int cube(int num)
+{
+	return num*num*num;
+}
+int quartic(int num)
+{
+	return num*num*num*num;
+}
+int quintic(int num)
+{
+	return num*num*num*num*num;
 }
 //*/

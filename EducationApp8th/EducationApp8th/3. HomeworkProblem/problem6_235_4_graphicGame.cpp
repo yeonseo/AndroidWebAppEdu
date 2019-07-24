@@ -20,12 +20,12 @@ void printVS(void);
 void percentage(int a, int b);
 
 int userWin,userLose,userDraw,compWin,compLose,compDraw;
-int userScissor=0,userRock=0,userPaper=0,compScissor=0,compRock=0,compPaper=0,gameRun=10;
+int userScissor,userRock,userPaper,compScissor,compRock,compPaper,gameRun=10;
 
 int	main(void)
 {
-	int i=0, userNum=0,comNum=0,gameCount=0,gameRun=0,selectNo=0;
-	for(i=0;i<100;i++)
+	int i=0, userNum=0,comNum=0,gameCount=0,selectNo=0;
+	for(i=0;i<20;)
 	{
 		printInfo(gameCount);
 		printf("\n메뉴를 선택하세요 :");
@@ -34,25 +34,31 @@ int	main(void)
 		{
 		case 1:
 			srand((unsigned)time(NULL));				//난수 발생기의 시작점을 초기화한다
-			for(i=0 ; i<gameRun ; i++)
+			for(i=0 ; i<gameRun ;i++)
 			{
 				userNum=userNumbering();
 				comNum=computerNumbering();
-				percentage(userNum,comNum);
+				
 				if(userNum==0) break;					//사용자가 0을 입력할 시 프로그램 종료
 				printResult(userNum,comNum);
+				percentage(userNum,comNum);
 			}
 			gameCount++;
 			break;
 		case 2:
-			printf("사용자 전적 : %d전 %d승 %d패 %d무\n가위 : %.2lf 바위 : %.2lf 보 : %.2lf \n",gameRun,userWin,userLose,userDraw,userScissor/gameRun*100.0,userRock/gameRun*100.0,userPaper/gameRun*100.0);
+			printf("사용자 전적 : %d전 %d승 %d패 %d무\n가위 : %d%% 바위 : %.2lf 보 : %.2lf \n",gameRun,userWin,userLose,userDraw,userScissor/gameRun*100.0,userRock/gameRun*100.0,userPaper/gameRun*100.0);
 			printf("컴퓨터 전적 : %d전 %d승 %d패 %d무\n가위 : %.2lf 바위 : %.2lf 보 : %.2lf \n",gameRun,compWin,compLose,compDraw,compScissor/gameRun*100.0,compRock/gameRun*100.0,compPaper/gameRun*100.0);
+			printf("사용자 전적 : %d전 %d승 %d패 %d무\n가위 : %d 바위 : %d 보 : %d \n",gameRun,userWin,userLose,userDraw,userScissor,userRock,userPaper);
+			printf("컴퓨터 전적 : %d전 %d승 %d패 %d무\n가위 : %d 바위 : %d 보 : %d \n",gameRun,compWin,compLose,compDraw,compScissor,compRock,compPaper);
 			break;
 		case 3:
 			gameCount=0,userWin=0,userLose=0,userDraw=0;
 			continue;
 		case 4:
+			printf("사용자 전적 : %d전 %d승 %d패 %d무\n가위 : %d 바위 : %d 보 : %d \n",gameRun,userWin,userLose,userDraw,userScissor,userRock,userPaper);
+			printf("컴퓨터 전적 : %d전 %d승 %d패 %d무\n가위 : %d 바위 : %d 보 : %d \n",gameRun,compWin,compLose,compDraw,compScissor,compRock,compPaper);
 			printf("안녀어어어어어어어어엉엉!!!!!!!!\n");
+			i=20;
 			break;
 		default:printf("정신차려!!!!!!!!!!!!!\n");
 		}
@@ -127,7 +133,7 @@ void printResult(int a, int b)				//문자열을 출력받기 위해서 *포인터 이용
 }
 void percentage(int a, int b)
 {
-	switch(a)					//판단 시작=0,=0,compPaper=0;
+	switch(a)
 	{
 		case 1 :
 			userScissor++;
@@ -139,7 +145,7 @@ void percentage(int a, int b)
 			userPaper++;
 			break;
 	}
-	switch(b)					//판단 시작=0,=0,compPaper=0;
+	switch(b)
 	{
 		case 1 :
 			compScissor++;
@@ -202,7 +208,6 @@ void printGraphic(int a)
 			printf("     |                |\n");
 			printf("      |               /     \n");
 			printf("       |-------------|\n");
-
 			break;
 	}
 }
@@ -262,7 +267,7 @@ int	main(void)
 int computerNumbering()
 {
 	int result=0;
-	result=rand()%(3-1+1)+1;
+	result=rand()%(3-1+1)+1;				//a~b 사이의 숫자 구하기 :rand()%(b-a+1)+a하기
 	return result;
 }
 int userNumbering()

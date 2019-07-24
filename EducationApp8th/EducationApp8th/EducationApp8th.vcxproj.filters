@@ -231,9 +231,6 @@
     <ClCompile Include="1. BooksExample\chap09_240.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. BooksExample\chap8_213_case.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1. BooksExample\Hello.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -366,42 +363,6 @@
     <ClCompile Include="2. BooksExercise\Exercise09-1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Exercise09-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\chap5_130.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06-235_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_235-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_235-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_235-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_235-4_graphicGame.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_235-5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_236-6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_236_7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_236_8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem06_236_9.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. HomeworkProblem\problem2-077_1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -531,16 +492,91 @@
     <ClCompile Include="1. BooksExample\chap09_246_pointArr.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Exercise09-6.cpp">
+    <ClCompile Include="2. BooksExercise\Exercise09-3_arithmeticOperationOutput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Exercise09-7.cpp">
+    <ClCompile Include="3. HomeworkProblem\problem6_235_1_vowelConsonantOutput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Exercise09-5.cpp">
+    <ClCompile Include="3. HomeworkProblem\problem6_235_2_divisor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Exercise09-4.cpp">
+    <ClCompile Include="3. HomeworkProblem\problem6_235_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_235_4_graphicGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_235_5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_236_6_mounthOutput.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_236_7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_236_8_amusementParkCharge.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem6_236_9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise09_4_area.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise09_5_powers.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise09_6_sumAndCount.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise09_7_alphabeticalOrder.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\chap05_130.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap08_213_case.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. TestTest\Tetrise.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_329_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_329_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_329_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_329_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_10.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_12.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
