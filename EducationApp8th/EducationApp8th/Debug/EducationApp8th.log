@@ -1,11 +1,11 @@
-﻿빌드 시작: 2019-07-24 오후 5:33:27
+﻿빌드 시작: 2019-07-27 오후 9:17:00
      1>2 노드의 "C:\Users\BOBBY\MyProject\EducationApp8th\EducationApp8th\EducationApp8th.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\EducationApp8th.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "3. HomeworkProblem\problem8_329_3.cpp"
-         problem8_329_3.cpp
-     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\3. homeworkproblem\problem8_329_3.cpp(44): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "3. HomeworkProblem\problem8_331_10.cpp"
+         problem8_331_10.cpp
+     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\3. homeworkproblem\problem8_331_10.cpp(43): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
          모든 출력이 최신 상태입니다.
        Link:
@@ -187,15 +187,15 @@
          Debug\problem8_329_1.obj
          Debug\problem8_329_2.obj
          Debug\problem8_329_3.obj
-         Debug\problem8_329_4.obj
-         Debug\problem8_330_5.obj
-         Debug\problem8_330_6.obj
-         Debug\problem8_330_7.obj
+         Debug\problem8_329_4_tax.obj
+         Debug\problem8_330_5_doubleNumInputMulti.obj
+         Debug\problem8_330_6_rand.obj
+         Debug\problem8_330_7_coinGame.obj
          Debug\problem8_331_10.obj
          Debug\problem8_331_11.obj
          Debug\problem8_331_12.obj
          Debug\problem8_331_8.obj
-         Debug\problem8_331_9.obj
+         Debug\problem8_331_9_drowStick.obj
          Debug\Tetrise.obj
          EducationApp8th.vcxproj -> C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.exe
        Manifest:
@@ -207,4 +207,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.27
+경과 시간: 00:00:01.45

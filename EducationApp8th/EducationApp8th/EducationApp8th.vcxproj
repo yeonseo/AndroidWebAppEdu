@@ -253,15 +253,15 @@
     <ClCompile Include="3. HomeworkProblem\problem8_329_1.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_329_2.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_329_3.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem8_329_4.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem8_330_5.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem8_330_6.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem8_330_7.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem8_329_4_tax.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem8_330_5_doubleNumInputMulti.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem8_330_6_rand.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem8_330_7_coinGame.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_10.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_11.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_12.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_8.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem8_331_9.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem8_331_9_drowStick.cpp" />
     <ClCompile Include="4. TestTest\Tetrise.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

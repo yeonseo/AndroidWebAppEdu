@@ -552,22 +552,7 @@
     <ClCompile Include="3. HomeworkProblem\problem8_329_3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem8_329_4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem8_330_5.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem8_330_6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem8_330_7.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. HomeworkProblem\problem8_331_8.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem8_331_9.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. HomeworkProblem\problem8_331_10.cpp">
@@ -577,6 +562,21 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. HomeworkProblem\problem8_331_12.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_5_doubleNumInputMulti.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_6_rand.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_330_7_coinGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_331_9_drowStick.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem8_329_4_tax.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
