@@ -1,15 +1,13 @@
-﻿빌드 시작: 2019-07-27 오후 9:17:00
+﻿빌드 시작: 2019-07-29 오후 6:13:57
      1>2 노드의 "C:\Users\BOBBY\MyProject\EducationApp8th\EducationApp8th\EducationApp8th.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
-         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\EducationApp8th.unsuccessfulbuild"을(를) 만들고 있습니다.
+         "Debug\EducationApp8th.unsuccessfulbuild"에 연결(touching)하고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "3. HomeworkProblem\problem8_331_10.cpp"
-         problem8_331_10.cpp
-     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\3. homeworkproblem\problem8_331_10.cpp(43): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+         모든 출력이 최신 상태입니다.
          모든 출력이 최신 상태입니다.
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\EducationApp8th.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.lib" /MACHINE:X86 Debug\chap01_20_hello.obj
+         Debug\chap01_280.obj
          "Debug\chap02-41_cal2-3.obj"
          "Debug\chap02-42.obj"
          "Debug\chap02-44rewrite.obj"
@@ -84,6 +82,8 @@
          Debug\chap09_246_pointArr.obj
          Debug\chap08_213_case.obj
          Debug\Hello.obj
+         Debug\chap01_282.obj
+         Debug\chap01_283.obj
          "Debug\Exercise02-1.obj"
          "Debug\Exercise02-2.obj"
          "Debug\Exercise02-3.obj"
@@ -132,6 +132,10 @@
          Debug\Exercise09_5_powers.obj
          Debug\Exercise09_6_sumAndCount.obj
          Debug\Exercise09_7_alphabeticalOrder.obj
+         Debug\Exercise01_01.obj
+         Debug\Exercise01_02.obj
+         Debug\Exercise01_04.obj
+         Debug\Exercise02_03.obj
          Debug\chap05_130.obj
          Debug\problem6_235_1_vowelConsonantOutput.obj
          Debug\problem6_235_2_divisor.obj
@@ -196,6 +200,7 @@
          Debug\problem8_331_12.obj
          Debug\problem8_331_8.obj
          Debug\problem8_331_9_drowStick.obj
+         Debug\VendingMachine.obj
          Debug\Tetrise.obj
          EducationApp8th.vcxproj -> C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.exe
        Manifest:
@@ -207,4 +212,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.45
+경과 시간: 00:00:01.03

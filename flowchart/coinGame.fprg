@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.9">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="BOBBY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-07-29 11:49:39 &#50724;&#51204;"/>
+        <attribute name="created" value="Qk9CQlk7IERFU0tUT1AtSVRCRFVDSDsgMjAxOS0wNy0yOTsgMTA6MzI6Mzkg7Jik7KCEOyAxMDQ2MjM="/>
+        <attribute name="edited" value="Qk9CQlk7IERFU0tUT1AtSVRCRFVDSDsgMjAxOS0wNy0yOTsgMTE6NDk6Mzkg7Jik7KCEOyAxMDQ2MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <for variable="" start="" end="" direction="inc" step="">
+                <call expression="comptuerRand(void)"/>
+                <assign variable="randValue" expression="rand%2"/>
+                <input variable="userInput"/>
+                <if expression="randValue==userInput">
+                    <then>
+                        <output expression="&#47582;&#50520;&#49845;&#45768;&#45796;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&#53952;&#47160;&#49845;&#45768;&#45796;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

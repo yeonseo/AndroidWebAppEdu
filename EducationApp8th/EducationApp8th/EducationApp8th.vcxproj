@@ -76,6 +76,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1. BooksExample\chap01_20_hello.cpp" />
+    <ClCompile Include="1. BooksExample\chap01_280.cpp" />
     <ClCompile Include="1. BooksExample\chap02-41_cal2-3.cpp" />
     <ClCompile Include="1. BooksExample\chap02-42.cpp" />
     <ClCompile Include="1. BooksExample\chap02-44rewrite.cpp" />
@@ -150,6 +151,8 @@
     <ClCompile Include="1. BooksExample\chap09_246_pointArr.cpp" />
     <ClCompile Include="1. BooksExample\chap08_213_case.cpp" />
     <ClCompile Include="1. BooksExample\Hello.c" />
+    <ClCompile Include="1. BooksExample\Part2\chap01_282.cpp" />
+    <ClCompile Include="1. BooksExample\Part2\chap01_283.cpp" />
     <ClCompile Include="2. BooksExercise\Exercise02-1.cpp" />
     <ClCompile Include="2. BooksExercise\Exercise02-2.cpp" />
     <ClCompile Include="2. BooksExercise\Exercise02-3.cpp" />
@@ -198,6 +201,10 @@
     <ClCompile Include="2. BooksExercise\Exercise09_5_powers.cpp" />
     <ClCompile Include="2. BooksExercise\Exercise09_6_sumAndCount.cpp" />
     <ClCompile Include="2. BooksExercise\Exercise09_7_alphabeticalOrder.cpp" />
+    <ClCompile Include="2. BooksExercise\Part2\Exercise01_01.cpp" />
+    <ClCompile Include="2. BooksExercise\Part2\Exercise01_02.cpp" />
+    <ClCompile Include="2. BooksExercise\Part2\Exercise01_04.cpp" />
+    <ClCompile Include="2. BooksExercise\Part2\Exercise02_03.cpp" />
     <ClCompile Include="3. HomeworkProblem\chap05_130.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem6_235_1_vowelConsonantOutput.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem6_235_2_divisor.cpp" />
@@ -262,6 +269,7 @@
     <ClCompile Include="3. HomeworkProblem\problem8_331_12.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_8.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_9_drowStick.cpp" />
+    <ClCompile Include="4. TestTest\VendingMachine.cpp" />
     <ClCompile Include="4. TestTest\Tetrise.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -5,7 +5,7 @@ Problem8-331_11.c
 입력:없음(void)
 출력:return값(0)
 **************************/
-///*
+/*
 #include <stdio.h>
 #include <string.h>
 
