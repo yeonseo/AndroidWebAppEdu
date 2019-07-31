@@ -534,9 +534,6 @@
     <ClCompile Include="2. BooksExercise\Exercise09_7_alphabeticalOrder.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\chap05_130.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1. BooksExample\chap08_213_case.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -579,28 +576,91 @@
     <ClCompile Include="3. HomeworkProblem\problem8_329_4_tax.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. BooksExample\chap01_280.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="4. TestTest\VendingMachine.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. BooksExample\Part2\chap01_282.cpp">
+    <ClCompile Include="1. BooksExample\chap11_280.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. BooksExample\Part2\chap01_283.cpp">
+    <ClCompile Include="1. BooksExample\chap11_282.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Part2\Exercise01_01.cpp">
+    <ClCompile Include="1. BooksExample\chap11_283.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Part2\Exercise01_02.cpp">
+    <ClCompile Include="1. BooksExample\chap11_301.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Part2\Exercise02_03.cpp">
+    <ClCompile Include="1. BooksExample\chap11_303.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. BooksExercise\Part2\Exercise01_04.cpp">
+    <ClCompile Include="1. BooksExample\chap11_304.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap11_309.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_02_pointScanfFunc수정.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_04.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_05.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_06.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap11_316for.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_02_05.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_01_03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_02_03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap11_542.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap11_543.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. BooksExample\chap11_545.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_02_02_apartment.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_02_01_arrRotation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. BooksExercise\Exercise11_02_04_arrSud.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_05.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_03_arrayEqual.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_02_randTwoArrayDiff.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_04_returnArray.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_06.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

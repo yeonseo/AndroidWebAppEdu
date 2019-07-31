@@ -71,6 +71,7 @@ int numInputMulti(int *pointArr, int numMin, int numMax) // 리턴값 포인터 배열에
 	}while(*pointArr<numMin||*pointArr>numMax);
 	//printf("값이 %d로 입력되었습니다.\n",*pointArr);
 	return 0;
+
 }
 //*/
 
