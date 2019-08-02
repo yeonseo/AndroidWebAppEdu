@@ -15,7 +15,7 @@ int main()
 	{
 		printf("첫 번째 수를 입력하시오 : ");
 		scanf("%d",&num1);
-		printf("첫 번째 수를 입력하시오 : ");
+		printf("두 번째 수를 입력하시오 : ");
 		scanf("%d",&num2);
 	}while(num1<0||num1>100||num2<0||num2>num1);
 

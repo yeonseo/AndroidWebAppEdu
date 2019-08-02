@@ -73,3 +73,36 @@ int numInputMulti(int *arr,int j,int i, int numMin, int numMax) //함수에서 받을 
 	return 0;
 }
 //*/
+
+/* //김동진교수님 코드
+1. 크기가 4행 6열을 선언한다. 
+2. 초기값은 바로 설정한다. 
+3. 각행을 합계를 마지막행에있는 요소에 저장한다.
+4. 각열의 합계를 마지막열에 있는 요소에 저장한다. 
+5. 각행과 열의 합계를 거기에 저장한다.  
+
+#include <stdio.h>
+#define ROW 4
+#define COL 6
+int main()
+{
+	int data[ROW][COL]={
+	{1,1,1,1,1,0},
+	{2,2,2,2,2,0},
+	{3,3,3,3,3,0},
+	{0,0,0,0,0,0}}; 
+	int i=0, j=0;
+	for(i=0;i<ROW;i++)
+	{
+		for(j=0;j<COL-1;j++)
+		{
+			data[i][COL-1]= data[i][COL-1] + data[i][j]; 
+			if(i != ROW-1) 
+				data[ROW-1][j]= data[ROW-1][j] + data[i][j];
+			printf("%5d",data[i][j]);
+		}
+		printf("%5d\n",data[i][COL-1]);
+	}
+return 0; 
+}
+//*/

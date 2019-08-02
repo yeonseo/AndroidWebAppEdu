@@ -225,7 +225,10 @@
     <ClCompile Include="3. HomeworkProblem\problem10_420_03_arrayEqual.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem10_420_04_returnArray.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem10_420_05.cpp" />
-    <ClCompile Include="3. HomeworkProblem\problem10_420_06.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem10_420_06_tableSumSumTotal.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem10_421_07.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem10_421_08_randomArray.cpp" />
+    <ClCompile Include="3. HomeworkProblem\problem10_421_09.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem6_235_1_vowelConsonantOutput.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem6_235_2_divisor.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem6_235_3.cpp" />
@@ -289,8 +292,11 @@
     <ClCompile Include="3. HomeworkProblem\problem8_331_12.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_8.cpp" />
     <ClCompile Include="3. HomeworkProblem\problem8_331_9_drowStick.cpp" />
+    <ClCompile Include="4. TestTest\Test0831.cpp" />
     <ClCompile Include="4. TestTest\VendingMachine.cpp" />
     <ClCompile Include="4. TestTest\Tetrise.cpp" />
+    <ClCompile Include="5. Project\190802VendingMachine_text.cpp" />
+    <ClCompile Include="mySourceDic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -70,3 +70,238 @@ void array_equal(int *arr1,int *arr2,int size)
 	}
 }
 //*/
+
+/*
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <windows.h>
+
+#define ARRAY_SIZE 5
+
+void random(int array[], int size, int max, int min);
+void array_print(int array[], int size);
+int compare(int a[], int b[], int size);
+
+int main()
+{
+	int a[ARRAY_SIZE]={0,}, b[ARRAY_SIZE]={0,};
+	int i=0, flag=0;
+	const int SIZE = sizeof(a)/sizeof(a[0]);
+
+	random(a, SIZE, 1, 10);
+	Sleep(1000);
+	random(b, SIZE, 1, 10);
+
+	array_print(a, SIZE);
+	array_print(b, SIZE);
+
+	flag = compare(a, b, SIZE);
+	switch(flag)
+	{
+	case 0:puts("두 배열이 같습니다. :-)"); break;
+	case -1:puts("두 번째 배열이 큽니다. :-)"); break;
+	case 1:puts("첫 번째 배열이 큽니다. :-)"); break;
+	default :puts("다시 입력하세요 :-|"); break;
+	}
+
+	return 0;
+}
+
+void random(int array[], int size, int max, int min)
+{
+	int i=0;
+	for(i=0; i<size ; i++)
+	{
+		array[i] = rand()%(max-min+1)+min;
+	}
+}
+void array_print(int array[], int size)
+{
+	int i=0;
+	for(i=0;i<size;i++)	printf("%5d",array[i]); 
+	printf("\n");
+	return;
+}
+int compare(int a[], int b[], int size)
+{
+	int i=0, flag=0;
+	for(i=0;i<size;i++)
+	{
+		if( a[i]-b[i] >0)
+		{
+			flag =1;
+			break;
+		}
+		else if(a[i]-b[i] <0)
+		{
+			flag =-1;
+			break;
+		}
+	}
+	return flag;
+}
+//*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <windows.h>
+void random(int array[], int size, int max, int min);
+void array_print(int array[], int size);
+int compare(int a[], int b[], int size);
+
+int main()
+{
+	int a[5]={0,},b[5]={0,}; 
+	int i=0, flag=0;
+	const int SIZE = sizeof(a)/sizeof(a[0]);
+	//1.배열을 랜덤으로 설정하는함수구현
+	random(a, SIZE, 10, 1);
+	Sleep(1000);
+	random(b, SIZE, 10, 1);
+	//2. 랜덤배열값을 출력
+	array_print(a,SIZE);
+	array_print(b,SIZE);
+	//3. 비교연산을 진행
+	flag=compare(a, b, SIZE);
+	//4.비교결과값을 따라서 출력함. 
+	switch(flag)
+	{
+	case  0: puts("두개배열이 같습니다.");   break;
+	case  1: puts("첫번째 배열이 큽니다.");  break;
+	case  -1: puts("두번배열이 큽니다.");     break;
+	default: puts("다시확인바랍니다.");       break;
+	}	
+return 0; 
+}
+
+void random(int array[], int size, int max, int min)
+{	int i=0;
+	srand(time(NULL));
+	for(i=0;i<size;i++)
+	{
+		array[i]=rand()%(max-min+1)+min; 
+	}
+	return;
+}
+
+void array_print(int array[], int size)
+{
+	int i=0;
+	for(i=0;i<size;i++)	printf("%5d",array[i]); 
+	printf("\n");
+	return;
+}
+int compare(int a[], int b[], int size)
+{
+	int i=0, flag=0;
+	for(i=0;i<size;i++)
+	{
+		if( a[i]-b[i] >0)
+		{
+			flag =1;
+			break;
+		}
+		else if(a[i]-b[i] <0)
+		{
+			flag =-1;
+			break;
+		}
+	}
+	return flag;
+}
+//*/
+
+/* //김동진 교수님 코드
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <windows.h>
+void random(int array[], int size, int max, int min);
+void array_print(int array[], int size);
+int compare(int a[], int b[], int size);
+
+int main()
+{
+	
+	int a[5]={0,}; int i=0;
+	int b[5]={0,}; int flag=0;
+	const int SIZE = sizeof(a)/sizeof(a[0]);
+	//1.배열을 랜덤으로 설정하는함수구현
+	random(a, SIZE, 10, 1);
+	Sleep(1000);
+	random(b, SIZE, 10, 1);
+	//2. 랜덤배열값을 출력
+	array_print(a,SIZE);
+	array_print(b,SIZE);
+	//3. 비교연산을 진행
+	flag=compare(a, b, SIZE);
+	//4.비교결과값을 따라서 출력함. 
+	switch(flag)
+	{
+	case  0: puts("두개배열이 같습니다.");   break;
+	case  1: puts("첫번째 배열이 큽니다.");  break;
+	case  -1: puts("두번배열이 큽니다.");     break;
+	default: puts("다시확인바랍니다.");       break;
+	}	
+return 0; 
+}
+
+void random(int array[], int size, int max, int min)
+{	int i=0;
+	srand(time(NULL));
+	for(i=0;i<size;i++)
+	{
+		array[i]=rand()%(max-0+min)+min; 
+	}
+	return;
+}
+
+void array_print(int array[], int size)
+{
+	int i=0;
+	for(i=0;i<size;i++)	printf("%5d",array[i]); 
+	printf("\n");
+	return;
+}
+int compare(int a[], int b[], int size)
+{
+	int i=0, flag=0;
+	for(i=0;i<size;i++)
+	{
+		if( a[i]-b[i] >0)
+		{
+			flag =1;
+			break;
+		}
+		else if(a[i]-b[i] <0)
+		{
+			flag =-1;
+			break;
+		}
+	}
+	return flag;
+}
+//*/
+

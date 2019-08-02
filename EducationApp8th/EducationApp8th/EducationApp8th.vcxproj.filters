@@ -660,7 +660,25 @@
     <ClCompile Include="3. HomeworkProblem\problem10_420_04_returnArray.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. HomeworkProblem\problem10_420_06.cpp">
+    <ClCompile Include="mySourceDic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_420_06_tableSumSumTotal.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_421_07.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. TestTest\Test0831.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_421_09.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. HomeworkProblem\problem10_421_08_randomArray.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Project\190802VendingMachine_text.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,11 +1,17 @@
-﻿빌드 시작: 2019-07-31 오후 6:25:36
+﻿빌드 시작: 2019-08-02 오후 6:00:10
      1>2 노드의 "C:\Users\BOBBY\MyProject\EducationApp8th\EducationApp8th\EducationApp8th.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\EducationApp8th.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "3. HomeworkProblem\problem10_420_06.cpp"
-         problem10_420_06.cpp
-     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\3. homeworkproblem\problem10_420_06.cpp(70): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "5. Project\190802VendingMachine_text.cpp"
+         190802VendingMachine_text.cpp
+     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\5. project\190802vendingmachine_text.cpp(267): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\5. project\190802vendingmachine_text.cpp(296): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\5. project\190802vendingmachine_text.cpp(306): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
+     1>c:\users\bobby\myproject\educationapp8th\educationapp8th\5. project\190802vendingmachine_text.cpp(322): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 'scanf' 선언을 참조하십시오.
          모든 출력이 최신 상태입니다.
        Link:
@@ -159,7 +165,10 @@
          Debug\problem10_420_03_arrayEqual.obj
          Debug\problem10_420_04_returnArray.obj
          Debug\problem10_420_05.obj
-         Debug\problem10_420_06.obj
+         Debug\problem10_420_06_tableSumSumTotal.obj
+         Debug\problem10_421_07.obj
+         Debug\problem10_421_08_randomArray.obj
+         Debug\problem10_421_09.obj
          Debug\problem6_235_1_vowelConsonantOutput.obj
          Debug\problem6_235_2_divisor.obj
          Debug\problem6_235_3.obj
@@ -223,8 +232,11 @@
          Debug\problem8_331_12.obj
          Debug\problem8_331_8.obj
          Debug\problem8_331_9_drowStick.obj
+         Debug\Test0831.obj
          Debug\VendingMachine.obj
          Debug\Tetrise.obj
+         Debug\190802VendingMachine_text.obj
+         Debug\mySourceDic.obj
          EducationApp8th.vcxproj -> C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"C:\Users\BOBBY\MyProject\EducationApp8th\Debug\EducationApp8th.exe.manifest" /manifest Debug\EducationApp8th.exe.intermediate.manifest
@@ -235,4 +247,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.44
+경과 시간: 00:00:01.39
