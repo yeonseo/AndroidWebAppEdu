@@ -1,5 +1,6 @@
 //*
 #include <stdio.h>
+#include <windows.h>
 
 //salade
 char* saladeName[5] = { " ","기본(필수)","토마토","올리브","비트" };
@@ -18,7 +19,7 @@ int toppingStore[5] = { 0,10,10,10,10 };  //상품명 선택 번호와 배열 번호를 맞춰�
 int toppingUser[5] = {0,};
 
 //카드와 코인
-int payCard = 0;
+int payCard = 150000;
 int payCoin = 0;
 int payValue = 0;
 
@@ -33,31 +34,36 @@ void select_menu_print(void);
 void salade_menu_print(void);
 void topping_menu_print(void);
 void source_menu_print(void);
+void user_collection(void);
 //결제방법 결정
 void pay_menu_print(void);
-//void pay_coin(void);
 void pay_coin(void);
 void pay_card(void);
-void saladeOut(void);
-
+void salade_out(void);
+void user_default(void);
 int main(void)
 {
-	select_menu_print();
-	pay_menu_print();
-	
+	for(;;)
+	{
+		select_menu_print();
+		pay_menu_print();
+		printf("\n\n\n\n\n\n");
+		user_default();
+	}
 	return 0;
 }
 //입력받기
 int input_char(void)
 {
-	scanf("%c",&selectMenu);
+	selectMenu=0;
 	while(getchar()!='\n');
+	scanf("%c",&selectMenu);
 	return selectMenu;
 }
 int input_int(void)
 {
+	selectMenu=0;
 	scanf("%d",&selectMenu);
-	while(getchar()!='\n');
 	return selectMenu;
 }
 //메뉴 화면 선택
@@ -67,6 +73,7 @@ void select_menu_print(void)
 	printf("★     원하는 재료로 나만의 샐러드를 만들어 먹어요     ★\n");
 	printf("★각각 페이지에서 장바구니에 담을 메뉴를 선택해 주세요.★\n");
 	printf("★모든 선택이 끝난 후에, E.선택종료(계산)을 선택합니다.★\n");
+	printf("★                                                     ★\n");
 	printf("★     A.채소, B.토핑, C.소스 입력  E.선택종료(계산)   ★\n");
 	printf("★페이지 선택 : ");
 	
@@ -81,6 +88,7 @@ void select_menu_print(void)
 		default : printf("페이지 이동은 'A', 'B', 'C', 'E' 중에 입력해주세요.");
 		}
 		if(selectMenu==69||selectMenu==101) break;
+		selectMenu=0;
 	}
 }
 //상품 페이지
@@ -91,12 +99,12 @@ void salade_menu_print(void)
 	printf("*             채 소             *\n");
 	printf("*********************************\n");
 
-	for(i=1 ; i<5 ; i++) printf("%d. %10s  : %5d원 (남은수량 : %2d) \n",i, saladeName[i], saladePrice[i], saladeStore[i]-saladeUser[i]);
+	for(i=1 ; i<5 ; i++) printf("%d. %14s  : %5d원 (남은수량 : %2d) \n",i, saladeName[i], saladePrice[i], saladeStore[i]-saladeUser[i]);
 	printf("1-4 번 메뉴 중에서 메뉴를 골라주세요.( 0 : 이전 화면)\n");
 	printf("\n*현재 장바구니*\n");
 	for(i=0;i<5;i++)
 	{
-		if(saladeUser[i]!=0) printf("%10s : %2d개\n",saladeName[i],saladeUser[i]);
+		if(saladeUser[i]!=0) printf("%14s : %2d개\n",saladeName[i],saladeUser[i]);
 	}
 	selectMenu=input_int();
 	if(selectMenu!=0)
@@ -113,12 +121,12 @@ void topping_menu_print(void)
 	printf("*             토 핑             *\n");
 	printf("*********************************\n");
 
-	for(i=1 ; i<5 ; i++) printf("%d. %10s  : %5d원 (남은수량 : %2d) \n",i, toppingName[i], toppingPrice[i], toppingStore[i]-toppingUser[i]);
+	for(i=1 ; i<5 ; i++) printf("%d. %14s  : %5d원 (남은수량 : %2d) \n",i, toppingName[i], toppingPrice[i], toppingStore[i]-toppingUser[i]);
 	printf("1-4 번 메뉴 중에서 메뉴를 골라주세요.( 0 : 이전 화면)\n");
 	printf("\n*현재 장바구니*\n");
 	for(i=0;i<5;i++)
 	{
-		if(toppingUser[i]!=0) printf("%12s : %2d개\n",toppingName[i],toppingUser[i]);
+		if(toppingUser[i]!=0) printf("%14s : %2d개\n",toppingName[i],toppingUser[i]);
 	}
 	selectMenu=input_int();
 	if(selectMenu!=0)
@@ -136,12 +144,12 @@ void source_menu_print(void)
 	printf("*             소 스             *\n");
 	printf("*********************************\n");
 
-	for(i=1 ; i<5 ; i++) printf("%d. %10s  : %5d원 (남은수량 : %2d) \n",i, sourceName[i], sourcePrice[i], sourceStore[i]-sourceUser[i]);
+	for(i=1 ; i<5 ; i++) printf("%d. %14s  : %5d원 (남은수량 : %2d) \n",i, sourceName[i], sourcePrice[i], sourceStore[i]-sourceUser[i]);
 	printf("1-4 번 메뉴 중에서 메뉴를 골라주세요.( 0 : 이전 화면)\n");
 	printf("\n*현재 장바구니*\n");
 	for(i=0;i<5;i++)
 	{
-		if(sourceUser[i]!=0) printf("%10s : %2d개\n",sourceName[i],sourceUser[i]);
+		if(sourceUser[i]!=0) printf("%14s : %2d개\n",sourceName[i],sourceUser[i]);
 	}
 	selectMenu=input_int();
 	if(selectMenu!=0)
@@ -151,7 +159,7 @@ void source_menu_print(void)
 	}
 	if(selectMenu==0) select_menu_print();
 }
-void userCollection(void)
+void user_collection(void)
 {
 	int i=0;
 	for(i=1;i<5;i++)
@@ -179,7 +187,7 @@ void userCollection(void)
 //결제방법 결정
 void pay_menu_print(void)
 {
-	userCollection();
+	user_collection();
 	for(;;)
 	{
 		int flag=0;
@@ -195,11 +203,11 @@ void pay_menu_print(void)
 		}
 		if(flag==1)
 		{
-			saladeOut(); break;
+			salade_out(); break;
 		}
-		printf("결제금액이 모자릅니다. 결재를 다시 선택하시습니까?\n(Y:결제선택/N:종료) : ");
+		printf("결제금액이 모자릅니다. 결재를 다시 선택하시습니까?\n(1:결제선택 2:종료) : ");
 		selectMenu=input_int();
-		if(selectMenu=='y'||selectMenu=='Y') continue;
+		if(selectMenu==1) continue;
 		else break;
 	}//end of for
 }
@@ -219,10 +227,10 @@ void pay_coin(void)
 			payCoin=payCoin+inputMoney; break;
 		default: printf("\a정신차리세요:-0\n방금 입력하신 %d원 무효입니다!\n",inputMoney); break;
 		}
-		printf("금액을 입력하시겠습니까?(Y/N)");
+		printf("금액을 입력하시겠습니까?여기야 제발 ㅠㅠㅠ");
 		selectMenu=input_char();
-		//printf("%d %c",selectMenu,selectMenu);
-		if(selectMenu=='Y'||selectMenu=='y') continue;
+		printf("%d %c",selectMenu,selectMenu);
+		if(selectMenu==89||selectMenu==121) continue;
 		else break;
 	}
 }
@@ -230,7 +238,7 @@ void pay_card(void)
 {
 	for( ; ; )
 	{
-		int inputMoney=0, payCardNumber=0, payCardPassword=0;
+		int inputMoney=0, payCardNumber=0, payCardPassword=0,flag=0;
 		printf("\n현재 투입금액 : %5d\n",inputMoney);
 		printf("카드 번호를 입력해주세요.(16자리)\n");
 		payCardNumber=input_int();
@@ -239,19 +247,50 @@ void pay_card(void)
 		
 		switch(payCardNumber)
 		{
-		case 1234: if(payCardPassword==1234) payCard=150000; break;
+		case 1234: if(payCardPassword==1234) flag=1; break;
 		//case 1234123412341234: if(payCardPassword==1234) payCard=150000; break;
 		//case 1111222233334444: if(payCardPassword==1234) payCard=150000; break;
-		default: printf("\a정신차리세요:-0\n방금 입력하신 카드는 유효하지 않습니다 :-0\n"); break;
+		default: printf("\n\n\a정신차리세요:-0\n방금 입력하신 카드는 유효하지 않습니다 :-0\n"); break;
 		}
-		if(payCard!=0) break;
+		if(flag==1) break;
 	}
 }
-void saladeOut(void)
+void salade_out(void)
 {
-	printf("옛다 상품!!!!!\n");
-	userCollection();
-	if(payCoin>0) printf("옛다 돈!! %d원을 반환하고 종료합니다.\n",payCoin-payValue);
+	printf("\n\n\n");
+	if(payCoin>0)
+	{
+		printf("☆★잔돈 준비 중★☆\n");
+		Sleep(1000);
+		printf("옛다 돈!! %d원을 반환하고 종료합니다.\n",payCoin-payValue);
+	}
+	if(payCoin==0)
+	{
+		printf("☆★카드승인완료★☆\n");
+		payCard=payCard-payValue;
+	}
+	printf("********************\n");
+	printf(" 구입한 상품 준비중 \n");
+	Sleep(1000);
+	printf("☆★신선한샐러드★☆\n");
+	
+	user_collection();
+	Sleep(5000);
+}
+void user_default(void)
+{
+	int i=0;
+	for(i=1;i<5;i++)
+	{
+		saladeStore[i]=saladeStore[i]-saladeUser[i];
+		saladeUser[i]=0;
+		toppingStore[i]=toppingStore[i]-toppingUser[i];
+		toppingUser[i]=0;
+		sourceStore[i]=sourceStore[i]-sourceUser[i];
+		sourceUser[i]=0;
+	}
+	payCoin=0;
+	payValue=0;
 }
 
 //*/
