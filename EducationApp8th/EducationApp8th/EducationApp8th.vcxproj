@@ -296,6 +296,8 @@
     <ClCompile Include="4. TestTest\VendingMachine.cpp" />
     <ClCompile Include="4. TestTest\Tetrise.cpp" />
     <ClCompile Include="5. Project\190802VendingMachine_text.cpp" />
+    <ClCompile Include="5. Project\190805VendingMachine.cpp" />
+    <ClCompile Include="5. Project\kang%27s.cpp" />
     <ClCompile Include="mySourceDic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,0 +1,15 @@
+﻿  VendingMachine.cpp
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(6,1): warning C4005:  '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(6,1): warning C4005: C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(88,16): warning C4838:  'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(88,20): warning C4838:  'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(105,8): warning C4477:  'scanf' : 서식 문자열 '%c'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(128,9): warning C4477:  'scanf' : 서식 문자열 '%c'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+  Vending_no_func.cpp
+C:\Users\BOBBY\source\repos\VendingMachine\VendingMachine\VendingMachine.cpp(381,9): warning C4129:  '.': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+  코드를 생성하고 있습니다.
+  22 of 22 functions (100.0%) were compiled.
+    15 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  VendingMachine.vcxproj -> C:\Users\BOBBY\source\repos\VendingMachine\Release\VendingMachine.exe

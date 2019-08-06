@@ -681,5 +681,11 @@
     <ClCompile Include="5. Project\190802VendingMachine_text.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="5. Project\190805VendingMachine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Project\kang%27s.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
