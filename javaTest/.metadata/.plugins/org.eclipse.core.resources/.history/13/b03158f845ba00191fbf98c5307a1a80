@@ -1,0 +1,16 @@
+package chpter02;
+
+import java.util.Scanner;
+
+public class ToBinaryTest {
+	public static void main(String[] args) {
+		Scanner inputObject = new Scanner(System.in/*셋팅하는 조건(생성자 함수)*/); //입력을 받는 기계
+		//System.out.print("이진법으로 바꿀 정수값을 입력 요망 : ");
+		//inputObject.nextInt();
+		
+		Box smallBox = new Box();
+		double area=smallBox.areaBox();
+		System.out.println(area);
+	}
+	//public static String toBinaryTest(int )
+}

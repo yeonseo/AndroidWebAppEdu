@@ -1,0 +1,38 @@
+package chpter02;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		String name = "남연서";
+		String address = "서울특별시 관악구";
+		String college = "물리학과";
+		String phoneNumber = "010-9991-9092";
+		
+		System.out.println("이름 : " +name );
+		System.out.println("주소 : "+ address);
+		System.out.println("학과 : "+college);
+		System.out.println("전화번호 : "+phoneNumber);
+		
+		int z=5;
+		
+		for(int i=0 ; i<z*2 ; i++) {
+			if(i<z) {
+				for(int j=0 ; j < z-i ; j++ ) {
+					System.out.print(" ");
+				}
+				for(int j=0 ; j < 2*i-1 ; j++ ) {
+					System.out.print("*");
+				}
+			}
+			else {
+				for(int j=0 ; j < i-4 ; j++ ) {
+					System.out.print(" ");
+				}
+				for(int j=0 ; j < (z-i-1)*2-1 ; j++ ) {
+					System.out.print("*");
+				}
+			}
+		 System.out.println("");
+		}
+	}
+}

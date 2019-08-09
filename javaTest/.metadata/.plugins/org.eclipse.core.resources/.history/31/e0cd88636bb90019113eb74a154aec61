@@ -1,0 +1,17 @@
+package chpter02;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		String name = "남연서";
+		String address = "서울특별시 관악구";
+		String college = "물리학과";
+		String phoneNumber = "010-9991-9092";
+		
+		System.out.println("이름 : " +name );
+		System.out.println("주소 : "+ address);
+		System.out.println("학과 : "+college);
+		System.out.println("전화번호 : "+phoneNumber);
+	}
+
+}

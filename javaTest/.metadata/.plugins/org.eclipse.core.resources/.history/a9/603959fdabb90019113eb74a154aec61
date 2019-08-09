@@ -1,0 +1,13 @@
+package chpter02;
+
+public class StringTest {
+	public static void main(String[] args) {
+		//1. 문자열 변수를 선언한다. (포인터변수 s1), (초기값 : 문자열 상수 ~)
+		//2. 문자열 변수를 선언한다. (포인터변수 s1), (초기값 : 문자열 상수 ~)
+		//3. 문자열 변수 1 문자열 변수 2를 출력한다. 
+		String s1="우와아아아아";
+		String s2="오와아아아아";
+		
+		System.out.println(s1+"\n"+s2);
+	}
+}

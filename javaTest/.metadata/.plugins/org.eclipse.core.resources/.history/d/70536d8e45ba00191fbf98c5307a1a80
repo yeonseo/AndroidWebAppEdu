@@ -1,0 +1,19 @@
+package chpter02;
+
+import java.util.Scanner;
+
+public class TwoBinaryTest {
+	public static void main(String[] args) {
+		Scanner inputObject = new Scanner(System.in/*셋팅하는 조건(생성자 함수)*/); //입력을 받는 기계
+		//System.out.print("이진법으로 바꿀 정수값을 입력 요망 : ");
+		//inputObject.nextInt();
+		
+		Box smallBox = new Box();
+//		System.out.print("가로 넓이 입력 : ");
+//		double length=inputObject.nextInt();
+//		System.out.print("세로 넓이 입력 : ");
+//		double wight=inputObject.nextInt();
+		double area=smallBox.areaBox();
+		System.out.println(area);
+	}
+}

@@ -1,0 +1,23 @@
+package chpter02;
+
+import java.util.Scanner;
+
+public class Box {
+	public static void main(String[] args) {
+		
+		
+		double witdh;
+		double height;
+		double area;
+		double parimeter;
+		Scanner input = new Scanner(System.in);
+		
+		area = witdh*height;
+		
+		System.out.print("사각형의 가로를 입력하시오 : ");
+		witdh=input.nextDouble();
+		System.out.print("사각형의 세로를 입력하시오 : ");
+		height=input.nextDouble();
+		System.out.println("넓이 : "+ area+"cm2");
+	}
+}

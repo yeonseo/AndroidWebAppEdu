@@ -1,0 +1,29 @@
+package chpter02;
+
+import java.util.Scanner;
+
+public class ToBinaryTest {
+	public static void main(String[] args) {
+		Scanner inputObject = new Scanner(System.in/*셋팅하는 조건(생성자 함수)*/); //입력을 받는 기계
+		System.out.print("이진법으로 바꿀 정수값을 입력 요망 : ");
+		int number=inputObject.nextInt();
+		String strValue=toBinaryTest(number);
+		System.out.println(number+"값을 이진법으로 하면"+strValue+"이고, 길이는 "+strValue.length());
+		
+		CircleArea smallCrecle = new CircleArea();
+		double area=smallCrecle.areaCircle();
+		System.out.println(area);
+		
+		//Box smallBox = new Box();
+		area=Box.areaBox();
+		System.out.println(area);
+		
+	}
+	public static String toBinaryTest(int value) {
+		String strValue=Integer.toBinaryString(value);
+		while(strValue.length()<=32) {
+			strValue="0"+strValue;
+		}
+		return strValue;
+	}
+}

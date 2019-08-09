@@ -1,0 +1,17 @@
+package chpter02;
+import java.util.Scanner;
+public class CircleArea {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double radius = 5.0;
+		double area = 0.0;
+		
+		area = radius*radius*3.141592;
+		
+		System.out.print("반지름을 입력하시오 : ");
+		radius=input.nextDouble();
+		System.out.println("넓이 : "+ area+"cm2");
+		
+	}
+}
