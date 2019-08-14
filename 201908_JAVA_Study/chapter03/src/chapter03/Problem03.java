@@ -4,25 +4,7 @@ import java.util.Scanner;
 
 public class Problem03 {
 	public static void main(String[] args) {
-//	pro03();
-//	
-//	pro04_1();
-//	pro04_2();
-//	pro06_1();
-//	pro06_2();
-//	pro06_3();
-//		pro07_1();
-//		pro07_2();
-//		pro08();
-//		pro09();
-//		pro10();
-//		pro11();
-//		pro12();
-//		pro13();
-//		pro14();
-//		pro15();
-//		pro16();
-		pro17();
+		pro23();
 	}
 	
 	public static void pro03() {
@@ -184,9 +166,9 @@ public class Problem03 {
 	public static void pro15() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("몸무게를 입력하시오 : ");
-		double weight = input.nextInt();
+		double weight = input.nextDouble();
 		System.out.print("키를 입력하시오 : ");
-		double height = input.nextInt();
+		double height = input.nextDouble();
 		
 		double standard  =  (height-100)*0.9;
 		
@@ -213,5 +195,111 @@ public class Problem03 {
 				}
 			}System.out.println();
 		}
+	}
+	public static void pro18() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수를 입력하시오 : (ex: 1 3 4) ");
+		int  num1= input.nextInt();
+		int  num2= input.nextInt();
+		int  num3= input.nextInt();
+		int min=0;
+		
+		if(num1<num2) min=num1;
+		else if (num1>num2) min=num2;
+		
+		if(min>num3) min=num3;
+		
+		 System.out.println("최소값 : "+min);
+	}
+	public static void pro19() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수를 입력하시오 :  ");
+		int  num= input.nextInt();
+		int result=0;
+		if(num<=0) result=num*num*num-9*num+2;
+		else result=7*num+2;
+		 System.out.println("결과값 : "+result);
+	}
+	public static void pro20() {
+		int count=0;
+		for (int i=2 ; i<=100 ; i++) {
+			for(int j=2 ; j <=i ; j++) {
+				if (i%j==0) count++;
+			}
+			if(count == 1) System.out.print(i+" ");
+			count=0;
+		}
+	}
+	public static void pro21() {
+		int line=0;
+		for(int i=0 ; i<=100 ; i++) {
+			for(int j=0 ; j <=100 ; j++) {
+				for(int z=0;z<=100;z++) {
+					if(i*i+j*j-z*z==0) {
+						System.out.printf("(%3d,%3d,%3d)  ",i,j,z);
+						line++;
+						if (line==9) {
+							System.out.println();
+							line=0;
+						}
+						break;
+					}
+				}
+			}
+		}
+	}
+	public static void pro22() {
+		for(int i=1 ; i<=10 ; i++) {
+			for(int j=1 ; j <=10 ; j++) {
+				System.out.printf("%4d ",i*j);
+			}System.out.println(" ");
+		} 
+	}
+	public static void pro23() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수 2개를 입력하시오 (ex 5 4) : ");
+		int num1 = input.nextInt();
+		int num2 = input.nextInt();
+		char calcul;
+		do {
+			System.out.print("사칙연산 중에서 하나를 입력하세요 (+ - * /) : ");
+			String calculator = input.next();
+			calcul = calculator.charAt(0);
+		}while(calcul!='+'&&calcul!='-'&&calcul!='*'&&calcul!='/');
+		
+		if(calcul=='+') {
+			System.out.println("연산결과 : "+(num1+num2));
+		}else if(calcul=='-') {
+			System.out.println("연산결과 : "+(num1-num2));
+		}else if(calcul=='*') {
+			System.out.println("연산결과 : "+(num1*num2));
+		}else if(calcul=='/') {
+			if(num1!=0&&num2!=0)	System.out.println("연산결과 : "+(num1/num2));
+			else if(num1!=0)System.out.println("0을 나눌 수 없습니다.");
+			else if(num1!=0)System.out.println("0으로 나눌 수 없습니다.");
+		}
+	}
+	public static void pro24() {
+		long a=0, b=1, c=0;
+		Scanner input = new Scanner(System.in);
+		int userNum=0;
+		
+		do {
+			System.out.print("정수를 입력하시오 : ");
+			userNum= input.nextInt();
+		}while(userNum<0||userNum>100);
+		
+		for(int i=2 ; i<=userNum ; i++) {
+			c=a+b;
+			a=b;
+			b=c;
+			System.out.print(" "+c);
+		}
+	}
+	public static void pro25() {
+		double result=0;
+		for(int i=1 ; i<=100 ; i++) {
+			result=result+1/(double)i;
+		} System.out.println(result);
 	}
 }

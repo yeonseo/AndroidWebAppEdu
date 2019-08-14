@@ -1,19 +1,20 @@
 package chpter02;
 
+import java.util.Scanner;
+
 public class ToBinaryString {
 	public static void main(String[] args) {
-		int number;
-		for(int i=0; i<10; i++) {
-			number=(int) (Math.random()*(200-100+1)+100);
-			toBinaryString(number);
-		}
+		int number=0;
+		Scanner input = new Scanner(System.in);
+		number=input.nextInt();
+		toBinaryString(number);
 	}
 	
 	public static void toBinaryString(int num) {
-		String strValue = Integer.toBinaryString(num);
+		String strValue=Integer.toBinaryString(num);
 		while(strValue.length()<32) {
 			strValue="0"+strValue;
 		}
-		System.out.println(num+"  이진수 : "+strValue);
+		System.out.println(num+ "> 이진법 " +strValue);
 	}
 }
