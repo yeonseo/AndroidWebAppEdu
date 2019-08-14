@@ -10,27 +10,27 @@ public class Problem03 {
 	public static void pro03() {
 		int x=3;
 		if (x >= 0) {
-			if (x == 0) System.out.println("Ã¹ ¹øÂ° ¹®ÀÚ¿­");
-			else System.out.println("µÎ ¹øÂ° ¹®ÀÚ¿­");
-		} else System.out.println("¼¼ ¹øÂ° ¹®ÀÚ¿­");
+			if (x == 0) System.out.println("Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¿ï¿½");
+			else System.out.println("ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¿ï¿½");
+		} else System.out.println("ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¿ï¿½");
 	}
 	public static void pro04_1() {
 		int age = 22;
 		if( age > 20 ) {
-			System.out.println("1¹ø ±×·ì\n");
+			System.out.println("1ï¿½ï¿½ ï¿½×·ï¿½\n");
 		}
 		else {
-			System.out.println("2¹ø ±×·ì\n");
+			System.out.println("2ï¿½ï¿½ ï¿½×·ï¿½\n");
 		}
-		System.out.println("ÀÔ´Ï´Ù.\n");
+		System.out.println("ï¿½Ô´Ï´ï¿½.\n");
 	}
 	public static void pro04_2() {
 		int age = 66;
 		if( age > 20 ) {
 			if( age < 65 )
-				System.out.println("1¹ø ±×·ì");
+				System.out.println("1ï¿½ï¿½ ï¿½×·ï¿½");
 			else 
-				System.out.println("2¹ø ±×·ì");
+				System.out.println("2ï¿½ï¿½ ï¿½×·ï¿½");
 		}
 	}
 	public static void pro06_1() {
@@ -62,7 +62,7 @@ public class Problem03 {
 		for(int i=1 ; i<=30;i++) {
 			result=result+i*i+1;
 		}
-		System.out.println("°á°ú : "+result);
+		System.out.println("ï¿½ï¿½ï¿½ : "+result);
 	}
 	public static void pro07_2() {
 		int result=0;
@@ -71,7 +71,7 @@ public class Problem03 {
 				result=result+i*j;		
 			}
 		}
-		System.out.println("°á°ú : "+result);
+		System.out.println("ï¿½ï¿½ï¿½ : "+result);
 	}
 	public static void pro08() {
 		int x=3;
@@ -87,12 +87,12 @@ public class Problem03 {
 			if(i%3==0||i%4==0) result=result;
 			else result=result+i;
 		}
-		System.out.println("°á°ú : "+result);
+		System.out.println("ï¿½ï¿½ï¿½ : "+result);
 	}
 	public static void pro10() {
 		int userNum=0;
 		Scanner input = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ : ");
 		userNum=input.nextInt();
 		switch(userNum) {
 		case 1: System.out.println("ONE"); break;
@@ -114,15 +114,15 @@ public class Problem03 {
 				result=result+j;
 			}
 		}
-		System.out.println("°á°ú : "+result);
+		System.out.println("ï¿½ï¿½ï¿½ : "+result);
 	}
 	public static void pro12() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		int numOne=input.nextInt();
-		System.out.print("µÎ ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		int numTwo=input.nextInt();
-		System.out.print("¼¼ ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		int numThree=input.nextInt();
 		
 		int first=0;
@@ -140,8 +140,8 @@ public class Problem03 {
 			second=(numOne>numTwo)?(numOne):(numTwo);
 			third=(numOne<numTwo)?(numOne):(numTwo);
 		}
-		System.out.println("ÀÔ·Â°ª : "+numOne+"  "+numTwo+"  "+numThree);
-		System.out.println("°á°ú : "+first+"  "+second+"  "+third);
+		System.out.println("ï¿½Ô·Â°ï¿½ : "+numOne+"  "+numTwo+"  "+numThree);
+		System.out.println("ï¿½ï¿½ï¿½ : "+first+"  "+second+"  "+third);
 	}
 	public static void pro13() {
 		for(int i=1 ; i<6 ; i++) {
@@ -153,27 +153,27 @@ public class Problem03 {
 		}
 	}
 	public static void pro14() {
-		System.out.print("¾ËÆÄºªÀ» ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		Scanner input = new Scanner(System.in);
 		String string = input.next();
 		char charValue = string.charAt(0);
 		System.out.println(charValue);
 		switch (charValue) {
-		case 'a' : case 'A': case 'e': case 'E': case 'i': case 'I': case 'o': case 'O': case 'u': case'U': System.out.println("¸ðÀ½ÀÔ´Ï´Ù.");
-		default : System.out.println("ÀÚÀ½ÀÔ´Ï´Ù.");
+		case 'a' : case 'A': case 'e': case 'E': case 'i': case 'I': case 'o': case 'O': case 'u': case'U': System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+		default : System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 		}
 	}
 	public static void pro15() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("¸ö¹«°Ô¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		double weight = input.nextDouble();
-		System.out.print("Å°¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("Å°ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 		double height = input.nextDouble();
 		
 		double standard  =  (height-100)*0.9;
 		
-		if(weight>standard) System.out.println("°úÃ¼ÁßÀÔ´Ï´Ù.");
-		System.out.println("Á¤»óÃ¼ÁßÀÔ´Ï´Ù.");
+		if(weight>standard) System.out.println("ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 	}
 	public static void pro16() {
 		for(int i=0 ; i<=10 ; i++) {
@@ -198,7 +198,7 @@ public class Problem03 {
 	}
 	public static void pro18() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : (ex: 1 3 4) ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : (ex: 1 3 4) ");
 		int  num1= input.nextInt();
 		int  num2= input.nextInt();
 		int  num3= input.nextInt();
@@ -209,16 +209,16 @@ public class Problem03 {
 		
 		if(min>num3) min=num3;
 		
-		 System.out.println("ÃÖ¼Ò°ª : "+min);
+		 System.out.println("ï¿½Ö¼Ò°ï¿½ : "+min);
 	}
 	public static void pro19() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À :  ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ :  ");
 		int  num= input.nextInt();
 		int result=0;
 		if(num<=0) result=num*num*num-9*num+2;
 		else result=7*num+2;
-		 System.out.println("°á°ú°ª : "+result);
+		 System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ : "+result);
 	}
 	public static void pro20() {
 		int count=0;
@@ -257,26 +257,26 @@ public class Problem03 {
 	}
 	public static void pro23() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Á¤¼ö 2°³¸¦ ÀÔ·ÂÇÏ½Ã¿À (ex 5 4) : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ (ex 5 4) : ");
 		int num1 = input.nextInt();
 		int num2 = input.nextInt();
 		char calcul;
 		do {
-			System.out.print("»çÄ¢¿¬»ê Áß¿¡¼­ ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä (+ - * /) : ");
+			System.out.print("ï¿½ï¿½Ä¢ï¿½ï¿½ï¿½ï¿½ ï¿½ß¿ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ (+ - * /) : ");
 			String calculator = input.next();
 			calcul = calculator.charAt(0);
 		}while(calcul!='+'&&calcul!='-'&&calcul!='*'&&calcul!='/');
 		
 		if(calcul=='+') {
-			System.out.println("¿¬»ê°á°ú : "+(num1+num2));
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : "+(num1+num2));
 		}else if(calcul=='-') {
-			System.out.println("¿¬»ê°á°ú : "+(num1-num2));
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : "+(num1-num2));
 		}else if(calcul=='*') {
-			System.out.println("¿¬»ê°á°ú : "+(num1*num2));
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : "+(num1*num2));
 		}else if(calcul=='/') {
-			if(num1!=0&&num2!=0)	System.out.println("¿¬»ê°á°ú : "+(num1/num2));
-			else if(num1!=0)System.out.println("0À» ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
-			else if(num1!=0)System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			if(num1!=0&&num2!=0)	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : "+(num1/num2));
+			else if(num1!=0)System.out.println("0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+			else if(num1!=0)System.out.println("0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}
 	}
 	public static void pro24() {
@@ -285,7 +285,7 @@ public class Problem03 {
 		int userNum=0;
 		
 		do {
-			System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½ : ");
 			userNum= input.nextInt();
 		}while(userNum<0||userNum>100);
 		
