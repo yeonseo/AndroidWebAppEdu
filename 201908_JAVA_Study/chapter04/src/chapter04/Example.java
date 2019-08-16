@@ -3,47 +3,59 @@ package chapter04;
 import java.util.Scanner;
 
 public class Example {
-
 	public static void main(String[] args) {
-		System.out.println("숫자들의 합 : " +sum(new int[] {1,2,3,4}));		
-	}
-	public static int sum(int[] arr) {
-		int total=0;
-		for(int i=0 ; i < arr.length ; i++) {
-			total=total + arr[i];
-		}
-		return total;
-	}
+		Booking book = new Booking();
+		book.Book();		
+	}		
 }
-//04-164
+//booking~~~
 //public static void main(String[] args) {
-//	int[] arrSeats= new int[10];
-//	int[] arr= new int[10];
-//	Scanner input = new Scanner(System.in);
-//	for(int i=0 ; i < arr.length ; i++) {
-//		arrSeats[i]=i+1;
-//		arr[i]=0;
-//	}
+//	Booking book = new Booking();
+//	book.Book();
 //	
-//	do {
-//		System.out.println("--------------------------");
-//		for(int i=0 ; i < arr.length ; i++) {
-//			System.out.print(arrSeats[i] + "  ");
-//		}		
-//		System.out.println("\n--------------------------");
-//		for(int i=0 ; i < arr.length ; i++) {
-//			System.out.print(arr[i] + "  ");
-//		}		
-//		System.out.println("\n--------------------------");
-//		
-//		System.out.print("예매하실 좌석을 선택하세요 : ");
-//		int selectNum=input.nextInt();
-//		if(arr[selectNum-1]==0) {
-//			System.out.println("선택하신 좌석이 예매되었습니다.");
-//			arr[selectNum-1]++;
-//		}else System.out.println("선택하신 좌석은 선택불가합니다.");
-//	}while(true);
+//	
 //}
+//public static void main(String[] args) {
+//	System.out.println("숫자들의 합 : " +sum(new int[] {1,2,3,4}));		
+//}
+//public static int sum(int[] arr) {
+//	int total=0;
+//	for(int i=0 ; i < arr.length ; i++) {
+//		total=total + arr[i];
+//	}
+//	return total;
+//}
+//04-164
+//int[] arrSeats= new int[10];
+//int[] arr= new int[10];
+//Scanner input = new Scanner(System.in);
+//for(int i=0 ; i < arr.length ; i++) {
+//	arrSeats[i]=i+1;
+//	arr[i]=0;
+//}
+//
+//do {
+//	System.out.println("--------------------------");
+//	for(int i=0 ; i < arr.length ; i++) {
+//		System.out.print(arrSeats[i] + "  ");
+//	}		
+//	System.out.println("\n--------------------------");
+//	for(int i=0 ; i < arr.length ; i++) {
+//		System.out.print(arr[i] + "  ");
+//	}		
+//	System.out.println("\n--------------------------");
+//	
+//	System.out.print("예매하실 좌석을 선택하세요 :  ");
+//	int selectNum=input.nextInt();
+//	if(selectNum==-1) {
+//		System.out.println("예매 시스템을 종료합니다.");
+//		break;
+//	}
+//	if(arr[selectNum-1]==0) {
+//	System.out.println("선택하신 좌석이 예매되었습니다.");
+//	arr[selectNum-1]++;
+//	}else System.out.println("선택하신 좌석은 선택불가합니다.");
+//}while(true);
 //04-163
 //public static void main(String[] args) {
 //	int[] arr= new int[6];
