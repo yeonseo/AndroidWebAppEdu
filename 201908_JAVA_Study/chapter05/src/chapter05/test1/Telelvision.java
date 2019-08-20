@@ -1,16 +1,15 @@
 package chapter05.test1;
 
-public class Television {
+public class Telelvision {
 	private int channel;
 	private int volume;
 	private boolean onOff;
 	
-	public Television(){
+	public Telelvision(){
 		this.channel=0;
 		this.volume=0;
 		this.onOff=false;
 	}
-	
 	public void setChannel(int channel) {
 		this.channel=channel;
 	}
@@ -21,12 +20,12 @@ public class Television {
 		this.onOff=onOff;
 	}
 	public int getChannel() {
-		return this.channel;
+		return channel=channel;
 	}
 	public int getVolume() {
-		return this.volume;
+		return volume=volume;
 	}
 	public boolean getOnOff() {
-		return this.onOff;
+		return onOff=onOff;
 	}
 }

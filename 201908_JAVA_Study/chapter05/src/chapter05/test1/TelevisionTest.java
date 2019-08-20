@@ -1,18 +1,16 @@
 package chapter05.test1;
 
 public class TelevisionTest {
-
 	public static void main(String[] args) {
-		Television television=new Television();
-		television.setChannel(20);
-		television.setVolume(20);
-		television.setOnOff(true);
-		System.out.println("television.setChannel : "+television.getChannel());
-		System.out.println("television.setVolume : "+television.getVolume());
-		System.out.println("television.setOnOff : "+television.getOnOff());
+		Telelvision telelvision=new Telelvision();
+		telelvision.setChannel(20);
+		telelvision.setOnOff(true);
+		telelvision.setVolume(40);
+		System.out.println("telelvision.channel"+telelvision.getChannel());
+		System.out.println("telelvision.volume"+telelvision.getVolume());
+		System.out.println("telelvision.onOff"+telelvision.getOnOff());
 		
-		
+		//That's not good idea.
 		
 	}
-
 }

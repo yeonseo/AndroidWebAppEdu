@@ -11,8 +11,8 @@ public class Box {
 		this.width=0;
 	}
 	
-	public void setWidth(int width) {
-		this.width=width;
+	public void setWidth(int width/*this가 생략되어있음*/) {
+		this.width=width; //this는 이 클래스 안의 변수를 사용하겠다.
 	}
 	public void setLength(int length) {
 		this.length=length;
