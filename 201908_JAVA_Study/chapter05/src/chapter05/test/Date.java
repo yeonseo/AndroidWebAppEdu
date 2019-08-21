@@ -1,4 +1,4 @@
-package chapter05.test1;
+package chapter05.test;
 
 public class Date {
 	private int[] yearMounthDay=new int[3];
