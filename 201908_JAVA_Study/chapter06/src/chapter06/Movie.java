@@ -26,3 +26,12 @@ public class Movie {
 				", actors=" + Arrays.toString(actors) + "]";
 	}
 }
+
+//private String title; private String director; private String company;
+//
+//public Movie() {
+//	this.title=null; this.director=null; this.company=null;
+//}
+//public Movie(String movieName, String director, String company) {
+//	this.title=movieName; this.director=director; this.company=company;
+//}

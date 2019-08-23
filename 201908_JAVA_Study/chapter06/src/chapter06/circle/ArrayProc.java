@@ -18,7 +18,6 @@ public class ArrayProc {
 			System.out.print("입력 : ");
 			this.score[i]=scan.nextInt();
 		}
-		
 	}
 	public void getSum() {
 		for(int i=0; i<score.length ; i++) {

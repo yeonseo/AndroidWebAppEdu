@@ -11748,3 +11748,16 @@ java.net.SocketTimeoutException: Read timed out
 
 !ENTRY org.eclipse.help.base 2 0 2019-08-22 18:31:06.514
 !MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.sse.doc.user_1.2.0.v201903222120 [429]'. The index should be rebuilt with Lucene 8.0.0
+!SESSION 2019-08-23 08:49:07.556 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/nambbo/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/nambbo/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-08-23 08:49:12.721
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2019-08-23 08:49:12.743
+!MESSAGE Using Apache MINA sshd as ssh client.
