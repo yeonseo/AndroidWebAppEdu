@@ -1,8 +1,11 @@
 package chapter07.shape;
 
 public class Rectangle extends Shape{
-	private int width;
-	private int height;
+	private int width;	private int height;
+	public void draw() {
+		System.out.println("Rectangle Draw");
+	}
+	
 	public Rectangle() {
 		//super();
 		System.out.println("Rectangle()");
@@ -13,8 +16,6 @@ public class Rectangle extends Shape{
 		this.width = width;
 		this.height=height;
 	}
-	
-
 	double calcArea() {
 		return width * height;
 	}

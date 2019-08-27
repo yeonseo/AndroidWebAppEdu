@@ -1,14 +1,18 @@
 package chapter07.shape;
 
 public class Shape {
-	private int x;
-	private int y;
+	public int x;
+	public int y;
+	public void draw() {
+		System.out.println("Shape Draw");
+	}
 	public Shape() {
 		System.out.println("Shape()");
 	}
 	public Shape(int x, int y) {
-		System.out.println("Shape()");
 		this.x = x;
 		this.y = y;
+		//System.out.println("Shape()");
 	}
+	
 }

@@ -1,8 +1,8 @@
-package chapter07.problem;
+package chapter06;
 
 public class PointTest {
 	public static void main(String[] args) {
-		Point p = new Point(3,4);
+		Point2 p = new Point2(3,4);
 		p.printPoint();
 	}
 }

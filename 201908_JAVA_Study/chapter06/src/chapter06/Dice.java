@@ -1,4 +1,4 @@
-package chapter07.problem;
+package chapter06;
 
 public class Dice {
 	private int diceNum;

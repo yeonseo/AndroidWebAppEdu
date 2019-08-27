@@ -1,9 +1,9 @@
-package chapter07.problem;
+package chapter06;
 
-public class Point {
+public class Point2 {
 	private int x;	private int y;
 	
-	public Point(int x, int y) {
+	public Point2(int x, int y) {
 		this.x=x; this.y=y;
 	}
 	public void setPoint(int x, int y) {
