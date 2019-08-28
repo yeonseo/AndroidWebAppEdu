@@ -3,7 +3,7 @@ package chapter07.singleton;
 class SingleTon {
 	private int a = 10;
 	private String string = "과제하자.....";
-	//2.온통 아주 private로만 만드는구만... 로드될 때만 만들도록 자기객체를 가지고 있는 정적멤버변수 
+	//2.온통 아주 private로 만든다. 로드될 때만 만들도록 자기 객체를 가지고 있는 정적멤버변수를 선 
 	private static SingleTon single;
 	
 	//3.객체를 만든다. 블럭초기문을 이용해서 객채를 만드는 연습을 하도록 하자
@@ -21,7 +21,7 @@ class SingleTon {
 		return single;
 	}
 	public void print() {
-		System.out.println("와아... 과제할 시간이야.... 널 기다렸어...."+string);
+		System.out.println("공부할 시간이야.. :-) "+string);
 	}
 
 	public String getString() {

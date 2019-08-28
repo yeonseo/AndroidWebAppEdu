@@ -9,7 +9,7 @@ public class BombTest {
 			i.bomb();
 
 			if(i instanceof Building) {
-				((Building)i).bomb();
+				((Building)i).bomb();  //하향 형변
 			}
 			if(i instanceof Tree) {
 				((Tree)i).bomb();
