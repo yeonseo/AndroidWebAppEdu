@@ -1,7 +1,11 @@
 package chapter07.bombTest;
 
 public class Car extends Bomb{
-
+	
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public void bomb() {
 		System.out.println("자동차가 뻥뻥!!");

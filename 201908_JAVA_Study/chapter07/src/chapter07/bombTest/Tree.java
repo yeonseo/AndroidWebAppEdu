@@ -1,7 +1,11 @@
 package chapter07.bombTest;
 
 public class Tree extends Bomb{
-
+	
+	public Tree() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public void bomb() {
 		System.out.println("나무가 뻥뻥!!!");
