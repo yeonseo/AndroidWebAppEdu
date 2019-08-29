@@ -10,9 +10,10 @@ public class Rectangle extends Shape{
 	public void setHeight(int height) {this.height = height;}
 
 	double area() {
-		return (double)width * height;
+		return (double)width * height*0.5;
 	}
 	void draw() {
 		System.out.println("("+this.getX()+","+this.getY()+")"+" at "+"("+width+")"+height);
 	}
+	
 }

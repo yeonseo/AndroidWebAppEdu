@@ -3,6 +3,10 @@ package chapter07.shapereturn;
 public class RectangleTest {
 
 	public static void main(String[] args) {
+		Triangle t1 = new Triangle(1, 2, 10, 5);
+		System.out.println("Truangle length is "+t1.length(5, 6, 10));
+		System.out.println(t1.toString());
+		
 		Rectangle r1 = new Rectangle();
 		Rectangle r2 = new Rectangle();
 		

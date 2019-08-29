@@ -12,4 +12,16 @@ public class Costomer extends Person{
 		this.customerNo=customerNo;
 		this.customerMileage=customerMileage;
 	}
+	public int getCustomerNo() {
+		return customerNo;
+	}
+	public int getCustomerMileage() {
+		return customerMileage;
+	}
+	@Override
+	public String toString() {
+		return "Costomer [customerNo=" + customerNo + ", customerMileage=" + customerMileage + ", getName()="
+				+ getName() + ", getAddress()=" + getAddress() + ", getPhonNum()=" + getPhonNum() + "]";
+	}
+	
 }
