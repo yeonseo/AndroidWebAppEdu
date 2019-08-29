@@ -9,8 +9,8 @@ public class Circle {
 		this.radius=0.0;
 	}
 	public Circle(double radius, String color) {
-		this.color=radius;
-		this.radius=color;
+		this.color=color;
+		this.radius=radius;
 	}
 	public double getRadius() {
 		return radius;
