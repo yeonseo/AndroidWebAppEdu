@@ -1,6 +1,6 @@
 package chapter04;
 
-public class Problem19 {
+public class Problem19/*histogram*/ {
 	private static int[] arr = new int[10];
 
 	public static void pro19() {
@@ -18,10 +18,14 @@ public class Problem19 {
 	public static void printStar(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print((i * 10 + 1) + " - " + ((i + 1) * 10) + " : ");
-			for (int j = 0; j <= arr[i]; j++) {
+			for (int j = 0; j < arr[i]; j++) {
 				System.out.print("*");
 			}
 			System.out.println("");
 		}
+	}
+	
+	public static void main(String[] arge) {
+		pro19();
 	}
 }

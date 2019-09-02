@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/nambbo/Downloads/JAVA"/>
 		<item value="/Users/nambbo/Documents/GitHub/AndroidWebAppEdu/201908_JAVA_Study"/>
 		<item value="C:\Users\BOBBY\Dropbox\2. CODING STUDY\JAVA\game"/>
 	</list>
