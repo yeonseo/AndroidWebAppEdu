@@ -13,6 +13,7 @@ public class ShapeTest {
 		printLocation(s2);
 		printLocation(s3);
 		
+		Movable[] movable = {new Circle(), new Rectangle(), new Triangle()};
 	}
 }
 //public static void main(String[] args) {

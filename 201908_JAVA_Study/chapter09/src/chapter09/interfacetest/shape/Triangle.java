@@ -4,7 +4,7 @@ public class Triangle {
 	private double base;
 	private double height;
 	public double calcArea() {
-		return this.base*this.height;
+		return 0.5*this.base*this.height;
 	}
 	@Override
 	public String toString() {
