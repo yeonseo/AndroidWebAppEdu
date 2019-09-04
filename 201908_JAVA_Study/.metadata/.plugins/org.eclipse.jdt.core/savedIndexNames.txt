@@ -19,7 +19,6 @@ INDEX VERSION 1.131+/Users/nambbo/Documents/GitHub/AndroidWebAppEdu/201908_JAVA_
 2421475278.index
 1331281704.index
 1526473406.index
-3673047621.index
 3559401285.index
 1716388916.index
 3785393958.index
