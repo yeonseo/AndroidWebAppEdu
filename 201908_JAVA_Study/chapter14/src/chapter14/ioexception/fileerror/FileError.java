@@ -39,4 +39,19 @@ public class FileError {
 			}
 		}
 	}
+	
+	public void writelist2() throws IOException {
+		//data print to file
+		PrintWriter pw = null; //file open and will write
+		
+		pw = new PrintWriter(new FileWriter("outFile.txt"));
+		for(int i = 0 ; i <list.length ; i++) {
+			pw.println("array "+i+" : "+list[i]);
+		}
+			
+		if(pw != null) {
+			pw.close();
+			System.out.println("file creat!");
+		}
+	}
 }

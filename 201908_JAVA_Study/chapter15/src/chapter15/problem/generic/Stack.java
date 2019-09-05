@@ -1,4 +1,4 @@
-package chapter15.problem;
+package chapter15.problem.generic;
 
 public class Stack <T> {
 	private T[] stack;

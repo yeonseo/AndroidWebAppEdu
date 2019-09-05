@@ -1,4 +1,4 @@
-package chapter15.problem;
+package chapter15.problem.generic;
 
 import java.util.Arrays;
 

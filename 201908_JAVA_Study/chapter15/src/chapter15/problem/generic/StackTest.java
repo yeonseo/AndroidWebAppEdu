@@ -1,4 +1,4 @@
-package chapter15.problem;
+package chapter15.problem.generic;
 
 public class StackTest {
 	public static void main(String[] args) {
