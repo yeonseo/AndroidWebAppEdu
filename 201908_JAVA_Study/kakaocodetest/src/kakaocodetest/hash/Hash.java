@@ -30,15 +30,16 @@ public class Hash {
 */
 	class Solution {
 		public String solution(String[] participant, String[] completion) {
-	        int count=0;
+	        boolean check = false;
 	        String answer = "";
-	        for(String j : participant){
-	            for(String i : completion ){
-	                if(i==j){
-	                    j=j+"1"; count++; break;
+	        for(int i = 0 ; i < participant.length ; i++){
+                check = false;
+	            for(String j : completion ){
+	                if(participant[i]==j){
+	                    check=true; break;
 	                }
 	            }
-	            if(count == 0) answer=j;
+                if(check != true) return participant[i];
 	        }
 	        return answer;
 	    }
