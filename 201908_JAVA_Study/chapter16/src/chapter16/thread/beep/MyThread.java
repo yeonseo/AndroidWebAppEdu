@@ -1,4 +1,4 @@
-package chapter16.thread;
+package chapter16.thread.beep;
 
 public class MyThread extends Thread{
 	@Override
