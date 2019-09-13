@@ -9,7 +9,7 @@ public class Consumer implements Runnable {
 	}
 
 	@Override
-	public synchronized void run() {
+	public void run() {
 		for(int i=0; i<10 ;i++) {
 			String bread = buffer.getBread();
 			System.out.println("소비자가 "+bread+"를 겟!!!");
