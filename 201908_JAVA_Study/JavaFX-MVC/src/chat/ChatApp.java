@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 public class ChatApp extends Application {
 
-    private boolean isServer = false; //1. true(server open) 2. false(client open)
+    private boolean isServer =false; //1. true(server open) 2. false(client open)
 
     private TextArea messages = new TextArea();
     private NetworkConnection connection = isServer ? createServer() : createClient();
