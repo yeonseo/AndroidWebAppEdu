@@ -1,4 +1,4 @@
-package chapter17.problem;
+package chapter17.iostream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

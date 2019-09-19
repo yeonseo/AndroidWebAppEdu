@@ -127,7 +127,6 @@ public class StringToList {
 	}
 	public static void fileCat() throws IOException{		
 		FileInputStream fis1 = null;  FileInputStream fis2 = null;
-        FileOutputStream fos = null;
         
         try {
             fis1 = new FileInputStream("dataProblemInput.txt");
@@ -142,8 +141,10 @@ public class StringToList {
             			System.out.println("불일치~");
             			throw Exception;
             		}
-            		if(readData1==-1) break;
-            		fos.write(readData1);
+            		if(readData1==-1) {
+            			System.out.println("일치함미당!!!");
+            			break;
+            		}
             }           
         } catch (Exception e) { e.printStackTrace();
         }finally{
