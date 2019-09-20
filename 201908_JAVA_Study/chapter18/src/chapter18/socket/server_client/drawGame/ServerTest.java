@@ -1,4 +1,4 @@
-package chapter18.socket.server_client.game;
+package chapter18.socket.server_client.drawGame;
 
 import java.io.BufferedReader;
 import java.io.IOException;

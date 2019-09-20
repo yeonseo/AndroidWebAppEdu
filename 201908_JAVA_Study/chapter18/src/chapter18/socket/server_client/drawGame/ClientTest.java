@@ -1,4 +1,4 @@
-package chapter18.socket.server_client.game;
+package chapter18.socket.server_client.drawGame;
 
 import java.awt.BorderLayout;
 import java.awt.Font;

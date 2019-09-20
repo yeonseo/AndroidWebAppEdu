@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="683"/>
-		<item key="DIALOG_Y_ORIGIN" value="263"/>
+		<item key="DIALOG_X_ORIGIN" value="82"/>
+		<item key="DIALOG_Y_ORIGIN" value="144"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item key="dialogHeight" value="-1"/>
@@ -28,10 +28,12 @@
 		<item key="uncategorizedFilter" value="true"/>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 			<item value="org.eclipse.fx.ide"/>
+			<item value="org.eclipse.fx.ide/org.eclipse.fx.ide.clazz"/>
+			<item value="org.eclipse.xtend.ide.wizards"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">
@@ -44,5 +46,8 @@
 	<section name="PreferencesExportWizard">
 	</section>
 	<section name="EditorSelectionDialog">
+		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=""/>
+		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="/Applications/SceneBuilder.app"/>
 	</section>
 </section>

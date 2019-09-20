@@ -20,7 +20,7 @@ public class Client {
 
 			@Override
 			public void run() {
-			 try {
+			try {
 				 InputStream in = socket.getInputStream();
 				 byte[] buffer = new byte[512];
 				 int length = in.read(buffer);
