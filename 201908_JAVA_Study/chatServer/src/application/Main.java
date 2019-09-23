@@ -25,6 +25,7 @@ public class Main extends Application {
 	public static Vector<Client> clients = new Vector<Client>();
 	ServerSocket serverSocket;
 	
+	//Client submit threadPool(ExecutorService)
 	public void startServer(String IP, int port) {
 		try {
 			serverSocket = new ServerSocket();
@@ -36,10 +37,9 @@ public class Main extends Application {
 				stopServer();
 			}
 			return;
-		}
+		}//end of try/catch
 		
 		Runnable thread = new Runnable(){
-
 			@Override
 			public void run() {
 				while(true){
@@ -55,16 +55,15 @@ public class Main extends Application {
 							stopServer();
 						}
 						break;
-					}
-					
-				}
-				
-			}
-			
-		};
+					}//end of if/else
+				}//end of while
+			}//end of run()
+		};//end of thread
 		threadPool = Executors.newCachedThreadPool();
 		threadPool.submit(thread);
-	}
+	}//end of startServer
+	
+	
 	
 	public void stopServer() {
 		try {
@@ -78,12 +77,16 @@ public class Main extends Application {
 				serverSocket.close();
 			}
 			if(threadPool != null && !threadPool.isShutdown()) {
-				threadPool.isShutdown();
+				threadPool.shutdown();
 			}
 		}catch(Exception e) {
 			
 		}
 	}
+	
+	
+	
+	//server UI
 	@Override
 	public void start(Stage primaryStage) {
 		BorderPane root = new BorderPane();
@@ -99,7 +102,7 @@ public class Main extends Application {
 		BorderPane.setMargin(toggleButton, new Insets(1,0,0,0));
 		root.setBottom(toggleButton);
 		
-		String IP = "127.0.0.1";
+		String IP = "localhost";
 		int port = 9876;
 		
 		toggleButton.setOnAction(event ->{
@@ -109,7 +112,6 @@ public class Main extends Application {
 					String message = String.format("server start \n",IP, port);
 					textArea.appendText(message);
 					toggleButton.setText("exit");
-					
 				});
 			}else {
 				stopServer();
@@ -117,18 +119,19 @@ public class Main extends Application {
 					String message = String.format("server exit \n",IP, port);
 					textArea.appendText(message);
 					toggleButton.setText("start");
-					
-				});
-			}
-		});
-		
+				});//end of Platform.runLater
+			}//end of if/else
+		});//end of toggleButton
 		Scene scene = new Scene(root, 400, 400);
 		primaryStage.setTitle("Chat server");
 		primaryStage.setOnCloseRequest(event -> stopServer());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
-	}
+	}//end of start
+	
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);
