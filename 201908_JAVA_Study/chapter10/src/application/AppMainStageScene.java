@@ -5,6 +5,8 @@ import java.util.Observable;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -16,12 +18,14 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class AppMainStageScene extends Application{
+	public boolean fontValue = false;
+	public Label label = new Label();
+	public int width = 600;
+	public int space = 20;
+	public int fontSize = 50;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		int width = 300;
-		int space = 20;
-		int fontSize = 50;
-		
 		VBox root = new VBox();
 //		HBox root = new HBox();
 		root.setPrefWidth(width);
@@ -29,21 +33,50 @@ public class AppMainStageScene extends Application{
 		root.setAlignment(Pos.CENTER);
 		root.setSpacing(space);
 		
-		Label label = new Label();
-		label.setText("Hello, JavaFX");
-		label.setFont(new Font(fontSize));
-		
+
 		Button buttonOK = new Button();
 		buttonOK.setText("OK");
 		Button buttonA = new Button();
-		buttonA.setText("A");
+		buttonA.setText("Exit");
 		
 		
+//		/*람다*/
+//		buttonOK.setOnAction((event)-> {
+//				if(fontValue) {
+//					label.setText("HELLO");
+//					label.setFont(new Font(30));
+//				}
+//				else {
+//					label.setText("Hello, JavaFX");
+//					label.setFont(new Font(fontSize));
+//				}
+//				fontValue=!fontValue;
+//		});
 		
-		/*람다*/
-//		buttonOK.setOnAction(event->Platform.exit());
-		buttonOK.setOnAction((e)->Platform.exit());
-		
+//		/*임시객체*/
+		buttonOK.setOnAction(new EventHandler<ActionEvent>() {
+			
+			@Override
+			public void handle(ActionEvent event) {
+				if(fontValue) {
+					label.setText("HELLO");
+					label.setFont(new Font(30));
+					}
+					else {
+						label.setText("Hello, JavaFX");
+						label.setFont(new Font(fontSize));
+					}
+				fontValue=!fontValue;
+			}
+		});
+	
+		/*함수식*/
+		buttonOK.setOnAction((event)-> {
+			handlerAction(event);
+		});
+
+		buttonA.setOnAction((e)->Platform.exit());
+
 //		root.getChildren().add(label);
 //		root.getChildren().add(buttonOK);
 //		root.getChildren().add(buttonA);
@@ -62,7 +95,21 @@ public class AppMainStageScene extends Application{
 		
 	}
 	
+	private void handlerAction(ActionEvent event) {
+		if(fontValue) {
+		label.setText("HELLO");
+		label.setFont(new Font(30));
+		}
+		else {
+			label.setText("Hello, JavaFX");
+			label.setFont(new Font(fontSize));
+		}
+		fontValue=!fontValue;
+		
+	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 }
