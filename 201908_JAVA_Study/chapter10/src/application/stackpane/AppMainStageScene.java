@@ -1,4 +1,4 @@
-package application.tilepane;
+package application.stackpane;
 
 import java.util.Observable;
 

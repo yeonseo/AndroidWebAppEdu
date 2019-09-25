@@ -2,5 +2,7 @@
 <typeInfoHistroy>
 <typeInfo handle="=chapter15/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_221.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Comparable.class[Comparable" modifiers="1537" timestamp="1562241555000"/>
 <typeInfo handle="=chapter16/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_221.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1562241555000"/>
+<typeInfo handle="=chapter10/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_221.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;javax.naming.spi(InitialContextFactory.class[InitialContextFactory" modifiers="1537" timestamp="1562241555000"/>
 <typeInfo handle="=chapter10/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_221.jdk\/Contents\/Home\/jre\/lib\/ext\/jfxrt.jar&lt;javafx.application(Application.class[Application" modifiers="1057" timestamp="1560337578000"/>
+<typeInfo handle="=chapter10/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_221.jdk\/Contents\/Home\/jre\/lib\/ext\/jfxrt.jar&lt;javafx.fxml(Initializable.class[Initializable" modifiers="1537" timestamp="1560337578000"/>
 </typeInfoHistroy>

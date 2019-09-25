@@ -1,4 +1,4 @@
-package application.borderpane;
+package application.flowpane;
 
 import java.util.Observable;
 

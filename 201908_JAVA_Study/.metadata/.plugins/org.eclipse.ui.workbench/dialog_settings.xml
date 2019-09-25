@@ -28,12 +28,11 @@
 		<item key="uncategorizedFilter" value="true"/>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.fxml.wizard1"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 			<item value="org.eclipse.fx.ide"/>
 			<item value="org.eclipse.fx.ide/org.eclipse.fx.ide.clazz"/>
-			<item value="org.eclipse.xtend.ide.wizards"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">
@@ -48,7 +47,7 @@
 	<section name="EditorSelectionDialog">
 		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=""/>
 		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="/Applications/SceneBuilder.app"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="SceneBuilder"/>
 	</section>
 	<section name="FileExtensionDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="51"/>

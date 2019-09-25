@@ -17,7 +17,7 @@ public class RootController implements Initializable {
 	@FXML Button button3;
 	
 	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	public void initialize(URL args, ResourceBundle resources) {
 		/*임시객체*/
 		button1.setOnAction(new EventHandler<ActionEvent>() {
 			
