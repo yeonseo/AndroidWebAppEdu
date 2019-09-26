@@ -35,13 +35,13 @@
             </Separator>
             <VBox prefHeight="130.0" prefWidth="133.0" spacing="10.0">
                <children>
-                  <RadioButton fx:id="rdoBubble" mnemonicParsing="false" text="Bubble Chart" userData="Bubble Chart">
+                  <RadioButton fx:id="rdoBubble" mnemonicParsing="false" text="Bubble Chart" userData="bubbleChart" onAction="#handlerRadioButtonAction">
                      <toggleGroup>
                         <ToggleGroup fx:id="group" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="rdoBar" mnemonicParsing="false" text="Bar Chart" toggleGroup="$group" userData="Bar Chart"/>
-                  <RadioButton fx:id="rdoArea" mnemonicParsing="false" text="Area Chart" toggleGroup="$group" userData="Area Chart"/>
+                  <RadioButton fx:id="rdoBar" mnemonicParsing="false" text="Bar Chart" toggleGroup="$group" userData="barChart" onAction="#handlerRadioButtonAction"/>
+                  <RadioButton fx:id="rdoArea" mnemonicParsing="false" text="Area Chart" toggleGroup="$group" userData="areaChart" onAction="#handlerRadioButtonAction"/>
                </children>
             </VBox>
             <ImageView fx:id="imgGraph" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
