@@ -1,7 +1,5 @@
 package application.draw;
 
-import java.util.HashMap;
-
 public class VertexClass {
 	double x; double y;
 	boolean draw;

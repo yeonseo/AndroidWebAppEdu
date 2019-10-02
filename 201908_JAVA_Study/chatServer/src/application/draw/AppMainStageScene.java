@@ -34,17 +34,4 @@ public class AppMainStageScene extends Application{
 	}
 }
 
-//class DrawCanvas extends Canvas{
-//	 ArrayList<VertexClass> arPt;
-//	 DrawCanvas(ArrayList<VertexClass> arPt) {
-//           this.arPt = arPt;
-//    }
-//	 
-//	 public void paint(Line g) {
-//		 for (int i = 0 ; i < arPt.size() - 1; i++) {
-//			 if (arPt.get(i + 1).draw) {
-//				 g = new Line(arPt.get(i).x, arPt.get(i).y, arPt.get(i+1).x, arPt.get(i+1).y);
-//			 }
-//		 }
-//	 }
-//}
+
