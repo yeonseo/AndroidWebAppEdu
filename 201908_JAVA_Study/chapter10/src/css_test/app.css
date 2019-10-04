@@ -1,0 +1,80 @@
+Button {
+	-fx-background-color : lightgray;
+ 	-fx-text-fill: #000000; 
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+Button:hover {
+	-fx-background-color : gray;
+ 	-fx-text-fill: #000000; 
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+Button:pressed {
+	-fx-background-color : skyblue;
+ 	-fx-text-fill: #000000; 
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+
+TextField {
+	-fx-background-color : lightgray;
+	-fx-border-color : gray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+
+TextField:focused {
+	-fx-background-color : white;
+	-fx-border-color : lightblue;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+TextField:hover {
+	-fx-background-color : whitesmoke;
+	-fx-border-color : lightgray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox1 {
+	-fx-background-color : whitesmoke;
+	-fx-border-color : lightgray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox2 {
+	-fx-background-color : linear-gradient(to right, #000000, #ffffff);
+	-fx-border-color : lightgray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox3 {
+	-fx-background-color : radial-gradient(center 5% 5% ,radius 80%, #ffffff,#000000);
+	-fx-border-color : lightgray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox4 {
+	-fx-background-image : url("images/icon.gif");
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox5 {
+	-fx-background-image : url("images/icon.gif");
+	-fx-background-repeat: no-repeat;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox6 {
+	-fx-background-image : url("images/icon.gif");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}
+#vBox1 {
+	-fx-background-color : whitesmoke;
+	-fx-border-color : lightgray;
+	-fx-padding: 10; 
+	-fx-font-size: 15;
+}

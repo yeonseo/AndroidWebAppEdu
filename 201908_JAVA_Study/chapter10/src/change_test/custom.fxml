@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancCustom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="change_test.RootControllerCustom">
+   <children>
+      <VBox alignment="CENTER" layoutX="36.0" layoutY="51.0" prefHeight="180.0" prefWidth="329.0">
+         <children>
+            <Label text="시험점수를 입력하시오">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
+               <children>
+                  <Label text="국어" />
+                  <TextField id="textFieldKorean" fx:id="textFieldKorean" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
+               <children>
+                  <Label text="영어" />
+                  <TextField id="textFieldEnglish" fx:id="textFieldEnglish" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
+               <children>
+                  <Label text="수학" />
+                  <TextField id="textFieldMath" fx:id="textFieldMath" />
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="242.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="총합" />
+                        <TextField id="textFieldSum" fx:id="textFieldSum" prefHeight="27.0" prefWidth="73.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="평균" />
+                        <TextField id="textFieldAvg" fx:id="textFieldAvg" prefHeight="27.0" prefWidth="74.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="330.0" layoutY="51.0" prefHeight="180.0" prefWidth="156.0" spacing="20.0">
+         <children>
+            <Button id="buttonMain" fx:id="buttonMain" mnemonicParsing="false" text="Main" />
+            <Button id="buttonOK" fx:id="buttonOK" mnemonicParsing="false" text="확인" />
+            <Button id="ButtonCancle" fx:id="buttonClear" mnemonicParsing="false" text="취소" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
