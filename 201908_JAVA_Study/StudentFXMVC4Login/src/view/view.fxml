@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.RootController" prefHeight="300" prefWidth="850"> 
+	<HBox>
+		<children>
+			<VBox>
+				<padding>
+					<Insets top="10" right="20" bottom="10" left="20" />
+				</padding>
+				<spacing>10</spacing>
+				<children>
+					<HBox>    <!-- HBox 컨테이너 선언 -->
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="성 적 입 력" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="성명 : " />
+						   <TextField fx:id="txtName" prefWidth="70"  />
+							<Label text="학년:" />
+						    <TextField fx:id="txtLevel" prefWidth="40" />
+							<Label text="반:" />
+						    <TextField fx:id="txtBan" prefWidth="30" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="국어 : " />
+							<TextField fx:id="txtKo" prefWidth="70" />
+							<Label text="영어 : " />
+						     <TextField fx:id="txtEng" prefWidth="70" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="수학 : " />
+						     <TextField fx:id="txtMath" prefWidth="70" />
+							<Label text="과학 : " />
+							<TextField fx:id="txtSic" prefWidth="70" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="사회 : " />
+						     <TextField fx:id="txtSoc" prefWidth="70" />
+							<Label text="음악 : " />
+						    <TextField fx:id="txtMusic" prefWidth="70" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+						<Label text="------------------------------------" />
+						</children>
+					</HBox>
+					<HBox> 	<!-- HBox 컨테이너 선언 -->
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="성 적 출 력" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Label text="총점 : " />
+						     <TextField fx:id="txtTotal" prefWidth="70" />
+							<Label text="평균 : " />
+						     <TextField fx:id="txtAvg" prefWidth="70" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+						 <Label text="------------------------------------" />
+						</children>
+					</HBox>
+					<HBox alignment="center">
+						<spacing>10</spacing>
+						<children>	<!-- 자식 컨트롤 추가 -->
+							<Button fx:id="btnTotal" onAction="#handlerBtnAvgActoion">총 점</Button>
+							<Button fx:id="btnAvg">평 균</Button>
+							<Button fx:id="btnInit">초기화</Button>
+							<Button fx:id="btnOk">등 록</Button>
+							<Button fx:id="btnExit">종 료</Button>
+						</children>
+					</HBox>
+				</children>
+			</VBox>
+			
+			<VBox>
+				<padding>
+					<Insets top="10" right="10" bottom="20" left="10" />
+				</padding>
+				<Label text="성적 테이블" />
+				<TableView fx:id="tableView" prefHeight="270" prefWidth="510">
+				</TableView>
+			</VBox>
+		</children>
+	</HBox>
+</AnchorPane>
