@@ -131,7 +131,17 @@ public class RootController implements Initializable {
                 
                 // 확인 버튼 이벤트 설정(람다식)
 		btnOk.setOnAction(event -> {
-			data.add(new Student(txtName.getText(), txtLevel.getText(), txtBan.getText(), txtKo.getText(), txtEng.getText(), txtMath.getText(), txtSic.getText(), txtSoc.getText(), txtMusic.getText(), txtTotal.getText(), txtAvg.getText()));
+			try {
+				if(txtTotal.getText().equals("")||txtAvg.getText().equals("")) {
+					throw new Exception();
+				} else {
+					data.add(new Student(txtName.getText(), txtLevel.getText(), txtBan.getText(), txtKo.getText(), txtEng.getText(), txtMath.getText(), txtSic.getText(), txtSoc.getText(), txtMusic.getText(), txtTotal.getText(), txtAvg.getText()));
+				}
+				
+			}catch (Exception e0) {
+				System.out.println("입력값을 확인 해 주세요.");
+				return;
+			}			
 			txtName.setEditable(true);
 			txtLevel.setEditable(true);
 			txtBan.setEditable(true);
