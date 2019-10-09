@@ -63,7 +63,7 @@ class DrawCanvas extends Canvas{
 		g.setStroke(Color.RED);
 		
 		 for (int i = 0 ; i < arPt.size() - 1; i++) {
-			 if (arPt.get(i + 1).draw) {
+			 if (arPt.get(i).draw) {
 				 g.strokeLine(arPt.get(i).x, arPt.get(i).y, arPt.get(i+1).x, arPt.get(i+1).y);
 //				 System.out.println(arPt.get(i).x+" "+arPt.get(i).y+" "+arPt.get(i+1).x+" "+arPt.get(i+1).y);
 			 }
