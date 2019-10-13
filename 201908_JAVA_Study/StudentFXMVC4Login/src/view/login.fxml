@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
@@ -7,12 +8,12 @@
 <?import java.lang.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 
+
 <AnchorPane prefHeight="310.0" prefWidth="400.0"
-	xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
 	<VBox alignment="CENTER">
 		<padding>
 			<Insets top="20" right="10" bottom="20" left="10" />
@@ -21,9 +22,9 @@
 		<children>
 			<Label text="로 그 인" />
 			<HBox alignment="CENTER">
-				<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+				<ImageView fitHeight="200.0"  fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
 					<image>
-						<Image url="@../images/cat.jpeg" />
+						<Image url="images/image01.jpg" />
 					</image>
 				</ImageView>
 			</HBox>
@@ -47,3 +48,5 @@
 		</children>
 	</VBox>
 </AnchorPane>
+
+

@@ -14,9 +14,9 @@
 		<GridPane hgap="10.0" vgap="10.0">
 			<children>
 				<Label text="이름 : " prefWidth="50" />
-				<Label text="학년 : " prefWidth="50" GridPane.rowIndex="1"/>
-				<Label text="반 : " prefWidth="50" GridPane.rowIndex="2"/>
-				<Label text="성별 : " prefWidth="50" GridPane.rowIndex="3"/>
+				<Label text="학년 : " prefWidth="50" GridPane.rowIndex="1" />
+				<Label text="반 : " prefWidth="50" GridPane.rowIndex="2" />
+				<Label text="성별 : " prefWidth="50" GridPane.rowIndex="3" />
 				<Label text="국어 : " prefWidth="50" GridPane.rowIndex="4" />
 				<Label text="영어 : " prefWidth="50" GridPane.rowIndex="5" />
 				<Label text="수학 : " prefWidth="50" GridPane.rowIndex="6" />
@@ -59,7 +59,7 @@
 				<Insets top="20.0" bottom="10" />
 			</BorderPane.margin>
 			<children>
-			    <Button id="btnCal" text="계산" />
+				<Button id="btnCal" text="계산" />
 				<Button id="btnFormAdd" text="저장" />
 				<Button id="btnFormCancel" text="취소" />
 			</children>

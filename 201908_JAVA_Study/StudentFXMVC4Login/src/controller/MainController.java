@@ -1,9 +1,8 @@
-package controller;
+package Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,51 +12,49 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 
 public class MainController implements Initializable {
-	
+	@FXML private TextField txtName;
 	@FXML private Button btnInsert;
 	@FXML private Button btnDelete;
-	@FXML private Button btnOk;
 	@FXML private Button btnEnd;
-	@FXML private TextField txtName;
-
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		btnOk.setOnAction(event -> handlerBtnOkActoion(event));
-		btnDelete.setOnAction(event -> handlerBtnDeleteActoion(event));
-		btnInsert.setOnAction(event -> handlerBtnInsertActoion(event));
-		btnEnd.setOnAction(event -> handlerBtnEndActoion(event));
-	}
-
-	public void handlerBtnInsertActoion(ActionEvent event) {
-		alertDispaly(5, "Ï≤´ Î≤àÏß∏ ÌÉ≠ Î≤ÑÌäº", "Ï≤´ Î≤àÏß∏ ÌÉ≠ÏûÖÎãàÎã§.", "Ïù¥Î¶ÑÏùÄ" + txtName.getText()+ " ÏûÖÎãàÎã§.");
-	}
-
-	public void handlerBtnEndActoion(ActionEvent event) {
-		Platform.exit();
-	}
-
-	public void handlerBtnDeleteActoion(ActionEvent event) {
-		txtName.clear();
-		alertDispaly(5, "Ï≤´ Î≤àÏß∏ ÌÉ≠ Î≤ÑÌäº", "Ï≤´ Î≤àÏß∏ ÌÉ≠ÏûÖÎãàÎã§.", "ÏõêÌïòÎäî ÎÇ¥Ïö©ÏúºÎ°ú Ï±ÑÏö∞ÏÑ∏Ïöî \n ÏÇ¨Ïö©Í∞ÄÎä•Ìï©ÎãàÎã§..");
-	}
-
-	public void handlerBtnOkActoion(ActionEvent event) {
-		alertDispaly(5, "Îëê Î≤àÏß∏ ÌÉ≠ Î≤ÑÌäº", "Îëê Î≤àÏß∏ ÌÉ≠ÏûÖÎãàÎã§.", "ÏõêÌïòÎäî ÎÇ¥Ïö©ÏúºÎ°ú Ï±ÑÏö∞ÏÑ∏Ïöî \n ÏÇ¨Ïö©Í∞ÄÎä•Ìï©ÎãàÎã§..");
-	}
+	@FXML private Button btnOk;
 	
-	private void alertDispaly(int type, String title, String headerText, String contentTezxt) {
-		Alert alert=null; // warning, information, confirmation ÏùÑ ÏÇ¨Ïö©Ìï† Ïàò ÏûàÎã§.
-		switch(type) {
-		case 1 : alert = new Alert(AlertType.WARNING); break;
-		case 2 : alert = new Alert(AlertType.CONFIRMATION); break;
-		case 3 : alert = new Alert(AlertType.ERROR); break;
-		case 4 : alert = new Alert(AlertType.NONE); break;
-		case 5 : alert = new Alert(AlertType.INFORMATION); break;
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		btnInsert.setOnAction(e->{ handlerBtnInsertAction(e); });
+		btnEnd.setOnAction(e->{ handlerBtnEndAction(e); });
+		btnDelete.setOnAction(e->{ handlerBtnDeleteAction(e); });
+		btnOk.setOnAction(e->{ handlerBtnOkAction(e); });
+	}
+	public void handlerBtnInsertAction(ActionEvent e) {
+		alertDisplay(5,"ª¿‘¡§∫∏","ª¿‘¡§∫∏", txtName.getText()+"¥‘ π›∞©Ω¿¥œ¥Ÿ!" );
+		
+	}
+	public void handlerBtnEndAction(ActionEvent e) {
+		alertDisplay(5,"¡æ∑·","¡æ∑·", txtName.getText()+"¥‘ æ»≥Á»˜∞°ººø‰!" );
+		
+	}
+	public void handlerBtnDeleteAction(ActionEvent e) {
+		alertDisplay(5,"ªË¡¶","ªË¡¶", txtName.getText()+"¥‘ ¡¶∞≈«ﬂΩ¿¥œ¥Ÿ!" );	
+	}
+	public void handlerBtnOkAction(ActionEvent e) {
+		alertDisplay(5,"»Æ¿Œ","»Æ¿Œ", txtName.getText()+"¥‘ »Æ¿Œ«ﬂΩ¿¥œ¥Ÿ!" );	
+		
+	}
+	//∞Ê∞Ì√¢	
+	public void alertDisplay(int type, String title, String headerText, String contentText) {
+		Alert alert=null;
+		switch (type) {
+		case 1:  alert=new Alert(AlertType.WARNING); break;
+		case 2 : alert=new Alert(AlertType.CONFIRMATION); break;
+		case 3:  alert=new Alert(AlertType.ERROR); break;
+		case 4:  alert=new Alert(AlertType.NONE); break;
+		case 5:  alert=new Alert(AlertType.INFORMATION); break;
 		}
 		alert.setTitle(title);
 		alert.setHeaderText(headerText);
-		alert.setContentText(contentTezxt);
+		alert.setContentText(headerText+"\n"+contentText);
 		alert.setResizable(false);
-		alert.showAndWait();		
-	}	
+		alert.showAndWait();
+		
+	}
 }

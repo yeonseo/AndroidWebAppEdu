@@ -15,8 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 
+
 <TabPane prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE"
-	xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
 	<tabs>
 		<Tab text="첫번째 ">
 			<content>
@@ -25,7 +26,7 @@
 						<Label text="이름" layoutX="100.0" layoutY="200.0" textFill="RED" />
 						<TextField fx:id="txtName" layoutX="140.0" layoutY="200.0" />
 						<Button fx:id="btnInsert" layoutX="300.0" layoutY="400.0" text="등록" />
-						<Button fx:id="btnDelete" layoutX="450.0" layoutY="400.0" text="삭제" />
+						<Button fx:id="btnDelete" layoutX="450.0" layoutY="500.0" text="삭제" />
 						<Button fx:id="btnEnd" layoutX="320.0" layoutY="550.0" prefHeight="50.0" prefWidth="90.0" text="종료" />
 					</children>
 				</AnchorPane>
@@ -42,4 +43,5 @@
 		</Tab>
 	</tabs>
 </TabPane>
+
 

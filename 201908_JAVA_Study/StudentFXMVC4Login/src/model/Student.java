@@ -1,10 +1,11 @@
 package model;
 
 public class Student {
+	private String no;
 	private String name;
 	private String level;
-	private String gender;
 	private String ban;
+	private String gender;
 	private String korean;
 	private String english;
 	private String math;
@@ -13,13 +14,15 @@ public class Student {
 	private String music;
 	private String total;
 	private String avg;
-
+	
 	public Student() {
+		super();
 	}
 
-	public Student(String name, String level, String ban, String gender, String korean
-			, String english, String math, String sic, String soc
-			, String music, String total, String avg) {
+	public Student(String no,String name, String level, String ban, String gender, String korean, String english, String math, String sic,
+			String soc, String music, String total, String avg) {
+		super();
+		this.no = no;
 		this.name = name;
 		this.level = level;
 		this.ban = ban;
@@ -50,14 +53,6 @@ public class Student {
 		this.level = level;
 	}
 
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String genderGroup) {
-		this.gender = genderGroup;
-	}
-
 	public String getBan() {
 		return ban;
 	}
@@ -66,6 +61,13 @@ public class Student {
 		this.ban = ban;
 	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}	
 	public String getKorean() {
 		return korean;
 	}
@@ -129,5 +131,16 @@ public class Student {
 	public void setAvg(String avg) {
 		this.avg = avg;
 	}
+
+	public String getNo() {
+		return no;
+	}
+
+	public void setNo(String no) {
+		this.no = no;
+	}
+
+	
+	
 	
 }

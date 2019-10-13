@@ -1,14 +1,14 @@
-package controller;
+package Controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.ParsePosition;
 import java.time.LocalDate;
-import java.util.Observable;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import model.Student;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,7 +23,6 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -33,171 +32,303 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.Student;
+import model.StudentVO;
 
 public class RootController implements Initializable {
-	@FXML private TableView<Student> tableView = new TableView<>();
-	@FXML private TextField txtName;
-	@FXML private ComboBox<String> cbYear;
-	@FXML private TextField txtBan;
-	@FXML private ToggleGroup genderGroup;
-	
-	@FXML private RadioButton rbMale;
-	@FXML private RadioButton rbFemale;
-	
-	@FXML private Button btnTotal;
-	@FXML private Button btnAvg;
-	@FXML private Button btnInit;
-	@FXML private Button btnOk;
-	@FXML private Button btnExit;
-	@FXML private Button btnEdit;
-	@FXML private Button btnDelete;
-	@FXML private Button btnSearch;
-	@FXML private Button btnBarChart;
-	
-	@FXML private TextField txtKo;
-	@FXML private TextField txtEng;
-	@FXML private TextField txtMath;
-	@FXML private TextField txtSic;
-	@FXML private TextField txtSoc;
-	@FXML private TextField txtMusic;
-	
-	@FXML private TextField txtTotal;
-	@FXML private TextField txtAvg;
-	@FXML private TextField txtSearch;
-	
-	@FXML private DatePicker dpDate;
 
-	Student student = new Student();
-	
-	ObservableList<Student> data = FXCollections.observableArrayList();
-	ObservableList<Student> selectStudent; // 테이블에서 선택한 정보 저장
-	boolean editDelete = false; // 수정할 때 확인 버튼 상태 설정
-	boolean editButton = false;
-	int selectedIndex; // 테이블에서 선택한 학생 정보 인덱스 저장
+	@FXML
+	private TextField txtName;
+	@FXML
+	private ComboBox<String> cbYear;
+	@FXML
+	private ToggleGroup genderGroup;
+	@FXML
+	private RadioButton rbMale;
+	@FXML
+	private RadioButton rbFemale;
+//	@FXML private TextField txtLevel;
+	@FXML
+	private TextField txtBan;
+	@FXML
+	private TextField txtKo;
+	@FXML
+	private TextField txtEng;
+	@FXML
+	private TextField txtMath;
+	@FXML
+	private TextField txtSic;
+	@FXML
+	private TextField txtSoc;
+	@FXML
+	private TextField txtMusic;
+	@FXML
+	private TextField txtTotal;
+	@FXML
+	private TextField txtAvg;
+	@FXML
+	private Button btnTotal;
+	@FXML
+	private Button btnAvg;
+	@FXML
+	private Button btnInit;
+	@FXML
+	private Button btnOk;
+	@FXML
+	private Button btnExit;
+	@FXML
+	private Button btnTotalList;
+
+	// �˻���� �߰�
+	@FXML
+	private TextField txtSearch;
+	@FXML
+	private Button btnSearch;
+	// ����,������ư �߰�
+	@FXML
+	private Button btnDelete;
+	@FXML
+	private Button btnEdit;
+	// �����Ҷ��� ��ư ����
+	private boolean editDelete = false;
+	// ��íƮ ��ư ����
+	@FXML
+	private Button btnBarChart;
+	@FXML
+	private HBox imageBox;
+	@FXML
+	private Button btnImageFile;
+	@FXML
+	private DatePicker dpDate;
+	@FXML
+	private TextField txtDay;
+	@FXML
+	private ImageView imageView;
+
+	// ���̺� �並 ���������� ��ġ ���� ��ü���� ������ �� �ִ� ������ ����.
+	private int selectedIndex; // ��ġ��
+	private ObservableList<StudentVO> selectStudent; // ��ü��
+	@FXML
+	private TableView<StudentVO> tableView;
+	ObservableList<StudentVO> data; // ���̺�信 �����ֱ����ؼ� ����� ����Ÿ.
+	private StudentDAO studentDAO;
+
+	private String selectFileName = ""; // 이미지 파일명
+	private String localUrl = ""; // 이미지 파일 경로
+	private Image localImage;
+	private File selectedFile = null;
+
+	// 이미지 처리
+	// 이미지 저장할 폴더를 매개변수로 파일 객체 생성
+	private File dirSave = new File("/Users/nambbo/Documents/images");
+	// 이미지 불러올 파일을 저장할 파일 객체 선언
+	private File file = null;
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL location, ResourceBundle resources) {
 
-		txtTotal.setEditable(false);
-		txtAvg.setEditable(false);
-		btnAvg.setDisable(true);
-		btnOk.setDisable(true);
-		btnEdit.setDisable(true);
-		btnDelete.setDisable(true);
-		dpDate.setValue(LocalDate.now());
-		
-		
-		
-		
-		//숫자만 입력하도록 한
+		// 1.��ư �ʱ�ȭ(����, �ʱ�ȭ,���� <->���x,���x) ��������ؽ�Ʈx, ��հ�� �ؽ�Ʈx
+		buttonInitSetting(false, true, false, true, false, true, true);
+		// 1.2 �޺��ڽ� �ʱ�ȭ
+		cbYear.setItems(FXCollections.observableArrayList("1", "2", "3", "4", "5", "6"));
+		// 2.���̺������(���������˼��� ����)
+		tableViewSetting();
+		// 3.������ư�� �������� ��չ�ư Ȱ��ȭ �� 6���� ������ ���ϰ� �����ʵ忡 ������´�.
+		btnTotal.setOnAction(e -> {
+			handlerBtnTotalAction(e);
+		});
+		// 4.��չ�ư�� �������� ������ư��Ȱ��,��չ�ư��Ȱ��,���Ȱ��ȭ,����ؽ�Ʈ �ʵ� ��Ȱ��ȭ
+		btnAvg.setOnAction(e -> {
+			handlerBtnAvgActoion(e);
+		});
+		// 5.����� ������ �ʱ�ȭ ��ư �������� 1�� ��ư�ʱ�ȭ��,�ؽ�Ʈ�ʵ带 ��� Ȱ��ȭ,
+		btnInit.setOnAction(e -> {
+			handlerBtnInitActoion(e);
+		});
+		// 6.��Ϲ�ư�� �������� ���̺� ����ϰ�, ��簪�� �ʱ�ȭ�Ѵ�.
+		btnOk.setOnAction(e -> {
+			handlerBtnOkActoion(e);
+		});
+		// 7.�˻���ư�� �������� ���̺�信�� ã����
+		btnSearch.setOnAction(e -> {
+			handlerBtnSearchActoion(e);
+		});
+		// 8.������ư �������� ���̺� �信�� �������
+		btnDelete.setOnAction(e -> {
+			handlerBtnDeleteActoion(e);
+		});
+		// 9.���̺�並 �������� �߻��Ǵ� �̺�Ʈ ó�����
+		tableView.setOnMousePressed(e -> {
+			handlerTableViewPressedActoion(e);
+		});
+		// 10. ������ư�� �������� �̺�Ʈ ó�����
+		btnEdit.setOnAction(e -> {
+			handlerBtnEditActoion(e);
+		});
+		// 11.�����ư
+		btnExit.setOnAction(e -> {
+			Platform.exit();
+		});
+		// 12.테이블뷰 마우스를 더블클릭시 선택된 내용을 중심으로 파이차트
+		tableView.setOnMouseClicked(e -> {
+			handlerPieChartActoion(e);
+		});
+		// 13.바차트 처리
+		btnBarChart.setOnAction(e -> {
+			handlerBtnBarChartAction(e);
+		});
+		// 14. 학생 전체 정보
+		// 14.테이블 뷰에 데이타베이스값을 읽어서 테이블뷰에 가져온다.
+		totalList();
+		// 15.전체 리스트를 누르면 데이터베이스값가져오기
+		btnTotalList.setOnAction(e -> {
+			handlerBtnTotalListAction(e);
+		});
+		// 17.날짜 선택
+		dpDate.setOnAction(e -> {
+			handlerDatePickerAction(e);
+		});
+		// 18. 이미지 버튼선택창.
+		btnImageFile.setOnAction(event -> handlerBtnImageFileActoion(event)); // 이미지선택창
+
+		imageViewInit();
+
+		// 디버깅을 위한 테스트
+		txtName.setText("남연");
+		cbYear.setValue("3");
+//		txtLevel.setText("3");
+		txtBan.setText("5");
+		rbFemale.setSelected(true);
+		txtKo.setText("50");
+		txtEng.setText("60");
+		txtMath.setText("70");
+		txtSic.setText("80");
+		txtSoc.setText("90");
+		txtMusic.setText("80");
+	}
+
+	public void tableViewSetting() {
+		// 2.���̺� ���� ���̸���Ʈ ����
+		data = FXCollections.observableArrayList();
+
+		// 2-1���̺� ���� ���̺�並 �������ϰ� ����
+		tableView.setEditable(false);
+
+		// 2-2 ���̺�信 ���ڸ� �Է��ϵ��� ����
 		DecimalFormat format = new DecimalFormat("###");
-		
-		
-		//점수 입력시 길이제한 이벤트 처리
+		// ���� �Է½� ���� ���� �̺�Ʈ ó��
 		txtKo.setTextFormatter(new TextFormatter<>(event -> {
-			if(event.getControlNewText().isEmpty()) {
+			if (event.getControlNewText().isEmpty()) {
 				return event;
 			}
 			ParsePosition parsePosition = new ParsePosition(0);
 			Object object = format.parse(event.getControlNewText(), parsePosition);
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length() ||
-					 event.getControlNewText().length() == 4) {
-				return null;
-			} else {
-				return event;
-			}
-		}));
-		
-		txtEng.setTextFormatter(new TextFormatter<>(event -> {
-			if(event.getControlNewText().isEmpty()) {
-				return event;
-			}
-			ParsePosition parsePosition = new ParsePosition(0);
-			Object object = format.parse(event.getControlNewText(), parsePosition);
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length() ||
-					 event.getControlNewText().length() == 4) {
-				return null;
-			} else {
-				return event;
-			}
-		}));
-		
-		txtMath.setTextFormatter(new TextFormatter<>(event -> {
-			if(event.getControlNewText().isEmpty()) {
-				return event;
-			}
-			ParsePosition parsePosition = new ParsePosition(0);
-			Object object = format.parse(event.getControlNewText(), parsePosition);
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length() ||
-					 event.getControlNewText().length() == 4) {
-				return null;
-			} else {
-				return event;
-			}
-		}));
-		
-		txtSic.setTextFormatter(new TextFormatter<>(event -> {
-			if(event.getControlNewText().isEmpty()) {
-				return event;
-			}
-			ParsePosition parsePosition = new ParsePosition(0);
-			Object object = format.parse(event.getControlNewText(), parsePosition);
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length() ||
-					 event.getControlNewText().length() == 4) {
-				return null;
-			} else {
-				return event;
-			}
-		}));
-		
-		txtSoc.setTextFormatter(new TextFormatter<>(event -> {
-			if(event.getControlNewText().isEmpty()) {
-				return event;
-			}
-			ParsePosition parsePosition = new ParsePosition(0);
-			Object object = format.parse(event.getControlNewText(), parsePosition);
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length() ||
-					 event.getControlNewText().length() == 4) {
-				return null;
-			} else {
-				return event;
-			}
-		}));
-		
-		txtMusic.setTextFormatter(new TextFormatter<>(event ->{
-			if(event.getControlNewText().isEmpty()) {
-				return event;
-			}
-			ParsePosition parsePosition = new ParsePosition(0);
-			Object object = format.parse(event.getControlNewText(), parsePosition);
-			
-			if(object == null || parsePosition.getIndex() < event.getControlNewText().length()
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
 					|| event.getControlNewText().length() == 4) {
 				return null;
-			}else {
+			} else {
 				return event;
 			}
 		}));
-		
-		
-		
-		
-		
-		//학년
-		cbYear.setItems(FXCollections.observableArrayList("1", "2", "3", "4", "5", "6"));
+		// ***********************************
+		txtEng.setTextFormatter(new TextFormatter<>(event -> {
+			if (event.getControlNewText().isEmpty()) {
+				return event;
+			}
 
-		
-		
-		
-		tableView.setEditable(false);
+			ParsePosition parsePosition = new ParsePosition(0);
+			Object object = format.parse(event.getControlNewText(), parsePosition);
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
+					|| event.getControlNewText().length() == 4) {
+				return null;
+			} else {
+				return event;
+			}
+		}));
+		txtMath.setTextFormatter(new TextFormatter<>(event -> {
+			if (event.getControlNewText().isEmpty()) {
+				return event;
+			}
+
+			ParsePosition parsePosition = new ParsePosition(0);
+			Object object = format.parse(event.getControlNewText(), parsePosition);
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
+					|| event.getControlNewText().length() == 4) {
+				return null;
+			} else {
+				return event;
+			}
+		}));
+		txtSic.setTextFormatter(new TextFormatter<>(event -> {
+			if (event.getControlNewText().isEmpty()) {
+				return event;
+			}
+
+			ParsePosition parsePosition = new ParsePosition(0);
+			Object object = format.parse(event.getControlNewText(), parsePosition);
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
+					|| event.getControlNewText().length() == 4) {
+				return null;
+			} else {
+				return event;
+			}
+		}));
+		txtSoc.setTextFormatter(new TextFormatter<>(event -> {
+			if (event.getControlNewText().isEmpty()) {
+				return event;
+			}
+
+			ParsePosition parsePosition = new ParsePosition(0);
+			Object object = format.parse(event.getControlNewText(), parsePosition);
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
+					|| event.getControlNewText().length() == 4) {
+				return null;
+			} else {
+				return event;
+			}
+		}));
+		txtMusic.setTextFormatter(new TextFormatter<>(event -> {
+			if (event.getControlNewText().isEmpty()) {
+				return event;
+			}
+
+			ParsePosition parsePosition = new ParsePosition(0);
+			Object object = format.parse(event.getControlNewText(), parsePosition);
+
+			if (object == null || parsePosition.getIndex() < event.getControlNewText().length()
+					|| event.getControlNewText().length() == 4) {
+				return null;
+			} else {
+				return event;
+			}
+		}));
+
+		// *******************
+
+		// 2.-3 ���̺��� �÷�����
+		// 테이블 뷰 컬럼이름 설정
+		TableColumn colNo = new TableColumn("NO.");
+		colNo.setMaxWidth(40);
+		colNo.setStyle("-fx-allignment: CENTER");
+		colNo.setCellValueFactory(new PropertyValueFactory<>("no"));
 
 		TableColumn colName = new TableColumn("성명");
 		colName.setMaxWidth(70);
+		colName.setStyle("-fx-allignment: CENTER");
 		colName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
 		TableColumn colLevel = new TableColumn("학년");
@@ -244,519 +375,610 @@ public class RootController implements Initializable {
 		colAvg.setMaxWidth(70);
 		colAvg.setCellValueFactory(new PropertyValueFactory<>("avg"));
 
-		tableView.setItems(data);
-		tableView.getColumns().addAll(colName, colLevel, colBan, colGender
-				, colKorean, colEnglish, colMath, colSic
-				, colSoc, colMusic, colTotal, colAvg);
+		TableColumn colRegister = new TableColumn("등록일");
+		colRegister.setMinWidth(90);
+		colRegister.setCellValueFactory(new PropertyValueFactory<>("register"));
 
-		btnTotal.setOnAction(new EventHandler<ActionEvent>() {
+		TableColumn colImageFileName = new TableColumn("이미지");
+		colImageFileName.setMinWidth(260);
+		colImageFileName.setCellValueFactory(new PropertyValueFactory<>("filename"));
+
+		// 2-3
+		tableView.setItems(data);
+		tableView.getColumns().addAll(colNo, colName, colLevel, colBan, colGender, colKorean, colEnglish, colMath,
+				colSic, colSoc, colMusic, colTotal, colAvg);
+
+		// 전체 리스트
+		btnTotalList.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
 				try {
-					handlerBtnTotalAction(event);
-				} catch (NumberFormatException e) {
-					Alert alert = new Alert(AlertType.WARNING);
-					alert.setTitle("점수 입력");
-					alert.setHeaderText("점수를 입력하시오.");
-					alert.setContentText("다음에는 주의하세요!");
-
-					alert.showAndWait();
-				}
-			}
-		});
-
-		btnOk.setOnAction(event -> {
-			
-			/*4단계*/
-//			if (editButton) {
-//				try {
-//				data.remove(selectedIndex);
-//				data.add(selectedIndex, new Student(txtName.getText(), cbYear.getSelectionModel().getSelectedItem()
-//						, txtBan.getText(), genderGroup.getSelectedToggle().getUserData().toString(), txtKo.getText()
-//						, txtEng.getText(), txtMath.getText(), txtSic.getText(), txtSoc.getText(), txtMusic.getText()
-//						, txtTotal.getText(), txtAvg.getText()));
-//	
-//				txtName.setEditable(true);
-//				cbYear.getSelectionModel().clearSelection();
-//				txtBan.setEditable(true);
-//				txtKo.setEditable(true);
-//				txtEng.setEditable(true);
-//				txtMath.setEditable(true);
-//				txtSic.setEditable(true);
-//				txtSoc.setEditable(true);
-//				txtMusic.setEditable(true);
-//				handlerBtnInitActoion(event);
-//				
-//				} catch (Exception e) {
-//					Alert alert = new Alert(AlertType.WARNING);
-//					alert.setTitle("학생 정보 수정");
-//					alert.setHeaderText("수정되는 정보를 정확히 입력하시오.");
-//					alert.setContentText("다음에는 주의하세요!");
-//					alert.showAndWait();
-//				}
-//				
-//				editButton = false;
-//			} else {
-				try {
-					data.add(new Student(txtName.getText(), cbYear.getSelectionModel().getSelectedItem()
-							,txtBan.getText(), genderGroup.getSelectedToggle().getUserData().toString()
-							, txtKo.getText(), txtEng.getText(), txtMath.getText(), txtSic.getText()
-							, txtSoc.getText(), txtMusic.getText(), txtTotal.getText(), txtAvg.getText()));
-					
-					txtName.setEditable(true);
-					cbYear.getSelectionModel().clearSelection();
-					txtBan.setEditable(true);
-					txtKo.setEditable(true);
-					txtEng.setEditable(true);
-					txtMath.setEditable(true);
-					txtSic.setEditable(true);
-					txtSoc.setEditable(true);
-					txtMusic.setEditable(true);
-					handlerBtnInitActoion(event);
-					
+					data.removeAll(data);
+					// 학생 전체 정보
+					totalList();
 				} catch (Exception e) {
-					Alert alert = new Alert(AlertType.WARNING);
-					alert.setTitle("학생 정보 입력");
-					alert.setHeaderText("학생 정보를 정확히 입력하시오.");
-					alert.setContentText("다음에는 주의하세요!");
-					alert.showAndWait();
-				}
-//			}
-			
-		});
-
-		btnAvg.setOnAction(event -> handlerBtnAvgActoion(event));
-		btnInit.setOnAction(event -> handlerBtnInitActoion(event));
-		btnExit.setOnAction(event -> handlerBtnExitActoion(event));
-		btnSearch.setOnAction(event -> handlerBtnSearchActoion(event));
-		btnEdit.setOnAction(event -> handlerBtnEditActoion(event));
-		btnDelete.setOnAction(event -> handlerBtnDeleteActoion(event));
-		btnBarChart.setOnAction(event -> handlerBtnBarChartActoion(event));
-		tableView.setOnMouseClicked(event -> handlerBtnPieChartActoion(event));
-
-		
-		
-        // 테이블에 이벤트 처리
-		tableView.setOnMousePressed(new EventHandler<MouseEvent>() {
-			public void handle(MouseEvent me) {
-				selectStudent = tableView.getSelectionModel().getSelectedItems();
-			    selectedIndex = tableView.getSelectionModel().getSelectedIndex();
-
-				try {
-					txtName.setText(selectStudent.get(0).getName());
-
-					cbYear.setValue(selectStudent.get(0).getLevel());
-					if (selectStudent.get(0).getGender().equals("남성")) {
-						rbMale.setSelected(true);
-						rbFemale.setDisable(true);
-					} else {
-						rbFemale.setSelected(true);
-						rbMale.setDisable(true);
-					}
-
-					txtBan.setText(selectStudent.get(0).getBan());
-					txtKo.setText(selectStudent.get(0).getKorean());
-					txtEng.setText(selectStudent.get(0).getEnglish());
-					txtMath.setText(selectStudent.get(0).getMath());
-					txtSic.setText(selectStudent.get(0).getSic());
-					txtSoc.setText(selectStudent.get(0).getSoc());
-					txtMusic.setText(selectStudent.get(0).getMusic());
-					txtTotal.setText(selectStudent.get(0).getTotal());
-					txtAvg.setText(selectStudent.get(0).getAvg());
-
-					txtName.setEditable(false);
-					txtBan.setEditable(false);
-					txtKo.setEditable(false);
-					txtEng.setEditable(false);
-					txtMath.setEditable(false);
-					txtSic.setEditable(false);
-					txtSoc.setEditable(false);
-					txtMusic.setEditable(false);
-					txtTotal.setEditable(false);
-					txtAvg.setEditable(false);
-					
-					cbYear.setDisable(true);
-					btnDelete.setDisable(false);
-
-					editDelete = true;
-				} catch (Exception e) {
-					Alert alert = new Alert(AlertType.WARNING);
-					alert.setTitle("학생 정보 수정 삭제");
-					alert.setHeaderText("학생 정보를 입력하시오.");
-					alert.setContentText("다음에는 주의하세요!");
-					alert.showAndWait();
 				}
 			}
 		});
 	}
 
+	public void buttonInitSetting(boolean b, boolean c, boolean d, boolean e, boolean f, boolean g, boolean h) {
+		// 1.��ư�ʱ�ȭ
+		btnTotal.setDisable(b);
+		btnAvg.setDisable(c);
+		btnInit.setDisable(d);
+		btnOk.setDisable(e);
+		btnExit.setDisable(f);
+		btnEdit.setDisable(g);
+		btnDelete.setDisable(h);
 
-	public void handlerBtnPieChartActoion(MouseEvent event) {
-		if (event.getClickCount() != 2) {
-			btnEdit.setDisable(false);
-			btnDelete.setDisable(false);
-			return;
-		}
+		btnImageFile.setDisable(true);
+
+		txtTotal.setDisable(true);
+		txtAvg.setDisable(true);
+
+		dpDate.setValue(LocalDate.now());
+
+	}
+
+	public void handlerBtnTotalAction(ActionEvent e) {
+
 		try {
-			Stage dialog = new Stage(StageStyle.UTILITY);
-			dialog.initModality(Modality.WINDOW_MODAL);
-			dialog.initOwner(btnOk.getScene().getWindow());
-			
-			Parent parent = FXMLLoader.load(getClass().getResource("/view/pieChart.fxml"));
-			
-			PieChart pieChart = (PieChart) parent.lookup("#pieChart");
-			Student studentPieChart = tableView.getSelectionModel().getSelectedItem();
-			dialog.setTitle(studentPieChart.getName()+"파이 그래프");
-			pieChart.setData(FXCollections.observableArrayList(
-					new PieChart.Data("총점", Double.parseDouble(studentPieChart.getTotal())),
-					new PieChart.Data("평균", Double.parseDouble(studentPieChart.getAvg()))));
-			
-			Button btnClose = (Button) parent.lookup("#btnClose");
-			btnClose.setOnAction(e-> dialog.close());
-			
-			Scene scene = new Scene(parent);
-			dialog.setScene(scene);
-			dialog.show();
-		}catch(IOException ioE){
-			
-		}
-	}
 
-	public void handlerBtnBarChartActoion(ActionEvent event) {
-		try {
-			Stage dialog = new Stage(StageStyle.UTILITY);
-			dialog.initModality(Modality.WINDOW_MODAL);
-			dialog.initOwner(btnOk.getScene().getWindow());
-			dialog.setTitle("막대 그래프");
-			
-			Parent parent = FXMLLoader.load(getClass().getResource("/view/barChart.fxml"));
-			BarChart barChart = (BarChart) parent.lookup("#barChart");
-			
-			XYChart.Series seriesKorean = new XYChart.Series();
-			seriesKorean.setName("국어");
-			ObservableList koreanList = FXCollections.observableArrayList();
-			for(int i = 0 ; i <data.size() ; i++) {
-				koreanList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getKorean())));
-			}
-			seriesKorean.setData(koreanList);
-			barChart.getData().add(seriesKorean);
-			
-			XYChart.Series seriesEnglish = new XYChart.Series();
-			seriesEnglish.setName("영어");
-			ObservableList englishList = FXCollections.observableArrayList();
-			for(int i = 0 ; i < data.size() ; i++) {
-				englishList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getMath())));
-			}
-			seriesEnglish.setData(englishList);
-			barChart.getData().add(seriesEnglish);
-			
-			XYChart.Series seriesMath = new XYChart.Series();
-			seriesMath.setName("수학");
-			ObservableList mathList = FXCollections.observableArrayList();
-			for(int i = 0 ; i < data.size() ; i++) {
-				mathList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getMath())));
-			}
-			seriesMath.setData(mathList);
-			barChart.getData().add(seriesMath);
-			
-			XYChart.Series seriesSic = new XYChart.Series();
-			seriesSic.setName("과학");
-			ObservableList sicList = FXCollections.observableArrayList();
-			for(int i = 0 ; i < data.size() ; i++) {
-				sicList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getSic())));
-			}
-			seriesSic.getData().add(sicList);
-			barChart.getData().add(seriesSic);
-			
-			XYChart.Series seriesSoc = new XYChart.Series();
-			seriesSoc.setName("사회");
-			ObservableList socList = FXCollections.observableArrayList();
-			for(int i = 0 ; i < data.size() ; i++) {
-				socList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getSoc())));
-			}
-			seriesSoc.setData(socList);
-			barChart.getData().add(seriesSoc);
-			
-			XYChart.Series seriesMusic = new XYChart.Series();
-			seriesMusic.setName("음악");
-			ObservableList musicList = FXCollections.observableArrayList();
-			for (int i = 0; i < data.size(); i++) {
-				musicList.add(new XYChart.Data(data.get(i).getName(), Integer.parseInt(data.get(i).getMusic())));
-			}
-			seriesMusic.setData(musicList);
-			barChart.getData().add(seriesMusic);
-
-			Button btnClose = (Button) parent.lookup("#btnClose");
-			btnClose.setOnAction(e -> dialog.close());
-
-			Scene scene = new Scene(parent);
-			dialog.setScene(scene);
-			dialog.show();
-			
-		}catch (IOException ioE) {
-			
-		}
-	}
-
-	// 삭제 이벤트 처리 메소드
-	public void handlerBtnDeleteActoion(ActionEvent event) {
-		data.remove(selectedIndex);
-		txtName.setEditable(true);
-		cbYear.getSelectionModel().clearSelection();
-		txtBan.setEditable(true);
-		txtKo.setEditable(true);
-		txtEng.setEditable(true);
-		txtMath.setEditable(true);
-		txtSic.setEditable(true);
-		txtSoc.setEditable(true);
-		txtMusic.setEditable(true);
-		handlerBtnInitActoion(event);
-	}
-        
-    // 수정 이벤트 처리 메소드
-	public void handlerBtnEditActoion(ActionEvent event) {
-		try {
-			btnTotal.setDisable(false);
-			btnOk.setDisable(true);
-			btnEdit.setDisable(true);
-			btnDelete.setDisable(true);
-	        editDelete = false;
-			
-	        cbYear.setDisable(true);
-			
-			txtName.setEditable(false);
-			txtBan.setEditable(false);
-			txtKo.setEditable(true);
-			txtEng.setEditable(true);
-			txtMath.setEditable(true);
-			txtSic.setEditable(true);
-			txtSoc.setEditable(true);
-			txtMusic.setEditable(true);
-			
-			editButton = true;
-			
-			Parent eidtRoot = FXMLLoader.load(getClass().getResource("/view/formedit.fxml"));
-			Stage stageDialog = new Stage(StageStyle.UTILITY);
-			
-			stageDialog.initModality(Modality.WINDOW_MODAL);
-			stageDialog.initOwner(btnOk.getScene().getWindow());
-			stageDialog.setTitle("수정");
-	
-			Student studentEdit = tableView.getSelectionModel().getSelectedItem();
-			selectedIndex = tableView.getSelectionModel().getSelectedIndex();
-	
-			TextField editName = (TextField) eidtRoot.lookup("#txtName");
-			TextField editYear = (TextField) eidtRoot.lookup("#txtYear");
-			TextField editBan = (TextField) eidtRoot.lookup("#txtBan");
-			TextField editGender = (TextField) eidtRoot.lookup("#txtGender");
-			TextField editKorean = (TextField) eidtRoot.lookup("#txtKorean");
-			TextField editEnglish = (TextField) eidtRoot.lookup("#txtEnglish");
-			TextField editMath = (TextField) eidtRoot.lookup("#txtMath");
-			TextField editSic = (TextField) eidtRoot.lookup("#txtSic");
-			TextField editSoc = (TextField) eidtRoot.lookup("#txtSoc");
-			TextField editMusic = (TextField) eidtRoot.lookup("#txtMusic");
-			TextField editTotal = (TextField) eidtRoot.lookup("#txtTotal");
-			TextField editAvg = (TextField) eidtRoot.lookup("#txtAvg");
-	
-			editName.setDisable(true);
-			editYear.setDisable(true);
-			editBan.setDisable(true);
-			editGender.setDisable(true);
-			editTotal.setDisable(true);
-			editAvg.setDisable(true);
-	
-			editName.setText(studentEdit.getName());
-			editYear.setText(studentEdit.getLevel());
-			editBan.setText(studentEdit.getBan());
-			editGender.setText(studentEdit.getGender());
-			editKorean.setText(studentEdit.getKorean());
-			editEnglish.setText(studentEdit.getEnglish());
-			editMath.setText(studentEdit.getMath());
-			editSic.setText(studentEdit.getSic());
-			editSoc.setText(studentEdit.getSoc());
-			editMusic.setText(studentEdit.getMusic());
-			editTotal.setText(studentEdit.getTotal());
-			editAvg.setText(studentEdit.getAvg());
-	
-			Button btnCal = (Button) eidtRoot.lookup("#btnCal");
-			Button btnFormAdd = (Button) eidtRoot.lookup("#btnFormAdd");
-			Button btnFormCancel = (Button) eidtRoot.lookup("#btnFormCancel");
-	
-			btnFormAdd.setDisable(true);
-	        
-			// 계산 버튼 이벤트 처리
-			btnCal.setOnAction(e -> {
-				int sum = Integer.parseInt(editKorean.getText()) + Integer.parseInt(editEnglish.getText())
-				+ Integer.parseInt(editMath.getText()) + Integer.parseInt(editSic.getText())
-				+ Integer.parseInt(editSoc.getText()) + Integer.parseInt(editMusic.getText());
-			
-				double avg = sum / 6.0;
-	
-				editTotal.setText(sum + "");
-				editAvg.setText(avg + "");
-				btnCal.setDisable(true);
-				btnFormAdd.setDisable(false);
-			});
-			
-			// 다이얼 로그 저장 버튼 이벤트 처리
-			btnFormAdd.setOnAction(e -> {
-				TextField txtName = (TextField) eidtRoot.lookup("#txtName");
-				TextField txtYear = (TextField) eidtRoot.lookup("#txtYear");
-				TextField txtBan = (TextField) eidtRoot.lookup("#txtBan");
-				TextField txtGender = (TextField) eidtRoot.lookup("#txtGender");
-				TextField txtKorean = (TextField) eidtRoot.lookup("#txtKorean");
-				TextField txtEnglish = (TextField) eidtRoot.lookup("#txtEnglish");
-				TextField txtMath = (TextField) eidtRoot.lookup("#txtMath");
-				TextField txtSic = (TextField) eidtRoot.lookup("#txtSic");
-				TextField txtSoc = (TextField) eidtRoot.lookup("#txtSoc");
-				TextField txtMusic = (TextField) eidtRoot.lookup("#txtMusic");
-				TextField txtTotal = (TextField) eidtRoot.lookup("#txtTotal");
-				TextField txtAvg = (TextField) eidtRoot.lookup("#txtAvg");
-			
-				data.remove(selectedIndex);
-			
-				data.add(selectedIndex, new Student(txtName.getText(), txtYear.getText(), txtBan.getText(), txtGender.getText(), txtKorean.getText(), txtEnglish.getText(), txtMath.getText(), txtSic.getText(), txtSoc.getText(), txtMusic.getText(), txtTotal.getText(), txtAvg.getText()));
-				stageDialog.close();
-				btnDelete.setDisable(true);
-				btnEdit.setDisable(true);
-			});
-			
-			// 다이얼 로그 취소 버튼 이벤트 처리
-			btnFormCancel.setOnAction(e -> {
-				btnDelete.setDisable(true);
-				btnEdit.setDisable(true);
-				stageDialog.close();
-			});
-		
-			Scene scene = new Scene(eidtRoot);
-			stageDialog.setScene(scene);
-			stageDialog.setResizable(false);
-			stageDialog.show();
-		} catch (IOException e) {
-			System.out.println(e.toString());
-		}
-	}
-
-    // 검색 이벤트 처리 메소드
-	public void handlerBtnSearchActoion(ActionEvent event) {
-		for (Student list : data) {
-			if ((list.getName()).equals(txtSearch.getText())) {
-				tableView.getSelectionModel().select(list);
-			}
-		}
-	}
-	
-	//종료버튼
-	public void handlerBtnExitActoion(ActionEvent event) {
-		Platform.exit();
-	}
-	
-	//버튼 초기화
-	public void handlerBtnInitActoion(ActionEvent event) {
-		txtName.clear();
-		txtName.setEditable(true);
-		cbYear.setDisable(false);
-		cbYear.getSelectionModel().clearSelection();
-		rbFemale.setDisable(false);
-		rbMale.setDisable(false);
-		genderGroup.selectToggle(null);
-		txtBan.clear();
-		txtBan.setEditable(true);
-		txtKo.clear();
-		txtKo.setEditable(true);
-		txtEng.clear();
-		txtEng.setEditable(true);
-		txtMath.clear();
-		txtMath.setEditable(true);
-		txtSic.clear();
-		txtSic.setEditable(true);
-		txtSoc.clear();
-		txtSoc.setEditable(true);
-		txtMusic.clear();
-		txtMusic.setEditable(true);
-		txtTotal.clear();
-		txtAvg.clear();
-		btnTotal.setDisable(false);
-		btnOk.setDisable(true);
-		btnEdit.setDisable(true);
-		btnDelete.setDisable(true);
-        editDelete = false;
-		
-	}
-	
-	//총합구하기
-	public void handlerBtnTotalAction(ActionEvent event) {
-		try {
 			int korean = Integer.parseInt(txtKo.getText());
 			int english = Integer.parseInt(txtEng.getText());
 			int math = Integer.parseInt(txtMath.getText());
 			int sic = Integer.parseInt(txtSic.getText());
 			int soc = Integer.parseInt(txtSoc.getText());
 			int music = Integer.parseInt(txtMusic.getText());
-			int total;
-			if ((korean >= 0 && korean <= 100) && (english >= 0 && english <= 100) 
-					&& (math >= 0 && math <= 100) && (sic >= 0 && sic <= 100) 
-					&& (soc >= 0 && soc <= 100) && (music >= 0 && music <= 100)) {
-				total = korean + english + math + sic + soc + music;
-
-				student.setName(txtName.getText());
-				student.setLevel(cbYear.getItems() + "");
-				student.setBan(txtBan.getText());
-				student.setGender(genderGroup.getUserData() + "");
-				student.setKorean(txtKo.getText());
-				student.setEnglish(txtEng.getText());
-				student.setMath(txtMath.getText());
-				student.setSic(txtSic.getText());
-				student.setSoc(txtSoc.getText());
-				student.setMusic(txtMusic.getText());
-
-				student.setTotal(total + "");
-				txtTotal.setText(student.getTotal());
+			if ((korean <= 100) && (english <= 100) && (math <= 100) && (sic <= 100) && (soc <= 100)
+					&& (music <= 100)) {
+				int total = korean + english + math + sic + soc + music;
+				txtTotal.setText(String.valueOf(total));
 				btnAvg.setDisable(false);
-				btnTotal.setDisable(true);
+
 			} else {
-				Alert alert = new Alert(AlertType.WARNING);
-				alert.setTitle("학생 점수 입력");
-				alert.setHeaderText("점수는 0점에서 100점 사이로 입력하시오.");
-				alert.setContentText("다음에는 주의하세요!");
-				alert.showAndWait();
+				throw new Exception("��ȿ�Ѱ� ����");
 			}
-			
-		} catch (Exception e) {
-			Alert alert = new Alert(AlertType.WARNING);
-			alert.setTitle("학생 정보 입력");
-			alert.setHeaderText("학생의 정보와 점수을 정확히 입력하시오.");
-			alert.setContentText("다음에는 주의하세요!");
-			alert.showAndWait();
+		} catch (Exception e2) {
+			alertDisplay(1, "�հ����!", "������(��ȿ�� ���� ������ �ʾҽ��ϴ�.)", e2.toString());
 		}
 	}
-	
-	//평균구하기
-	public void handlerBtnAvgActoion(ActionEvent event) {
-		student.setAvg((Integer.parseInt(student.getTotal()) / 6.0) + "");
-		txtAvg.setText(student.getAvg() + "");
-		txtName.setEditable(false);
-		cbYear.setEditable(false);
-		txtBan.setEditable(false);
-		txtKo.setEditable(false);
-		txtEng.setEditable(false);
-		txtMath.setEditable(false);
-		txtSic.setEditable(false);
-		txtSoc.setEditable(false);
-		txtMusic.setEditable(false);
-		btnAvg.setDisable(true);
 
-		// 등록 버튼 상태 설정(순서 중요)
-		if (editDelete == false) {
-			btnOk.setDisable(false);
+	public void handlerBtnAvgActoion(ActionEvent e) {
+		txtAvg.setText(String.valueOf(Integer.parseInt(txtTotal.getText()) / 6.0));
+		// 1.��ư�ʱ�ȭ(����x,���x,�ʱ�ȭ,���,����,����x,����x)
+		buttonInitSetting(true, true, false, false, false, true, true);
+		// 2.�ؽ�Ʈ�ʵ� ��Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+		textFieldInitSetting(true, true, true, true, true, true, true, true, true, true);
+
+	}
+
+	public void handlerBtnInitActoion(ActionEvent e) {
+		// 1.��ư �ʱ�ȭ(����, �ʱ�ȭ,���� <->���x,���x,����x,����x) ��������ؽ�Ʈx, ��հ��
+		// �ؽ�Ʈx
+		buttonInitSetting(false, true, false, true, false, true, true);
+		// 2.�ؽ�Ʈ�ʵ� Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+		textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
+		// 3.��� �ʵ� ���� �ʱ�ȭ
+		cbYear.getSelectionModel().clearSelection();
+		txtName.clear();
+		genderGroup.selectToggle(null);
+//				txtLevel.clear();
+		txtBan.clear();
+		txtKo.clear();
+		txtEng.clear();
+		txtMath.clear();
+		txtSic.clear();
+		txtSoc.clear();
+		txtMusic.clear();
+		txtTotal.clear();
+		txtAvg.clear();
+
+	}
+
+	public void handlerBtnOkActoion(ActionEvent e) {
+		// ������ ����� �ִ��� Ȯ��!
+		try {
+			String fileName = imageSave(selectedFile);
+
+			if (txtTotal.getText().equals("") || txtAvg.getText().equals(" ")) {
+				throw new Exception();
+			} else {
+				StudentVO svo = new StudentVO(txtName.getText(), cbYear.getSelectionModel().getSelectedItem(),
+						txtBan.getText(), genderGroup.getSelectedToggle().getUserData().toString(),
+						Integer.parseInt(txtKo.getText().trim()), Integer.parseInt(txtEng.getText().trim()),
+						Integer.parseInt(txtMath.getText().trim()), Integer.parseInt(txtSic.getText().trim()),
+						Integer.parseInt(txtSoc.getText().trim()), Integer.parseInt(txtMusic.getText().trim()),
+						Integer.parseInt(txtTotal.getText().trim()), Double.parseDouble(txtAvg.getText().trim()), null,
+						fileName);
+
+				// ���̺�信 ������ ����!
+				if (editDelete == true) {
+					data.remove(selectedIndex);
+					data.add(selectedIndex, svo);
+					editDelete = false;
+				} else {
+					studentDAO = new StudentDAO(); // 데이타베이스 테이블에 입력값을 입력하는 함수.
+					int count = studentDAO.getStudentregiste(svo);// <<< ����Ÿ���̽� ���̺� �Է°��� �Է��ϴ� �Լ�.
+					if (count != 0) {
+						data.add(svo);
+						totalList();
+						imageViewInit();
+					} else {
+						throw new Exception("데이타 베이스 등록실패");
+					}
+				}
+				alertDisplay(5, "등록성공", "테이블등록성공", "축하축하~!");
+			}
+		} catch (Exception e2) {
+			alertDisplay(1, "등록실패", "합계, 평균을 확인해주세요!", e2.toString());
+			return;
+		}
+		// �ʱ�ȭ ��ư �������� 1�� ��ư�ʱ�ȭ��,�ؽ�Ʈ�ʵ带 ��� Ȱ��ȭ,
+		handlerBtnInitActoion(e);
+
+	}
+
+	public void handlerBtnSearchActoion(ActionEvent e) {
+		try {
+			ArrayList<StudentVO> list = new ArrayList<StudentVO>();
+			StudentDAO studentDAO = new StudentDAO();
+			list = studentDAO.getStudentCheck(txtSearch.getText());
+
+			if (list == null) {
+				throw new Exception("검색오류");
+			}
+
+			data.removeAll(data);
+
+			for (StudentVO svo : list) {
+				data.add(svo);
+			}
+		} catch (Exception e1) {
+			alertDisplay(1, "이름오류", "이름검색 오류", "정확한 이름 입력 요망!");
 		}
 
-		// 수정, 삭제 버튼 상태 설정
-		if (editDelete == true) {
-			btnEdit.setDisable(false);
-			btnDelete.setDisable(false);
+	}
+
+	public void handlerTableViewPressedActoion(MouseEvent e) {
+		// �������� ��ġ�� �ش�� ��ü�� ������.
+		try {
+			editDelete = true;
+			buttonInitSetting(true, true, true, true, false, false, false); // �ʱ�ȭ
+			selectedIndex = tableView.getSelectionModel().getSelectedIndex();
+			selectStudent = tableView.getSelectionModel().getSelectedItems();
+			// �������� ���̺� �ִ� ���� �����ͼ� ����Ÿ�ʵ忡 ����ִ´�.
+			txtName.setText(selectStudent.get(0).getName());
+			cbYear.setValue(selectStudent.get(0).getLevel());
+			txtBan.setText(selectStudent.get(0).getBan());
+			if (selectStudent.get(0).getGender().equals("����")) {
+				rbMale.setSelected(true);
+				rbFemale.setSelected(false);
+			} else {
+				rbMale.setSelected(false);
+				rbFemale.setSelected(true);
+			}
+			txtKo.setText(String.valueOf(selectStudent.get(0).getKorean()));
+			txtEng.setText(String.valueOf(selectStudent.get(0).getEnglish()));
+			txtMath.setText(String.valueOf(selectStudent.get(0).getMath()));
+			txtSoc.setText(String.valueOf(selectStudent.get(0).getSoc()));
+			txtSic.setText(String.valueOf(selectStudent.get(0).getSic()));
+			txtMusic.setText(String.valueOf(selectStudent.get(0).getMusic()));
+			txtTotal.setText(String.valueOf(selectStudent.get(0).getTotal()));
+			txtAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
+
+			// 2.�ؽ�Ʈ�ʵ� ��Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+			textFieldInitSetting(true, true, true, true, true, true, true, true, true, true);
+		} catch (Exception e2) {
+			System.out.println("�߸�����!");
+			buttonInitSetting(false, true, false, true, false, true, true);
 			editDelete = false;
 		}
+	}
+
+	// 학생 전체 리스트
+	// 14.테이블 뷰에 데이타베이스값을 읽어서 테이블뷰에 가져온다.
+	public void totalList() {
+		Object[][] totalData;
+		ArrayList<String> title;
+
+		ArrayList<StudentVO> list = null;
+
+		StudentVO studentVO = null;
+		StudentDAO studentDAO = new StudentDAO();
+
+		list = studentDAO.getStudentTotal();
+
+		if (list == null) {
+			DBUtil.alertDisplay(1, "Error : DB ", "DB null", "Check");
+			return;
+		}
+		for (int i = 0; i < list.size(); i++) {
+			studentVO = list.get(i);
+			data.add(studentVO);
+		}
+
+//			title = sDao.getColumnName();
+//			int columnCount = title.size();
+//
+//			list = sDao.getStudentTotal();
+//			int rowCount = list.size();
+//
+//			totalData = new Object[rowCount][columnCount];
+//
+//			for (int index = 0; index < rowCount; index++) {
+//				sVo = list.get(index);
+//				data.add(sVo);
+//			}
+	}
+
+	public void handlerBtnDeleteActoion(ActionEvent e) {
+		alertDisplay(2, "�������", "�������", "���� �����Ͻðڽ��ϱ�?");
+
+		try {
+
+			StudentDAO studentDAO = new StudentDAO();
+			studentDAO.getStudentDelete(selectStudent.get(0).getNo());
+
+			data.removeAll(data);
+			totalList();
+		} catch (Exception e1) {
+			DBUtil.alertDisplay(1, "ERROR", "Del", "check!");
+		}
+		// 1. 버튼 초기화
+		buttonInitSetting(false, true, false, true, false, true, true);
+		// 2.텍스트 필드 비활성화
+		textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
+		editDelete = false;
+	}
+
+	// 수정버튼을 눌렀을
+	public void handlerBtnEditActoion(ActionEvent e) {
+		try {
+			// 1.��ư �ʱ�ȭ
+			buttonInitSetting(false, true, false, true, false, true, true);
+			// 2.�ؽ�Ʈ�ʵ� ��Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+			textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
+			// ����ȭ���� �θ���
+			Parent editRoot = FXMLLoader.load(getClass().getResource("/View/formedit.fxml"));
+			Stage stageDialog = new Stage(StageStyle.UTILITY);
+			stageDialog.initModality(Modality.WINDOW_MODAL);
+			stageDialog.initOwner(btnOk.getScene().getWindow());
+			stageDialog.setTitle("����");
+			TextField editName = (TextField) editRoot.lookup("#txtName");
+			TextField editYear = (TextField) editRoot.lookup("#txtYear");
+			TextField editBan = (TextField) editRoot.lookup("#txtBan");
+			TextField editGender = (TextField) editRoot.lookup("#txtGender");
+			TextField editKorean = (TextField) editRoot.lookup("#txtKorean");
+			TextField editEnglish = (TextField) editRoot.lookup("#txtEnglish");
+			TextField editMath = (TextField) editRoot.lookup("#txtMath");
+			TextField editSic = (TextField) editRoot.lookup("#txtSic");
+			TextField editSoc = (TextField) editRoot.lookup("#txtSoc");
+			TextField editMusic = (TextField) editRoot.lookup("#txtMusic");
+			TextField editTotal = (TextField) editRoot.lookup("#txtTotal");
+			TextField editAvg = (TextField) editRoot.lookup("#txtAvg");
+			Button btnCal = (Button) editRoot.lookup("#btnCal");
+			Button btnFormAdd = (Button) editRoot.lookup("#btnFormAdd");
+			Button btnFormCancel = (Button) editRoot.lookup("#btnFormCancel");
+			// 총점과 평균은 수정하지 못하게한다.
+			editTotal.setDisable(true);
+			editAvg.setDisable(true);
+			// 텍스트 에디터로 값을 가져온다.
+			editName.setText(selectStudent.get(0).getName());
+			editYear.setText(selectStudent.get(0).getLevel());
+			editBan.setText(selectStudent.get(0).getBan());
+			editGender.setText(selectStudent.get(0).getGender());
+			editKorean.setText(String.valueOf(selectStudent.get(0).getKorean()));
+			editEnglish.setText(String.valueOf(selectStudent.get(0).getEnglish()));
+			editMath.setText(String.valueOf(selectStudent.get(0).getMath()));
+			editSic.setText(String.valueOf(selectStudent.get(0).getSic()));
+			editSoc.setText(String.valueOf(selectStudent.get(0).getSoc()));
+			editMusic.setText(String.valueOf(selectStudent.get(0).getMusic()));
+			editTotal.setText(String.valueOf(selectStudent.get(0).getTotal()));
+			editAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
+			// 계산이 이루어짐
+			btnCal.setOnAction(e2 -> {
+				try {
+
+					int korean = Integer.parseInt(editKorean.getText());
+					int english = Integer.parseInt(editEnglish.getText());
+					int math = Integer.parseInt(editMath.getText());
+					int sic = Integer.parseInt(editSic.getText());
+					int soc = Integer.parseInt(editSoc.getText());
+					int music = Integer.parseInt(editMusic.getText());
+					if ((korean <= 100) && (english <= 100) && (math <= 100) && (sic <= 100) && (soc <= 100)
+							&& (music <= 100)) {
+						int total = korean + english + math + sic + soc + music;
+						editTotal.setText(String.valueOf(total));
+						editAvg.setText(String.valueOf(total / 6.0));
+
+					} else {
+						throw new Exception("��ȿ�Ѱ� ����");
+					}
+				} catch (Exception e3) {
+					alertDisplay(1, "�հ����!", "������(��ȿ�� ���� ������ �ʾҽ��ϴ�.)", e3.toString());
+				}
+			});
+			// 저장버튼을 눌렀을 때
+			btnFormAdd.setOnAction(e4 -> {
+				try {
+
+					if (editTotal.getText().equals("") || editAvg.getText().equals(" ")) {
+						throw new Exception();
+					} else {
+						StudentVO svo = new StudentVO(selectStudent.get(0).getNo(), editName.getText(),
+								editYear.getText(), editBan.getText(), editGender.getText(),
+								Integer.parseInt(editKorean.getText().trim()),
+								Integer.parseInt(editEnglish.getText().trim()),
+								Integer.parseInt(editMath.getText().trim()), Integer.parseInt(editSic.getText().trim()),
+								Integer.parseInt(editSoc.getText().trim()),
+								Integer.parseInt(editMusic.getText().trim()),
+								Integer.parseInt(editTotal.getText().trim()),
+								Double.parseDouble(editAvg.getText().trim()));
+
+						StudentDAO studentDAO = new StudentDAO();
+						StudentVO studentVO = studentDAO.getStudentUpdate(svo, selectStudent.get(0).getNo());
+
+						// 테이블 뷰에 들어가버린 순간
+						if (editDelete == true && studentVO != null) {
+							data.remove(selectedIndex);
+							data.add(selectedIndex, svo);
+							editDelete = false;
+						} else {
+							throw new Exception("수정등록 오류");
+
+						}
+					}
+				} catch (Exception e2) {
+					alertDisplay(1, "수정등록 실패", "수정등록 실패", "오류!" + e2.getMessage());
+				}
+				stageDialog.close();
+				// �ʱ�ȭ ��ư �������� 1�� ��ư�ʱ�ȭ��,�ؽ�Ʈ�ʵ带 ��� Ȱ��ȭ,
+				handlerBtnInitActoion(e);
+
+			});
+			// ��ҹ�ư�� ��������
+			btnFormCancel.setOnAction(e3 -> {
+				stageDialog.close();
+			});
+
+			Scene scene = new Scene(editRoot);
+			stageDialog.setScene(scene);
+			stageDialog.setResizable(false);
+			stageDialog.show();
+		} catch (IOException e1) {
+
+			e1.printStackTrace();
+		}
+
+	}
+
+	// 12.PI chart
+	public void handlerPieChartActoion(MouseEvent e) {
+		try {
+			// �ι�Ŭ���ߴ��� ����
+			if (e.getClickCount() != 2) {
+				return;
+			}
+			buttonInitSetting(false, true, false, true, false, true, true);
+			// 2.�ؽ�Ʈ�ʵ� ��Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+			textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
+			// �ι�Ŭ���� ������
+			Parent pieChartRoot = FXMLLoader.load(getClass().getResource("/View/piechart.fxml"));
+			Stage stage = new Stage(StageStyle.UTILITY);
+			stage.initModality(Modality.WINDOW_MODAL);
+			stage.initOwner(btnOk.getScene().getWindow());
+			stage.setTitle(selectStudent.get(0).getName() + "�հ���� ����íƮ");
+			PieChart pieChart = (PieChart) pieChartRoot.lookup("#pieChart");
+			Button btnClose = (Button) pieChartRoot.lookup("#btnClose");
+			pieChart.setData(FXCollections.observableArrayList(
+					new PieChart.Data("����", (double) (selectStudent.get(0).getTotal())),
+					new PieChart.Data("���", selectStudent.get(0).getAvg())
+
+			));
+			// â�ݱ�
+			btnClose.setOnAction(e2 -> {
+				stage.close();
+				editDelete = false;
+			});
+			Scene scene = new Scene(pieChartRoot);
+			stage.setScene(scene);
+			stage.show();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+
+	// 13.Bart chart
+	public void handlerBtnBarChartAction(ActionEvent e) {
+		try {
+			Parent barChartRoot = FXMLLoader.load(getClass().getResource("/View/barchart.fxml"));
+			Stage stage = new Stage(StageStyle.UTILITY);
+			stage.initModality(Modality.WINDOW_MODAL);
+			stage.initOwner(btnOk.getScene().getWindow());
+			stage.setTitle("���� ����íƮ");
+
+			BarChart barChart = (BarChart) barChartRoot.lookup("#barChart");
+			Button btnClose = (Button) barChartRoot.lookup("#btnClose");
+
+			XYChart.Series seriseKorean = new XYChart.Series();
+			seriseKorean.setName("����");
+			ObservableList koreanList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+
+				koreanList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getKorean()));
+			}
+			seriseKorean.setData(koreanList);
+			barChart.getData().add(seriseKorean);
+
+			XYChart.Series seriesMath = new XYChart.Series();
+			seriesMath.setName("����");
+			ObservableList mathList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+				mathList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getMath()));
+			}
+			seriesMath.setData(mathList);
+			barChart.getData().add(seriesMath);
+
+			XYChart.Series seriesEnglish = new XYChart.Series();
+			seriesEnglish.setName("����");
+			ObservableList englishList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+				englishList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getEnglish()));
+			}
+			seriesEnglish.setData(englishList);
+			barChart.getData().add(seriesEnglish);
+
+			XYChart.Series seriesSic = new XYChart.Series();
+			seriesSic.setName("����");
+			ObservableList sicList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+				sicList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getSic()));
+			}
+			seriesSic.setData(sicList);
+			barChart.getData().add(seriesSic);
+
+			XYChart.Series seriesSoc = new XYChart.Series();
+			seriesSoc.setName("��ȸ");
+			ObservableList socList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+				socList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getSoc()));
+			}
+			seriesSoc.setData(socList);
+			barChart.getData().add(seriesSoc);
+
+			XYChart.Series seriesMusic = new XYChart.Series();
+			seriesMusic.setName("����");
+			ObservableList musicList = FXCollections.observableArrayList();
+			for (int i = 0; i < data.size(); i++) {
+				musicList.add(new XYChart.Data(data.get(i).getName(), data.get(i).getMusic()));
+			}
+			seriesMusic.setData(musicList);
+			barChart.getData().add(seriesMusic);
+
+			// ��íƮ ��ư close�̺�Ʈ
+			btnClose.setOnAction(e2 -> {
+				buttonInitSetting(false, true, false, true, false, true, true);
+				// 2.�ؽ�Ʈ�ʵ� ��Ȱ��ȭ(�̸�x,�г�x,��x,����x,����x,����x,����x,����x,��ȸx,����x)
+				textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
+				stage.close();
+				editDelete = false;
+
+			});
+
+			Scene scene = new Scene(barChartRoot);
+			stage.setScene(scene);
+			stage.show();
+
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+	}
+
+	// 14.
+
+	// 15. total list
+	private void handlerBtnTotalListAction(ActionEvent e) {
+		try {
+			data.removeAll(data);
+			totalList();
+		} catch (Exception e1) {
+			DBUtil.alertDisplay(1, "Error", "TotalList", "Check!");
+		}
+
+	}
+
+	// 16. 기본 이미지 셋
+	public void imageViewInit() {
+		localUrl = "/images/image01.jpg";
+		localImage = new Image(localUrl, false);
+		imageView.setImage(localImage);
+	}
+
+	// 17. 날짜 선택 이벤트
+
+	private void handlerDatePickerAction(ActionEvent e) {
+		LocalDate date = dpDate.getValue();
+		txtDay.setText("" + date);
+
+	}
+
+	// 18. 이미지 버튼을 누르면 선택하도록
+	public Object handlerBtnImageFileActoion(ActionEvent event) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	// 이미지 세이브 //내림차수 오름차수
+	private String imageSave(File selectedFile2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/***********************************************************
+	 * imageDelete() 이미지 삭제 메소드. 19.10.10 by 남연서
+	 * 
+	 * @param (삭제할 파일명)
+	 * @return 삭제여부를 리턴
+	 ***********************************************************/
+	public boolean imageDelete(String fileName) {
+		boolean result = false;
+		try {
+			File fileDelete = new File(dirSave.getAbsolutePath() + "\\" + fileName); // 삭제이미지 파일
+			if (fileDelete.exists() && fileDelete.isFile()) {
+				result = fileDelete.delete();
+				imageViewInit();
+			}
+		} catch (Exception ie) {
+			System.out.println("ie = [ " + ie.getMessage() + "]");
+			result = false;
+		}
+		return result;
+	}
+
+	public void alertDisplay(int type, String title, String headerText, String contentText) {
+		Alert alert = null;
+		switch (type) {
+		case 1:
+			alert = new Alert(AlertType.WARNING);
+			break;
+		case 2:
+			alert = new Alert(AlertType.CONFIRMATION);
+			break;
+		case 3:
+			alert = new Alert(AlertType.ERROR);
+			break;
+		case 4:
+			alert = new Alert(AlertType.NONE);
+			break;
+		case 5:
+			alert = new Alert(AlertType.INFORMATION);
+			break;
+		}
+		alert.setTitle(title);
+		alert.setHeaderText(headerText);
+		alert.setContentText(headerText + "\n" + contentText);
+		alert.setResizable(false);
+		alert.showAndWait();
+
+	}
+
+	public void textFieldInitSetting(boolean b, boolean c, boolean d, boolean k, boolean e, boolean f, boolean g,
+			boolean h, boolean i, boolean j) {
+		txtName.setDisable(b);
+		cbYear.setDisable(c);
+//		txtLevel.setDisable(c);
+		txtBan.setDisable(d);
+		rbMale.setDisable(k);
+		rbFemale.setDisable(k);
+		txtKo.setDisable(e);
+		txtEng.setDisable(f);
+		txtMath.setDisable(g);
+		txtSic.setDisable(h);
+		txtSoc.setDisable(i);
+		txtMusic.setDisable(j);
 	}
 }
