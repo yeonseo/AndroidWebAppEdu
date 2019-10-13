@@ -6,22 +6,30 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="!= 2"/>
+		<item key="selection" value="날짜"/>
 		<list key="findhistory">
-			<item value="!= 2"/>
-			<item value="editDelete"/>
-			<item value="Controll"/>
-			<item value="Dial"/>
-			<item value="onCreatDial"/>
-			<item value="onCreat"/>
-			<item value=""/>
+			<item value="날짜"/>
+			<item value="studentDAO"/>
+			<item value="image"/>
+			<item value="local"/>
+			<item value="학생"/>
+			<item value="okAc"/>
+			<item value="cat"/>
+			<item value="View/"/>
+			<item value="View"/>
+			<item value="tatal"/>
+			<item value="기본"/>
+			<item value="기본이미지"/>
+			<item value="imageView"/>
+			<item value="sear"/>
+			<item value="data"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="845"/>
-		<item key="DIALOG_Y_ORIGIN" value="286"/>
+		<item key="DIALOG_X_ORIGIN" value="1011"/>
+		<item key="DIALOG_Y_ORIGIN" value="228"/>
 		<item key="DIALOG_WIDTH" value="294"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
