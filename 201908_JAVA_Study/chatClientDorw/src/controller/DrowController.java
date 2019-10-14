@@ -138,6 +138,10 @@ public class DrowController implements Initializable {
 
 	}
 
+	
+	/* 메세지를 받아서 처리하는 함
+	 * 
+	 * */
 	public void recive() {
 		while (true) {
 			try {
@@ -148,7 +152,41 @@ public class DrowController implements Initializable {
 					throw new IOException();
 				String message = new String(buffer, 0, length, "UTF-8");
 				Platform.runLater(() -> {
-					txtAreaChat.appendText(message);
+					if(message.startsWith(txtUserStrName.getText() + " : "+"XY")) {
+						txtAreaChat.appendText("좌표얏!!\n");
+					} else if(message.startsWith("NoDrow")) {
+						txtAreaChat.appendText("안 그릴꺼얏!!\n");
+						String drowMessage = message;
+						String[] array = drowMessage.split(",");
+						double x = Double.parseDouble(array[1]);
+						double y = Double.parseDouble(array[2]);
+						boolean draw = Boolean.parseBoolean(array[3]);
+						int color = Integer.parseInt(array[4]);
+						
+						txtAreaChat.appendText("그린거얏얏!! \n"+x+", "+y+", "+draw+", "+color);
+						DrawCanvas drow = new DrawCanvas(arPt);
+						GraphicsContext g = canDrow.getGraphicsContext2D();
+						arPt.add(new DrowInfoVO(x, y, draw, color));
+						drow.paint(g);
+					} else if(message.startsWith("Drow")){
+						txtAreaChat.appendText("그릴꺼얏!!\n");
+						String drowMessage = message;
+						String[] array = drowMessage.split(",");
+						double x = Double.parseDouble(array[1]);
+						double y = Double.parseDouble(array[2]);
+//						boolean draw = Boolean.parseBoolean(array[3]);
+						boolean draw = true;
+						int color = Integer.parseInt(array[4]);
+						
+						txtAreaChat.appendText("그린거얏얏!! \n"+x+", "+y+", "+draw+", "+color);
+						DrawCanvas drow = new DrawCanvas(arPt);
+						GraphicsContext g = canDrow.getGraphicsContext2D();
+						arPt.add(new DrowInfoVO(x, y, draw, color));
+						drow.paint(g);
+					} else {
+						txtAreaChat.appendText(message);
+					}
+					
 				});
 			} catch (Exception e) {
 				stopClient();
@@ -189,7 +227,6 @@ public class DrowController implements Initializable {
 	/* 데이터베이스 관련 */
 
 	public void totalList() {
-		System.out.println("try save db4");
 		Object[][] totalData;
 		ArrayList<String> title;
 
@@ -200,16 +237,11 @@ public class DrowController implements Initializable {
 
 		list = drowInfoDAO.getDrowTotal();
 
-		System.out.println("try save db5");
-
 		if (list == null) {
-			System.out.println("try save db6");
 			AlertDisplay.alertDisplay(1, "Error : DB ", "DB null", "Check");
 			return;
 		}
-		System.out.println("try save db7-1");
 		for (int i = 0; i < list.size(); i++) {
-			System.out.println("try save db7");
 			drowInfoVO = list.get(i);
 			data.add(drowInfoVO);
 		}
@@ -218,44 +250,25 @@ public class DrowController implements Initializable {
 	/* 그리기 관련 */
 	public void handlerCuoserAction(MouseEvent event) {
 
-		DrawCanvas drow = new DrawCanvas(arPt);
-		GraphicsContext g = canDrow.getGraphicsContext2D();
-
 		if (event.getEventType() == MouseEvent.MOUSE_CLICKED) {
 			System.out.println("X : " + event.getX() + ", Y : " + event.getY() + " No Dorw " + color);
-			arPt.add(new DrowInfoVO(event.getX(), event.getY(), false, color));
-			totalListSaveDB(event.getX(), event.getY(), false, color);
-			System.out.println("try save db1");
-			
+			send("NoDrow,"+event.getX() + "," + event.getY() + ","+0+","+color);
 		}
 		if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
-			System.out.println("Hey!");
-			//System.out.println("X : " + event.getX() + ", Y : " + event.getY() + " Dorw " + color);
 			txtAreaChat.appendText("X : " + event.getX() + ", Y : " + event.getY() + " Dorw " + color +"\n");
-			arPt.add(new DrowInfoVO(event.getX(), event.getY(), true, color));
-			totalListSaveDB(event.getX(), event.getY(), true, color);
-			System.out.println("try save db1");
-
+			send("Drow,"+event.getX() + "," + event.getY() + ","+1+","+color);
 		}
 		if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
 			System.out.println("X : " + event.getX() + ", Y : " + event.getY() + " No Dorw " + color);
-			arPt.add(new DrowInfoVO(event.getX(), event.getY(), false, color));
-			totalListSaveDB(event.getX(), event.getY(), false, color);
-			System.out.println("try save db1");
 		}
-		drow.paint(g);
-		System.out.println("try save db3");
 	}
 
 	public void totalListSaveDB(double x, double y, boolean draw, int color) {
-		System.out.println("try save db2");
 		try {
-
 			DrowInfoVO dvo = new DrowInfoVO(x, y, draw, color);
 			
 			drowInfoDAO = new DrowInfoDAO(); // 데이타베이스 테이블에 입력값을 입력하는 함수.
 			int count = drowInfoDAO.getDrowRegiste(dvo);
-			System.out.println("????????"+count);
 			if (count != 0) {
 				data.add(dvo);
 				totalList();

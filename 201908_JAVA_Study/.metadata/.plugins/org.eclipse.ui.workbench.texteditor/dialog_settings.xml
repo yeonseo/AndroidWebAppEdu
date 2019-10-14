@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="dirSav"/>
+		<item key="selection" value="Port"/>
 		<list key="findhistory">
+			<item value="port"/>
+			<item value="1-5"/>
+			<item value="xim"/>
+			<item value="btnOK"/>
 			<item value="dirSav"/>
 			<item value="file"/>
 			<item value="/view"/>
@@ -19,16 +23,12 @@
 			<item value="table"/>
 			<item value="ㅅ뮤ㅣㄷ"/>
 			<item value="jdbc"/>
-			<item value="kdbc"/>
-			<item value="btnOK"/>
-			<item value="btnImageFile"/>
-			<item value="image"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1327"/>
+		<item key="DIALOG_X_ORIGIN" value="1146"/>
 		<item key="DIALOG_Y_ORIGIN" value="215"/>
 		<item key="DIALOG_WIDTH" value="294"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
