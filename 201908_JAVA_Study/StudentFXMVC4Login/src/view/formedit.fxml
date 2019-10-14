@@ -64,5 +64,7 @@
 				<Button id="btnFormCancel" text="취소" />
 			</children>
 		</HBox>
+
+
 	</bottom>
 </BorderPane>

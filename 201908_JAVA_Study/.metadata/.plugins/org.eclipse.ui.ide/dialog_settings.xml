@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/nambbo/Documents/안드로이드웹앱8차/자바프로젝트/자바프로젝트(선배)/05.필라테스관리프로젝트/MinjiJavaProject"/>
 		<item value="/Users/nambbo/Documents/GitHub/Catchmind2"/>
 		<item value="/Users/nambbo/Documents/GitHub/CatchMind"/>
 		<item value="/Users/nambbo/Downloads/JAVA/islandCat_Horizen"/>

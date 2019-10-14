@@ -3,38 +3,63 @@ package model;
 public class Student {
 	private String no;
 	private String name;
+	private String gender;
 	private String level;
 	private String ban;
-	private String gender;
 	private String korean;
 	private String english;
 	private String math;
-	private String sic;
-	private String soc;
+	private String science;
+	private String socity;
 	private String music;
 	private String total;
 	private String avg;
 	
 	public Student() {
-		super();
+	
 	}
 
-	public Student(String no,String name, String level, String ban, String gender, String korean, String english, String math, String sic,
-			String soc, String music, String total, String avg) {
+	public Student(String no, String name, String gender, String level, String ban, String korean, String english,
+			String math, String science, String socity, String music, String total, String avg) {
 		super();
 		this.no = no;
 		this.name = name;
+		this.gender = gender;
 		this.level = level;
 		this.ban = ban;
-		this.gender = gender;
 		this.korean = korean;
 		this.english = english;
 		this.math = math;
-		this.sic = sic;
-		this.soc = soc;
+		this.science = science;
+		this.socity = socity;
 		this.music = music;
 		this.total = total;
 		this.avg = avg;
+	}
+
+	public Student(String name, String gender, String level, String ban, String korean, String english, String math,
+			String science, String socity, String music, String total, String avg) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.level = level;
+		this.ban = ban;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.science = science;
+		this.socity = socity;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
+	}
+
+	public String getNo() {
+		return no;
+	}
+
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 	public String getName() {
@@ -43,6 +68,14 @@ public class Student {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getLevel() {
@@ -61,13 +94,6 @@ public class Student {
 		this.ban = ban;
 	}
 
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}	
 	public String getKorean() {
 		return korean;
 	}
@@ -92,20 +118,20 @@ public class Student {
 		this.math = math;
 	}
 
-	public String getSic() {
-		return sic;
+	public String getScience() {
+		return science;
 	}
 
-	public void setSic(String sic) {
-		this.sic = sic;
+	public void setScience(String science) {
+		this.science = science;
 	}
 
-	public String getSoc() {
-		return soc;
+	public String getSocity() {
+		return socity;
 	}
 
-	public void setSoc(String soc) {
-		this.soc = soc;
+	public void setSocity(String socity) {
+		this.socity = socity;
 	}
 
 	public String getMusic() {
@@ -131,16 +157,5 @@ public class Student {
 	public void setAvg(String avg) {
 		this.avg = avg;
 	}
-
-	public String getNo() {
-		return no;
-	}
-
-	public void setNo(String no) {
-		this.no = no;
-	}
-
-	
-	
 	
 }

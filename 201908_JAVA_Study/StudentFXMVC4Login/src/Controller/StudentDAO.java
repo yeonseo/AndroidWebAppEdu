@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,20 +12,24 @@ import javafx.scene.control.Alert.AlertType;
 import model.StudentVO;
 
 public class StudentDAO {
-	// ① data input
+	
+	// ① 신규 학생 점수 등록
 	public int getStudentregiste(StudentVO svo) throws Exception {
 		// ② 데이터 처리를 위한 SQL 문
-		// sysdate 오라클 현재 날짜를 리턴해줌.
+		// 해당된 필드 no부분은 자동으로 증가되므로 필드를 줄 필요가 없음.
 		String dml = "insert into schoolchild "
-				+ "(name, year, ban, gender, korean, english, math, sic, soc, music, total, avg, register, filename)" 
-				+ " values " + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(), ?)";
+				+ "(name, year, ban, gender, korean, english, math, sic, soc, music, total, avg, register, filename)" + " values "
+				+ "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(), ?)";
+
 		Connection con = null;
-		PreparedStatement pstmt = null; // ������ ���Ѱ�
-		int count = 0;
+		PreparedStatement pstmt = null;
+		StudentVO retval = null;
+		int i = 0;
+
 		try {
-			// ③ DBUtil이라는 클래스의 getConnection( )메서드로 데이터베이스와 연결
+			// ③ DBUtil 클래스의 getConnection( )메서드로 데이터베이스와 연결
 			con = DBUtil.getConnection();
-			// sVo = new StudentVO();
+
 			// ④ 입력받은 학생 정보를 처리하기 위하여 SQL문장을 생성
 			pstmt = con.prepareStatement(dml);
 			pstmt.setString(1, svo.getName());
@@ -43,7 +47,10 @@ public class StudentDAO {
 			pstmt.setString(13, svo.getFilename());
 
 			// ⑤ SQL문을 수행후 처리 결과를 얻어옴
-			count = pstmt.executeUpdate();
+			i = pstmt.executeUpdate();
+
+			retval = new StudentVO();
+
 		} catch (SQLException e) {
 			System.out.println("e=[" + e + "]");
 		} catch (Exception e) {
@@ -58,29 +65,28 @@ public class StudentDAO {
 			} catch (SQLException e) {
 			}
 		}
-		return count;
+		return i;
 	}
 
-	// student list
-	public ArrayList<StudentVO> getStudentTotal() {
-		ArrayList<StudentVO> list = new ArrayList<StudentVO>();
-		String tml = "select * from schoolchild";
-
+	// ⑦ 학생의 name을 입력받아 정보 조회
+	public ArrayList<StudentVO> getStudentCheck(String name) throws Exception {
+		String dml = "select * from schoolchild where name like ?";
+		ArrayList<StudentVO> arrayList = new ArrayList<StudentVO>();
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		StudentVO emVo = null;
-
+		StudentVO retval = null;
+		String name2 = "%" + name + "%";
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement(tml);
+			pstmt = con.prepareStatement(dml);
+			pstmt.setString(1, name2);
 			rs = pstmt.executeQuery();
-
 			while (rs.next()) {
-				emVo = new StudentVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				retval = new StudentVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11),
-						rs.getInt(12), rs.getDouble(13),rs.getString(14),rs.getString(15));
-				list.add(emVo);
+						rs.getInt(12), rs.getDouble(13), rs.getString(14), rs.getString(15));
+				arrayList.add(retval);
 			}
 		} catch (SQLException se) {
 			System.out.println(se);
@@ -97,10 +103,71 @@ public class StudentDAO {
 			} catch (SQLException se) {
 			}
 		}
-		return list;
+		return arrayList;
 	}
 
-	// student delete
+	// 선택한 학생의 점수 수정
+	public StudentVO getStudentUpdate(StudentVO svo, int no) throws Exception {
+		// ② 데이터 처리를 위한 SQL 문
+		String dml = "update schoolchild set "
+				+ " korean=?, english=?, math=?, sic=?, soc=?, music=?, total=?, avg=?  where no = ?";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		StudentVO retval = null;
+
+		try {
+			// ③ DBUtil이라는 클래스의 getConnection( )메서드로 데이터베이스와 연결
+			con = DBUtil.getConnection();
+
+			// ④ 수정한 학생 정보를 수정하기 위하여 SQL문장을 생성
+			pstmt = con.prepareStatement(dml);
+			pstmt.setInt(1, svo.getKorean());
+			pstmt.setInt(2, svo.getEnglish());
+			pstmt.setInt(3, svo.getMath());
+			pstmt.setInt(4, svo.getSic());
+			pstmt.setInt(5, svo.getSoc());
+			pstmt.setInt(6, svo.getMusic());
+			pstmt.setInt(7, svo.getTotal());
+			pstmt.setDouble(8, svo.getAvg());
+			pstmt.setDouble(9, no);
+
+			// ⑤ SQL문을 수행후 처리 결과를 얻어옴
+			int i = pstmt.executeUpdate();
+
+			if (i == 1) {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("점수 수정");
+				alert.setHeaderText("점수 수정 완료.");
+				alert.setContentText("점수 수정 성공!!!");
+
+				alert.showAndWait();
+				retval = new StudentVO();
+			} else {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("점수 수정");
+				alert.setHeaderText("점수 수정 실패.");
+				alert.setContentText("점수 수정 실패!!!");
+
+				alert.showAndWait();
+			}
+
+		} catch (SQLException e) {
+			System.out.println("e=[" + e + "]");
+		} catch (Exception e) {
+			System.out.println("e=[" + e + "]");
+		} finally {
+			try {
+				// ⑥ 데이터베이스와의 연결에 사용되었던 오브젝트를 해제
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+			}
+		}
+		return retval;
+	}
+
 	public void getStudentDelete(int no) throws Exception {
 		// ② 데이터 처리를 위한 SQL 문
 		String dml = "delete from schoolchild where no = ?";
@@ -119,9 +186,20 @@ public class StudentDAO {
 			int i = pstmt.executeUpdate();
 
 			if (i == 1) {
-				DBUtil.alertDisplay(5, "DELETE", "SUCCESE", "BYEBYE!");
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("학생 삭제");
+				alert.setHeaderText("학생 삭제 완료.");
+				alert.setContentText("학생 삭제 성공!!!");
+
+				alert.showAndWait();
+
 			} else {
-				DBUtil.alertDisplay(1, "DELETE", "ERROR", "CHECK!");
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("학생 삭제");
+				alert.setHeaderText("학생 삭제 실패.");
+				alert.setContentText("학생 삭제 실패!!!");
+
+				alert.showAndWait();
 			}
 
 		} catch (SQLException e) {
@@ -140,79 +218,26 @@ public class StudentDAO {
 		}
 
 	}
-
-	// edit function update tabke Name set fieldname = edit where condition ""
-	public StudentVO getStudentUpdate(StudentVO svo, int no) throws Exception {
-		// ② 데이터 처리를 위한 SQL 문
-		String dml = "update schoolchild set "
-				+ " korean=?, english=?, math=?, sic=?, soc=?, music=?, total=?, avg=?  where no = ?";
-		Connection con = null;
-		PreparedStatement pstmt = null;
-
-		try {
-			// ③ DBUtil이라는 클래스의 getConnection( )메서드로 데이터베이스와 연결
-			con = DBUtil.getConnection();
-
-			// ④ 수정한 학생 정보를 수정하기 위하여 SQL문장을 생성
-			pstmt = con.prepareStatement(dml);
-			pstmt.setInt(1, svo.getKorean());
-			pstmt.setInt(2, svo.getEnglish());
-			pstmt.setInt(3, svo.getMath());
-			pstmt.setInt(4, svo.getSic());
-			pstmt.setInt(5, svo.getSoc());
-			pstmt.setInt(6, svo.getMusic());
-			pstmt.setInt(7, svo.getTotal());
-			pstmt.setDouble(8, svo.getAvg());
-			pstmt.setDouble(9, svo.getNo());
-
-			// ⑤ SQL문을 수행후 처리 결과를 얻어옴
-			int i = pstmt.executeUpdate();
-
-			if (i == 1) {
-				DBUtil.alertDisplay(1, "수정완료", svo.getNo() + "수정완료", "완료");
-
-			} else {
-				DBUtil.alertDisplay(1, "수정실패", svo.getNo() + "수정실패", "실패");
-
-			}
-
-		} catch (SQLException e) {
-			System.out.println("e=[" + e + "]");
-		} catch (Exception e) {
-			System.out.println("e=[" + e + "]");
-		} finally {
-			try {
-				// ⑥ 데이터베이스와의 연결에 사용되었던 오브젝트를 해제
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-			}
-		}
-		return svo;
-	}
-
-	// ⑦ 학생의 name을 입력받아 정보 조회
-	public ArrayList<StudentVO> getStudentCheck(String name) throws Exception {
-		String dml = "select * from schoolchild where name like ?";
+	// 학생 전체 리스트
+	public ArrayList<StudentVO> getStudentTotal() {
 		ArrayList<StudentVO> list = new ArrayList<StudentVO>();
+		String dml = "select * from schoolchild";
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String name2 = "%" + name + "%";
-		System.out.println("name2=" + name2);
-		StudentVO retval = null;
+		// 디비에서 가져온 데이터를 임시로 저장하고 있는 공간
+		StudentVO studentVo = null;
+
 		try {
 			con = DBUtil.getConnection();
 			pstmt = con.prepareStatement(dml);
-			pstmt.setString(1, name2);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				retval = new StudentVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				studentVo = new StudentVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11),
-						rs.getInt(12), rs.getDouble(13),rs.getString(14),rs.getString(15));
-				list.add(retval);
+						rs.getInt(12), rs.getDouble(13), rs.getString(14), rs.getString(15));
+				list.add(studentVo);
 			}
 		} catch (SQLException se) {
 			System.out.println(se);
@@ -268,4 +293,5 @@ public class StudentDAO {
 		}
 		return columnName;
 	}
+	
 }
