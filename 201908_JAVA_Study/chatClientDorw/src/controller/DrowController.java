@@ -273,7 +273,6 @@ public class DrowController implements Initializable {
 	}
 
 	public void handlerBtnColorRedAction(MouseEvent event) {
-		
 		color = 1;
 	}
 
