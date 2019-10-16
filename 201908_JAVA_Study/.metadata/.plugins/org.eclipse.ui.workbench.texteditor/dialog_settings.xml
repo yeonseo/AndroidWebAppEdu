@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Port"/>
+		<item key="selection" value="btnEdit"/>
 		<list key="findhistory">
+			<item value="btnEdit"/>
+			<item value="edit"/>
 			<item value="port"/>
 			<item value="1-5"/>
 			<item value="xim"/>
@@ -21,8 +23,6 @@
 			<item value="filename"/>
 			<item value="handlerTableViewPressedActoion"/>
 			<item value="table"/>
-			<item value="ㅅ뮤ㅣㄷ"/>
-			<item value="jdbc"/>
 		</list>
 		<list key="replacehistory">
 		</list>

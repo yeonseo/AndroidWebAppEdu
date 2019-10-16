@@ -51,6 +51,7 @@ public class DrowInfoVO {
 		case 1 : penColor = Color.RED; break;
 		case 2 : penColor = Color.BLUE; break;
 		case 3 : penColor = Color.BLACK; break;
+		
 		}
 		return penColor;
 	}

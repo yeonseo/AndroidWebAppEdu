@@ -21,8 +21,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import model.DrowInfoVO;
 
-public class DrowController implements Initializable {
 
+public class DrowController implements Initializable {
+	
 	@FXML
 	private Canvas canDrow;
 	@FXML
@@ -45,36 +46,36 @@ public class DrowController implements Initializable {
 	private TextField txtFieldUserInput;
 	@FXML
 	private Button btnUserInput;
-
+	
 	ObservableList<DrowInfoVO> data;
-
+	
 	/**/
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
+		
 		txtUserStrName.setPromptText("Enter your name!");
-
+		
 		txtSocketIP.setText("localhost");
 		txtSocketPort.setText("9876");
-
+		
 		txtAreaChat.setEditable(false);
 		txtFieldUserInput.setDisable(true);
-
+		
 		txtFieldUserInput.setOnAction(event -> {
 			send(txtUserStrName.getText() + " : " + txtFieldUserInput.getText() + "\n");
 			txtFieldUserInput.setText("");
 			txtFieldUserInput.requestFocus();
 		});
-
+		
 		btnUserInput.setText("Send");
 		btnUserInput.setDisable(true);
-
+		
 		btnUserInput.setOnAction(event -> {
 			send(txtUserStrName.getText() + " : " + txtFieldUserInput.getText() + "\n");
 			txtFieldUserInput.setText("");
 			txtFieldUserInput.requestFocus();
 		});
-
+		
 		btnServerEnter.setText("Enter");
 		btnServerEnter.setOnAction(event -> {
 			if (btnServerEnter.getText().equals("Enter")) {
@@ -88,7 +89,7 @@ public class DrowController implements Initializable {
 				Platform.runLater(() -> {
 					txtAreaChat.appendText("[Chat Start] \n");
 				});
-
+				
 				btnServerEnter.setText("Exit");
 				txtFieldUserInput.setDisable(false);
 				btnUserInput.setDisable(false);
@@ -101,11 +102,11 @@ public class DrowController implements Initializable {
 				btnServerEnter.setText("Enter");
 				txtFieldUserInput.setDisable(true);
 				btnUserInput.setDisable(true);
-
+				
 			}
 		});
 	}
-
+	
 	
 	
 	
@@ -121,7 +122,7 @@ public class DrowController implements Initializable {
 	private DrowInfoDAO drowInfoDAO;
 	static boolean down = false;
 	static int color = 0;
-
+	
 	
 	
 	
@@ -138,9 +139,9 @@ public class DrowController implements Initializable {
 	 * stopClient
 	 * 
 	 * */
-
+	
 	Socket socket;
-
+	
 	public void startClient(String IP, int port) {
 		Thread thread = new Thread() {
 			public void run() {
@@ -154,14 +155,14 @@ public class DrowController implements Initializable {
 						stopClient();
 						Platform.exit();
 					}
-
+					
 				}
-
+				
 			}
-
+			
 		};
 		thread.start();
-
+		
 	}
 	
 	public void recive() {
@@ -196,9 +197,11 @@ public class DrowController implements Initializable {
 						boolean draw = false;
 						int color = Integer.parseInt(array[4]);
 						
+						arPt.add(new DrowInfoVO(x, y, draw, color));
+						
 						DrawCanvas drow = new DrawCanvas(arPt);
 						GraphicsContext g = canDrow.getGraphicsContext2D();
-						arPt.add(new DrowInfoVO(x, y, draw, color));
+						
 						drow.paint(g);
 					} else if (message.startsWith("Drow")) {
 						txtAreaChat.appendText("그릴꺼얏!!\n");
@@ -216,16 +219,16 @@ public class DrowController implements Initializable {
 					} else {
 						txtAreaChat.appendText(message);
 					}
-
+					
 				});
 			} catch (Exception e) {
 				stopClient();
 				break;
 			}
 		}
-
+		
 	}
-
+	
 	public void send(String message) {
 		Thread thread = new Thread() {
 			public void run() {
@@ -234,7 +237,7 @@ public class DrowController implements Initializable {
 					byte[] buffer = message.getBytes("UTF-8");
 					os.write(buffer);
 					os.flush();
-
+					
 				} catch (Exception e) {
 					stopClient();
 				}
@@ -242,7 +245,7 @@ public class DrowController implements Initializable {
 		};
 		thread.start();
 	}
-
+	
 	public void stopClient() {
 		try {
 			if (socket != null && !socket.isClosed()) {
@@ -251,26 +254,26 @@ public class DrowController implements Initializable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 	}
-
+	
 	
 	
 	
 	
 	/* 데이터베이스 관련 (안씀 필요없음)*/
-
+	
 	public void totalList() {
 		Object[][] totalData;
 		ArrayList<String> title;
-
+		
 		ArrayList<DrowInfoVO> list = null;
-
+		
 		DrowInfoVO drowInfoVO = null;
 		DrowInfoDAO drowInfoDAO = new DrowInfoDAO();
-
+		
 		list = drowInfoDAO.getDrowTotal();
-
+		
 		if (list == null) {
 			AlertDisplay.alertDisplay(1, "Error : DB ", "DB null", "Check");
 			return;
@@ -285,7 +288,7 @@ public class DrowController implements Initializable {
 	public void totalListSaveDB(double x, double y, boolean draw, int color) {
 		try {
 			DrowInfoVO dvo = new DrowInfoVO(x, y, draw, color);
-
+			
 			drowInfoDAO = new DrowInfoDAO(); // 데이타베이스 테이블에 입력값을 입력하는 함수.
 			int count = drowInfoDAO.getDrowRegiste(dvo);
 			if (count != 0) {
@@ -299,9 +302,9 @@ public class DrowController implements Initializable {
 			// AlertDisplay.alertDisplay(1, "등록실패", "합계, 평균을 확인해주세요!", e2.toString());
 			return;
 		}
-
+		
 	}
-
+	
 	
 	
 	
@@ -310,7 +313,7 @@ public class DrowController implements Initializable {
 	 * MOUSE_DRAGGED 상태만 그림 상태(true)로 list에 저장시킴
 	 * 이 외의 상태에서는 그림 상태(false)로 list에 저장시킴*/
 	public void handlerCuoserAction(MouseEvent event) {
-
+		
 		if (event.getEventType() == MouseEvent.MOUSE_CLICKED) {
 			System.out.println("X : " + event.getX() + ", Y : " + event.getY() + " No Dorw " + color);
 			send("NoDrow," + event.getX() + "," + event.getY() + "," + 0 + "," + color);
@@ -323,22 +326,22 @@ public class DrowController implements Initializable {
 			System.out.println("X : " + event.getX() + ", Y : " + event.getY() + " No Dorw " + color);
 		}
 	}
-
+	
 	
 	
 	/*캔버스 하단의 버튼 3개를 누를 시 펜 색깔이 바뀜*/
 	public void handlerBtnColorRedAction(MouseEvent event) {
 		color = 1;
 	}
-
+	
 	public void handlerBtnColorBlueAction(MouseEvent event) {
 		color = 2;
 	}
-
+	
 	public void handlerBtnColorBlackAction(MouseEvent event) {
 		color = 3;
 	}
-
+	
 }
 
 
@@ -360,14 +363,14 @@ public class DrowController implements Initializable {
  * */
 class DrawCanvas extends Canvas {
 	ArrayList<DrowInfoVO> arPt;
-
+	
 	DrawCanvas(ArrayList<DrowInfoVO> arPt) {
 		this.arPt = arPt;
 	}
-
+	
 	public void paint(GraphicsContext g) {
 		g.setLineWidth(2.0);
-
+		
 		for (int i = 0; i < arPt.size() - 1; i++) {
 			if (arPt.get(i).isDraw()) {
 				int color = arPt.get(i).getDBColor();
