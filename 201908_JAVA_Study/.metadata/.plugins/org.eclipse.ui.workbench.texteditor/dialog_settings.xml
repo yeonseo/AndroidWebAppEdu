@@ -6,32 +6,34 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="btnEdit"/>
+		<item key="selection" value="AlertDisplay.alertDisplay"/>
 		<list key="findhistory">
-			<item value="btnEdit"/>
-			<item value="edit"/>
-			<item value="port"/>
-			<item value="1-5"/>
-			<item value="xim"/>
-			<item value="btnOK"/>
-			<item value="dirSav"/>
-			<item value="file"/>
-			<item value="/view"/>
-			<item value="view"/>
-			<item value="vire"/>
-			<item value="root"/>
-			<item value="filename"/>
-			<item value="handlerTableViewPressedActoion"/>
-			<item value="table"/>
+			<item value="AlertDisplay.alertDisplay"/>
+			<item value="AlertDisplay"/>
+			<item value="al"/>
+			<item value="managerStartTime"/>
+			<item value="welcome2out"/>
+			<item value="handlerWelcom2OutDBUdateAction"/>
+			<item value="handlerGamer1OutGameRoomDelAction"/>
+			<item value="UserAccess"/>
+			<item value="Access"/>
+			<item value="loginPassword"/>
+			<item value="bubble"/>
+			<item value="chart"/>
+			<item value="start"/>
+			<item value="handlerBtnManagerLoginTimeChartAction"/>
+			<item value="TableViewTotalMakeRoomName"/>
 		</list>
 		<list key="replacehistory">
+			<item value="System.out.println"/>
+			<item value="Gamer"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1146"/>
-		<item key="DIALOG_Y_ORIGIN" value="215"/>
+		<item key="DIALOG_X_ORIGIN" value="981"/>
+		<item key="DIALOG_Y_ORIGIN" value="420"/>
 		<item key="DIALOG_WIDTH" value="294"/>
-		<item key="DIALOG_HEIGHT" value="408"/>
+		<item key="DIALOG_HEIGHT" value="426"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

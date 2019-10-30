@@ -1,13 +1,18 @@
 package controller;
 
+import java.net.ServerSocket;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
+import java.util.concurrent.ExecutorService;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 
@@ -23,7 +28,9 @@ public class MainController implements Initializable {
 	private Button btnEnd;
 	@FXML
 	private Button btnOk;
-
+	
+	
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		btnInsert.setOnAction((e) -> {
@@ -38,6 +45,7 @@ public class MainController implements Initializable {
 		btnOk.setOnAction((e3) -> {
 			handlerButtonOkAction(e3);
 		});
+		
 	}
 
 	public void handlerButtonInsertAction(ActionEvent e) {
