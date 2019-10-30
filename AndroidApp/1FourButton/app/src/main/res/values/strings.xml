@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">1FourButton</string>
+    <string name="nate_home">네이트 홈페이지</string>
+    <string name="phone_number">01099919092</string>
+    <string name="gallerly">갤러리</string>
+    <string name="exit">닫기</string>
+</resources>
