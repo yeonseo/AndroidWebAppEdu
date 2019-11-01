@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">2ButtonVisible</string>
+    <string name="button1_name">Button 1 :-)</string>
+    <string name="button2_name">Button 2 :-)</string>
+    <string name="button3_name">Button 3 :-)</string>
+    <string name="button4_name">Button 4 :-)</string>
+    <string name="button5_name">Button 5 :-)</string>
+</resources>

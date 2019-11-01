@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">2report3</string>
+    <string name="txtvi1">선택을 시작하시겠습니까?</string>
+    <string name="swt">시작함</string>
+    <string name="txtvi2">좋아하는 고냥이는 무엇입니까?</string>
+    <string name="rdo_btn1">생축한다냥</string>
+    <string name="rdo_btn2">그네탄다냥</string>
+    <string name="rdo_btn3">사자다우아냥</string>
+    <string name="iv_cat">고냥이다옹</string>
+    <string name="btn_ok">보기</string>
+    <string name="btn_exit">종료</string>
+    <string name="btn_restart">새로시작</string>
+</resources>
