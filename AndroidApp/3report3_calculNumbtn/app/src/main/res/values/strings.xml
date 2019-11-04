@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">3report3</string>
+    <string name="btn_sum">덧셈</string>
+    <string name="btn_sub">뺄셈</string>
+    <string name="btn_mul">곱셈</string>
+    <string name="btn_div">나눗셈</string>
+</resources>

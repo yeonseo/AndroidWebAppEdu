@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:padding="10dp"
+    android:stretchColumns="*"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+
+        <Button
+            android:id="@+id/btn_num1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_num2"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_num3"
+            android:text="3" />
+
+
+        <Button
+            android:id="@+id/btn_sum"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:text="@string/btn_sum" />
+
+        <Button
+            android:id="@+id/btn_num4"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_num5"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn_num6"
+            android:text="6" />
+
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:text="@string/btn_sub" />
+
+        <Button
+            android:id="@+id/btn_num7"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_num8"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn_num9"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:text="@string/btn_mul" />
+
+        <Button android:text="#" />
+
+        <Button
+            android:id="@+id/btn_num0"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_clr"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:text="@string/btn_div" />
+
+
+    </GridLayout>
+
+    <GridLayout>
+
+        <TextView
+            android:id="@+id/txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과 : 0.0"
+            android:textSize="30dp" />
+    </GridLayout>
+
+
+</GridLayout>
