@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemRed"
+        android:title="RED">
+
+    </item>
+
+    <item
+        android:id="@+id/itemBlue"
+        android:title="BLUE">
+
+    </item>
+
+    <item
+        android:id="@+id/itemGreen"
+        android:title="GREEN">
+
+    </item>
+
+    <item android:title="Button Change">
+
+        <menu>
+            <item
+                android:id="@+id/subRotate"
+                android:title="Rot 45">
+            </item>
+            <item
+                android:id="@+id/subSize"
+                android:title="View Size">
+            </item>
+
+        </menu>
+    </item>
+
+</menu>

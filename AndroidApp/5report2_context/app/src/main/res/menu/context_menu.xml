@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/option1"
+    android:title="회전" />
+<item
+    android:id="@+id/option2"
+    android:title="확대" />
+<item
+    android:id="@+id/option3"
+    android:title="축소" />
+
+</menu>
