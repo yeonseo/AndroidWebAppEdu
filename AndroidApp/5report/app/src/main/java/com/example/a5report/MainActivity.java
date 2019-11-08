@@ -73,6 +73,17 @@ public class MainActivity extends TabActivity {
             }
         });
 
+
+
+        tabHost = getTabHost();
+
+        TabHost.TabSpec tabSpec1 = tabHost.newTabSpec("WEB").setIndicator("WEB");
+        tabSpec1.setContent(R.id.tab1);
+        tabHost.addTab(tabSpec1);
+
+        TabHost.TabSpec tabSpec2 = tabHost.newTabSpec("IMAGE").setIndicator("IMAGE");
+        tabSpec2.setContent(R.id.tab2);
+        tabHost.addTab(tabSpec2);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,17 +96,6 @@ public class MainActivity extends TabActivity {
                 autoCompleteTextView.setAdapter(adapter);
             }
         });
-
-        tabHost = getTabHost();
-
-        TabHost.TabSpec tabSpec1 = tabHost.newTabSpec("WEB").setIndicator("WEB");
-        tabSpec1.setContent(R.id.tab1);
-        tabHost.addTab(tabSpec1);
-
-        TabHost.TabSpec tabSpec2 = tabHost.newTabSpec("IMAGE").setIndicator("IMAGE");
-        tabSpec2.setContent(R.id.tab2);
-        tabHost.addTab(tabSpec2);
-
         TabHost.TabSpec tabSpec3 = tabHost.newTabSpec("SEARCH").setIndicator("DATA");
         tabSpec3.setContent(R.id.tab3);
         tabHost.addTab(tabSpec3);
