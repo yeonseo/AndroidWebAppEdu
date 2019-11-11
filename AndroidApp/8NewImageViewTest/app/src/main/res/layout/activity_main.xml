@@ -30,20 +30,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtFileNum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout"
-        android:layout_marginTop="29dp" />
-
-    <TextView
-        android:id="@+id/txtFileName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/layout"
-        android:layout_marginTop="110dp" />
-
     <LinearLayout
         android:layout_width="250dp"
         android:layout_height="250dp"
@@ -51,7 +37,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <com.example.a8custommakeimagetest.MyPictureView
+        <com.example.a8newimageviewtest.MyPictureView
             android:id="@+id/myPictureView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

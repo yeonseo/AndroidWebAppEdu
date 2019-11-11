@@ -1,4 +1,4 @@
-package com.example.a8custommakeimagetest;
+package com.example.a8newimageviewtest;
 
 import android.content.Context;
 import android.graphics.Bitmap;
