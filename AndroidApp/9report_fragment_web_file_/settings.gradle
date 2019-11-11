@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='9report_fragment_web_file_'
