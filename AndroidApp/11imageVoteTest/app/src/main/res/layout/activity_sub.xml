@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    >
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_weight="1"
+            android:text="pic1"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star1"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_weight="1"
+            android:text="pic2"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star2"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_weight="1"
+            android:text="pic3"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star3"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_weight="1"
+            android:text="pic4"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star4"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_weight="1"
+            android:text="pic5"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star5"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt6"
+            android:layout_weight="1"
+            android:text="pic6"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star6"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt7"
+            android:layout_weight="1"
+            android:text="pic7"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star7"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt8"
+            android:layout_weight="1"
+            android:text="pic8"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star8"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txt9"
+            android:layout_weight="1"
+            android:text="pic9"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/star9"
+            style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_weight="1"
+            android:text="Back"
+            android:textSize="20sp" />
+
+    </TableRow>
+
+</TableLayout>

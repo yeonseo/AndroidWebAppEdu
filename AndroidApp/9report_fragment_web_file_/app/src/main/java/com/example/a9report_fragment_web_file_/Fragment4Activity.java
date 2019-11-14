@@ -10,14 +10,12 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.EmbossMaskFilter;
 import android.graphics.Paint;
-import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +28,7 @@ import androidx.fragment.app.Fragment;
 public class Fragment4Activity extends Fragment {
     final static int ROTATION = 1, TRANCELATE = 2, SCALE = 3, SKEW = 4,
             NORMAL = 5, INNER = 6, OUTER = 7, SOLID = 8,
-            EM1 = 9,EM2 = 10,EM3 = 11,EM4 = 12,EM5 = 13;
+            EM1 = 9, EM2 = 10, EM3 = 11, EM4 = 12, EM5 = 13;
     public static int func = ROTATION;
     public int COLOR = Color.BLACK;
     View view;
@@ -98,37 +96,31 @@ public class Fragment4Activity extends Fragment {
                 break;
             case 6:
                 func = INNER;
-                gView.invalidate();
                 break;
             case 7:
                 func = OUTER;
-                gView.invalidate();
                 break;
             case 8:
                 func = SOLID;
-                gView.invalidate();
                 break;
             case 9: //마스크변경
                 func = EM1;
-                gView.invalidate();
                 break;
             case 10: //엠보싱변경
                 func = EM2;
-                gView.invalidate();
                 break;
             case 11: //엠보싱변경
                 func = EM3;
-                gView.invalidate();
                 break;
             case 12: //엠보싱변경
                 func = EM4;
-                gView.invalidate();
                 break;
             case 13: //엠보싱변경
                 func = EM5;
-                gView.invalidate();
+
                 break;
         }
+        gView.invalidate();
         return true;
     }
 
@@ -192,33 +184,34 @@ public class Fragment4Activity extends Fragment {
                     bMask = new BlurMaskFilter(30, BlurMaskFilter.Blur.SOLID);
                     break;
                 case 9:
-                    float[] array = { 2, 0, 0, 0, -25, 0, 2, 0, 0, -25, 0, 0, 2, 0,-25, 0, 0, 0, 1, 0 };
+                    float[] array = {2, 0, 0, 0, -25, 0, 2, 0, 0, -25, 0, 0, 2, 0, -25, 0, 0, 0, 1, 0};
                     ColorMatrix cm = new ColorMatrix(array);
                     paint.setColorFilter(new ColorMatrixColorFilter(cm));
                     break;
                 case 10:
-                    eMask = new EmbossMaskFilter(new float[] { 3, 3, 3 }, 0.2f, 1, 1);
+                    eMask = new EmbossMaskFilter(new float[]{3, 3, 3}, 0.2f, 1, 1);
                     break;
                 case 11:
-                    eMask = new EmbossMaskFilter(new float[] { 10, 3, 3 }, 0.2f, 1, 1);
+                    eMask = new EmbossMaskFilter(new float[]{10, 3, 3}, 0.2f, 1, 1);
                     break;
                 case 12:
-                    eMask = new EmbossMaskFilter(new float[] { 3, 10, 3 }, 0.2f, 1, 1);
+                    eMask = new EmbossMaskFilter(new float[]{3, 10, 3}, 0.2f, 1, 1);
                     break;
                 case 13:
-                    eMask = new EmbossMaskFilter(new float[] { 3, 3, 10 }, 0.2f, 1, 1);
+                    eMask = new EmbossMaskFilter(new float[]{3, 3, 10}, 0.2f, 1, 1);
                     break;
             }
 
-            if(func>9){
+            if (func > 9) {
                 paint.setMaskFilter(eMask);
                 canvas.drawCircle(cenX, cenY, 10, paint);
-            }else if (func > 4 | func<=9) {
+            } else if (func > 4 | func <= 9) {
                 paint.setMaskFilter(bMask);
                 canvas.drawBitmap(picture, picX, picY, paint);
             } else {
                 canvas.drawBitmap(picture, picX, picY, null);
             }
+            picture.recycle();
 
         }
 

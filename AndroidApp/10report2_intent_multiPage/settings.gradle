@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='10report2_intent_multiPage'

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/activity_navigation" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/btnMenu1"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/navi_menu"
+                android:text="Navi" />
+
+            <Button
+                android:id="@+id/btnMenu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="그림 투표하러 가기" />
+
+            <Button
+                android:id="@+id/btnMenu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="투표 결과 보기" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

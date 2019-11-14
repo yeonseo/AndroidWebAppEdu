@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화걸기"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHomapage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="홈페이지 열기"
+        app:layout_constraintTop_toBottomOf="@+id/btnDial" />
+
+    <Button
+        android:id="@+id/btnGoogleMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구글맵열기"
+        app:layout_constraintTop_toBottomOf="@+id/btnHomapage" />
+
+    <Button
+        android:id="@+id/btnGoogleSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구글검색하기"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleMap" />
+
+    <Button
+        android:id="@+id/btnEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="끝내기"
+        app:layout_constraintBottom_toTopOf="@+id/btnSms" />
+
+    <Button
+        android:id="@+id/btnSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자보내기"
+        app:layout_constraintBottom_toTopOf="@+id/btnPhoto" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진보기"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

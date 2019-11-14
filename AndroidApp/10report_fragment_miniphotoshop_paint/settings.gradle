@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='10report_fragment_miniphotoshop_paint'
