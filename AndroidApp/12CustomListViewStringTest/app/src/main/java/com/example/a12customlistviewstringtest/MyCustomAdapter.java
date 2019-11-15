@@ -24,7 +24,7 @@ public class MyCustomAdapter extends BaseAdapter {
         this.context = context;
         this.layout = layout;
         this.data = data;
-        Log.i("테스트","MyCustomAdapter 생성자");
+        Log.i("테스트", "MyCustomAdapter 생성자");
         //인틀렉터 할 수 있도록 기능을 요청하는 것.
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -47,9 +47,9 @@ public class MyCustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null){
-            Log.i("테스트","MyCustomAdapter getView");
+        if (convertView == null) {
             convertView = layoutInflater.inflate(layout, null);
+            Log.i("테스트", "MyCustomAdapter getView" + ", convertView : " + convertView + ", parent : " + parent + ", position : " + position);
         }
         TextView textView = convertView.findViewById(R.id.text1);
         MyCustomDAO myCustomDAO = data.get(position);

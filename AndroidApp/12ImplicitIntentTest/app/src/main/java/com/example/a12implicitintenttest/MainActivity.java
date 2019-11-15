@@ -55,48 +55,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         android.util.Log.i("액티비티 테스트", "onResume()");
-    }
+        }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        android.util.Log.i("액티비티 테스트", "onPause()");
-    }
+        @Override
+        protected void onPause() {
+            super.onPause();
+            android.util.Log.i("액티비티 테스트", "onPause()");
+        }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        android.util.Log.i("액티비티 테스트", "onStop()");
-    }
+        @Override
+        protected void onStop() {
+            super.onStop();
+            android.util.Log.i("액티비티 테스트", "onStop()");
+        }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        android.util.Log.i("액티비티 테스트", "onDestroy()");
-    }
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            android.util.Log.i("액티비티 테스트", "onDestroy()");
+        }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnDial:
-                handlerBtnDialAction();
-                break;
-            case R.id.btnHomapage:
-                handlerBtnHomapageAction();
-                break;
-            case R.id.btnGoogleMap:
-                handlerBtnGoogleMapAction();
-                break;
-            case R.id.btnGoogleSearch:
-                handlerBtnGoogleSearchAction();
-                break;
-            case R.id.btnSms:
-                handlerBtnSmsAction();
-                break;
-            case R.id.btnPhoto:
-                handlerBtnPhotoAction();
-                break;
-            case R.id.btnEnd:
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btnDial:
+                    handlerBtnDialAction();
+                    break;
+                case R.id.btnHomapage:
+                    handlerBtnHomapageAction();
+                    break;
+                case R.id.btnGoogleMap:
+                    handlerBtnGoogleMapAction();
+                    break;
+                case R.id.btnGoogleSearch:
+                    handlerBtnGoogleSearchAction();
+                    break;
+                case R.id.btnSms:
+                    handlerBtnSmsAction();
+                    break;
+                case R.id.btnPhoto:
+                    handlerBtnPhotoAction();
+                    break;
+                case R.id.btnEnd:
                 finish();
                 break;
 
