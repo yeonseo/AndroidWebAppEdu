@@ -21,12 +21,12 @@ public class MyCustomAdapter extends BaseAdapter {
     private LayoutInflater layoutInflater;
 
     public MyCustomAdapter(Context context, int layout, ArrayList<MyCustomDAO> data) {
-        this.context = context;
-        this.layout = layout;
+        this.context = context; //활동영역이 어디인가?
+        this.layout = layout; //홀더
         this.data = data;
         Log.i("테스트", "MyCustomAdapter 생성자");
         //인틀렉터 할 수 있도록 기능을 요청하는 것.
-        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE); //속도 저하의 원인
     }
 
     //데이타 갯수를 리턴해준다.
@@ -45,6 +45,7 @@ public class MyCustomAdapter extends BaseAdapter {
         return position;
     }
 
+    //홀더뷰를 가지고 온다.
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
