@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerMenuInfo"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_gravity="bottom"
+    android:background="#3e3e3e"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="가수"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="제목"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="앨범 : "
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="장르 : "
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvReleseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="발매 : "
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDrawerClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="close" />
+</LinearLayout>
