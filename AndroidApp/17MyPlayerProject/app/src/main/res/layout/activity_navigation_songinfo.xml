@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawerMenuInfo"
-    android:layout_width="match_parent"
-    android:layout_height="400dp"
-    android:layout_gravity="bottom"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
     android:background="#3e3e3e"
+    android:gravity="center"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,8 +16,14 @@
         android:layout_margin="20dp"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/ivArtistDrawerMenuInfo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"/>
+
         <TextView
-            android:id="@+id/tvArtist"
+            android:id="@+id/tvArtistDrawerMenuInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -26,7 +34,7 @@
             android:textSize="28sp" />
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvTitleDrawerMenuInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,7 +45,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/tvAlbum"
+            android:id="@+id/tvAlbumDrawerMenuInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -46,7 +54,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/tvGenre"
+            android:id="@+id/tvGenreDrawerMenuInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -55,7 +63,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/tvReleseDate"
+            android:id="@+id/tvReleseDateDrawerMenuInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -67,7 +75,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnDrawerClose"
+        android:id="@+id/btnDrawerInfoClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="close" />

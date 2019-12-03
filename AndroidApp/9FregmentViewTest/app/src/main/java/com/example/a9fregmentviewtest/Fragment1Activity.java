@@ -1,6 +1,7 @@
 package com.example.a9fregmentviewtest;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,8 @@ public class Fragment1Activity extends Fragment implements View.OnClickListener 
             view = inflater.inflate(R.layout.fragment1,container,false);
             btnFrag1 = view.findViewById(R.id.btnFrag1);
             btnFrag1.setOnClickListener(this);
-
+            String name = getArguments().getString("name");
+            Log.d("Fragment1Activity : ", name);
             return view;
         }
 

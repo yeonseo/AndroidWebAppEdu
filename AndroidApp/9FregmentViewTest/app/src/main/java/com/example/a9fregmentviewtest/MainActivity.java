@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+        , Fragment2Activity.OnFragmentInteractionListener {
     FrameLayout frameLayout;
     //합칠 때 팀장이 하는 것
     Button btnMenu1, btnMenu2, btnMenu3, btnMenu4;
-
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMenu3.setOnClickListener(this);
         btnMenu4.setOnClickListener(this);
 
+        name = "yan";
         btnMenu1.callOnClick(); //버튼을 부르는 함수
 //        이렇게 해야하지만!!
 //        FragmentTransaction ft =
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btnMenu1:
                 fragmentActivity = new Fragment1Activity();
+                Bundle bundle = new Bundle(1);
+                bundle.putString("name", name);
+                fragmentActivity.setArguments(bundle);
                 break;
             case R.id.btnMenu2:
                 fragmentActivity = new Fragment2Activity();
@@ -64,5 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         ft.replace(R.id.frameLayout, fragmentActivity);
         ft.commit();
+    }
+
+    @Override
+    public void onFragmentInteraction(String name) {
+        this.name = name;
     }
 }
