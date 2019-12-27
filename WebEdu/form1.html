@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      legend{
+        text-align: center;
+      }
+    </style>
+    <style>
+      fieldset {
+        width:300px; /* display가 block일때만 지정가능 */
+        text-align:right;
+      }
+    </style>
+    <style>
+        p>input{
+            display:inline-block; /* default값 inline */
+            width:70%; /* display가 block일때만 지정가능 */
+            height:10px; /* display가 block일때만 지정가능 */
+            background-color:skyblue; /* 배경색 = green */
+            margin-left:10px; /* 왼쪽 margin 10px */
+            padding:5px; /* padding 20px */
+            border:0px dashed skyblue; /* 테두리 */
+            font-style:italic; /* 글자형태 : 이태릭체 */
+            color:white /* 글자색 : white */
+        }
+    </style>
+
+  </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset style="border: 1px solid gray;">
+        <legend>요소 데모 화면</legend>
+        <ol>
+          <li>
+            <p>name: <input type="text" name="text" /></p>
+          </li>
+          <li>
+            <p><span>e-mail: </span> <input type="email" name="email" /></p>
+          </li>
+          <li>
+            <p>tel: <input type="tel" name="tel" /></p>
+          </li>
+        </ol>
+        <!-- <p>URL: <input type="url" name="url" /></p>
+        <p>num: <input type="number" name="number" /></p>
+        <p>color: <input type="color" name="color" /></p>
+        <p>month: <input type="month" name="month" /></p>
+        <p>date: <input type="date" name="date" /></p>
+        <p>time: <input type="time" name="time" /></p>
+        <p>Address: <input type="text" name="Adress" /></p>
+        <p>number:  <input type="number" name="number" ></p>
+        <p>City:  <input type="text" name="City" ></p>
+        <p>State: <input type="text" name="Stat" /></p>
+        <p>zip: <input type="text" name="Zip" /></p>
+        <p>range:  <input type="range" name="range" min="1" max="10" step="2"></p> -->
+        <input id="btn" type="submit" value="제출">
+      </fieldset>
+    </form>
+  </body>
+</html>
