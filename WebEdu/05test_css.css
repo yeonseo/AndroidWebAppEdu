@@ -1,0 +1,15 @@
+body {
+    background-color: greenyellow; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right,green, rgb(113, 148, 17),rgb(211, 223, 49));
+
+}
+
+div.div-main {
+    margin-left: 50%;
+    border: 2px dotted white;
+    padding: 5%;
+}
+
+i[class='fas fa-cloud']{
+    padding: 5%;
+}
