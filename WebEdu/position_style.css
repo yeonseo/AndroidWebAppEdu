@@ -1,0 +1,92 @@
+div.div_static {
+    border: 2px solid tomato;
+}
+
+div.div_static #one {
+    background-color: cyan;
+    width: 200px;
+    height: 50px;
+}
+div.div_static  #two {
+    position: static;
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+}
+div.div_static #three {
+    background-color: lightgreen;
+    width: 200px;
+    height: 50px;
+}
+
+
+div.div_relative {
+    border: 2px solid steelblue;
+}
+
+div.div_relative #one {
+    background-color: cyan;
+    width: 200px;
+    height: 50px;
+}
+
+div.div_relative #two {
+
+    position: relative;
+    left: 30px;
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+}
+
+div.div_relative #three {
+    background-color: lightgreen;
+    width: 200px;
+    height: 50px;
+}
+
+
+div.div_absolute {
+    border: 2px solid purple;
+}
+
+div.div_absolute #one {
+    background-color: cyan;
+    width: 200px;
+    height: 50px;
+}
+
+div.div_absolute #two {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+}
+
+div.div_absolute #three {
+    background-color: lightgreen;
+    width: 200px;
+    height: 50px;
+}
+
+
+div.div_fixed {
+    border: 2px solid green;
+}
+
+div.div_fixed p {
+    background-color: lightgreen;
+    width: 200px;
+    height: 50px;
+}
+div.div_fixed #two {
+    background-color: yellow;
+    position:fixed;
+    top:0px;
+    right:0px;
+}
+
