@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="./test_join_form.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>회원 신청서</h4>
+
+    <form method="POST">
+        <table>
+            <tr>
+                <td colspan="2">이용자 본인의 이름 및 주민등록번호를 정확히 입력하시길 바랍니다.</td>
+            </tr>
+            <tr>
+                <td>이름 :</td>
+                <td><input type="text" id="txtName" onkeyup="checkJoinForm('txtName');"><span>한글로 2-4자를
+                        입력해주세요.</span></td>
+            </tr>
+
+            <tr>
+                <td>주민번호 :</td>
+                <td><input type="text" id="txtNum1" onkeyup="checkJoinForm('txtNum1');">-
+                    <input type="text" id="txtNum2" onkeyup="checkJoinForm('txtNum2');">
+                    <span id="spanNum"></span></td>
+            </tr>
+            <tr>
+                <td>아이디 : </td>
+                <td><input type="text" id="txtID" onkeyup="checkJoinForm('txtID');">
+                    <span>첫글자는 영문자와 숫자와 영문자를 이용해 입력하세요.</span></td>
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+
+</html>

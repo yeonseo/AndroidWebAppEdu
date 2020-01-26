@@ -1,0 +1,85 @@
+* {
+    border: 0px solid white;
+}
+
+body {
+    background-image: url('./image/2813122.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1,
+label {
+    color: white;
+}
+
+div#container {
+    position: relative;
+
+    background-color: rgba(170, 170, 170, 0.425);
+    width: 700px;
+    margin: 10% 20% auto 45%;
+    padding: 40px 20px;
+}
+
+div.inputContainer {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    margin: 10px 15%;
+}
+
+div.warningIcon {
+    position: absolute;
+    right: 153px;
+    top: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+div.warningIcon, div.warningMessage {
+    visibility: hidden;
+    color: whitesmoke;
+}
+
+input {
+    width: 68%;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 25%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+input:focus,
+button:focus {
+    outline: 3px solid rgb(255, 174, 0);
+}
+
+button:focus {
+    background-color: rgb(255, 174, 0);
+}

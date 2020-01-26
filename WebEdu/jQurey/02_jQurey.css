@@ -1,0 +1,21 @@
+div.test2, div.next{
+    width: 70px;
+    height: 50px;
+    float: left;
+    margin:5px;
+    background-color: red;
+}
+
+div.next{
+    background-color: blue;
+}
+
+div#cssEchoDiv {
+    background-color: blue;
+    height: 80px;
+    width: 80px;
+}
+
+td {
+    border : 1px solid gray;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./test3.js"></script>
+    <title>Document</title>
+
+
+    <!-- Drag() and Drop() -->
+    <style>
+        #shopping_cart {
+            width: 500px;
+            height: 100px;
+            padding: 10px;
+            border: 2px dotted red;
+        }
+
+        #shopping_cart_out {
+            width: 500px;
+            height: 100px;
+            padding: 10px;
+            border: 2px dotted blue;
+        }
+    </style>
+    <script>
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function handleDragStart(e) {
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData("Text", e.target.id);
+        }
+        function handleDrop(e) {
+            e.preventDefault();
+            var src = e.dataTransfer.getData("Text");
+            e.target.appendChild(document.getElementById(src));
+        }
+
+        //리브도 선언하면 왜 오류남...???
+        function leaveDrop(e) {
+            e.preventDefault();
+            var src = e.dataTransfer.getData("Text");
+            e.target.removeChild(document.getElementById(src));
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Drag() and Drop() -->
+    <br />
+    <div id='bar'>================================================</div>
+    <div id="shopping_cart" ondrop="handleDrop(event)" ondragover="allowDrop(event)"></div>
+    <div id="shopping_cart_out" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+        <img id="img1" src="./image/tv.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+        <img id="img2" src="./image/audio.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+        <img id="Img3" src="./image/camera.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+    </div>
+
+    <!-- SGV -->
+    <br />
+    <div id='bar'>================================================</div>
+    <h2>SVG를 이용한 사각형 생성</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect width="300" height="100" style="fill:rgb(255,0,0); stroke-width:3; stroke:rgb(128,128,128)" />
+    </svg>
+
+</body>
+
+</html>

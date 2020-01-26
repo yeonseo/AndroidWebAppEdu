@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function readFile() {
+            if (!window.File || !window.FileReader) {
+                let $result = document.getElementById('result');
+                // alert('File API가 지원되지 않습니다.');
+                $result.value = 'File API가 지원되지 않습니다.';
+                return;
+            }
+
+            let $files = document.getElementById('input').files;
+            if (!$files.length) {
+                alert('파일을 선택하시오!');
+                return;
+            }
+
+            let file = $files[0];
+            let reader = new FileReader();
+            reader.onload = function () {
+                document.getElementById('result').value = reader.result;
+                document.getElementById('result').value = "읽기 완성~~~";
+            };
+            /* *  EUC - KR은 KS X 1001와 KS X 1003을 사용하는 8비트 문자 인코딩,
+             *  EUC의 일종이며 대표적인 한글 완성형 인코딩이기 때문에 보통 완성형이라고 불린다.
+             *  EUC - KR 인코딩은 다음과 같이 구성된다. 128보다 작은 바이트에 KS X 1003을 배당한다. */
+            reader.readAsText(file, 'euc-kr');
+            document.getElementById('result').value = "메롱메롱메롱";
+
+        } //end of func readFile()
+    </script>
+</head>
+
+<body>
+    <!-- 두가지 방법 모두 가능 -->
+    <!-- <input type="file" id="input" name="fileInput" multiple="multiple"> -->
+    <input type="file" id="input" name="fileInput" multiple>
+
+    <button id="readFile" onclick="readFile();">파일 읽기</button><br />
+    <textarea id="result" rows="8" cols="80"> </textarea>
+
+</body>
+
+</html>

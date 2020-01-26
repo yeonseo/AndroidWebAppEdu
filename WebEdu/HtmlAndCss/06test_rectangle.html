@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06test_09</title>
+    <style> 
+        div.rec01{
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+          animation-name: example;
+          animation-duration: 4s;
+        }
+
+        div.rec01:hover{
+            animation-name: ratate_rec;
+            animation-duration: 2s;
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+          from {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+            }
+          to {
+              background-color: yellow;
+              width: 200px;
+                height: 200px;
+            }
+        }
+        
+        /* Standard syntax */
+        @keyframes example {
+            from {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+            }
+          to {
+              background-color: yellow;
+              width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes ratate_rec {
+          from {transform: rotate( 0deg );}
+          to {transform: rotate( 360deg );}
+        }
+
+        div.rec02 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: move; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+  animation-name: move;
+  animation-duration: 4s;
+  animation-direction: reverse;  
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes move {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+        </style>
+</head>
+<body>
+<div class="rec01"></div>
+<div class="rec02"></div>
+
+</body>
+</html>

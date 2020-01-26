@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td#column1 {
+            background-color: lightblue;
+        }
+
+        td#columns {
+            border-bottom: 1px dotted gray;
+        }
+
+        td {
+            text-align: center;
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var table = function () {
+            var i, j;
+            document.write("<h1>구구단표</h1>");
+            document.write("<table border=2 width=50%");
+            for (i = 1; i <= 9; i++) {
+                document.write("<tr>");
+                document.write("<td id=\"column1\">" + i + "</td>");
+                for (j = 2; j <= 9; j++) {
+                    document.write("<td id=\"columns\">" + i * j + "</td>");
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        table();
+    </script>
+
+</body>
+
+</html>

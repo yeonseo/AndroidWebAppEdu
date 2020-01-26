@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function pageCount() {
+            if (!localStorage.pageLoadCount) {
+                localStorage.pageLoadCount = 0;
+            }
+
+            localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+            document.getElementById('count').textContent = localStorage.pageLoadCount;
+        }
+
+        function incrementCounter() {
+            if (('localStorage' in window) && window['localStorage'] !== null) {
+                if (localStorage.count) {
+                    localStorage.count++;
+                }
+                else {
+                    localStorage.count = 1;
+                }
+                document.getElementById("target").innerHTML =
+                    localStorage.count + "번 클릭하였습니다.";
+            }
+            else {
+                document.getElementById("target").innerHTML =
+                    "브라우저가 웹스토리지를 지원하지 않습니다.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>
+        페이지 방문 횟수: <span id="count"> </span>번
+    </p>
+    <script>pageCount();</script>
+
+</body>
+
+</html>

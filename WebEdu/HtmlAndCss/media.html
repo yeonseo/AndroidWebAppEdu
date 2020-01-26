@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Audio Test</title>
+  </head>
+  <body>
+    <audio src="./media/video.mp4" autoplay controls>
+      니 브라우져는 이걸 지원하지 않아여 ;
+    </audio>
+    <video id="vid" src="./media/video.mp4" type="video/mp4" muted autoplay controls poster="">
+      니 브라우져는 이걸 지원하지 않아여 ;
+    </video>
+
+    <video src="http://media.w3.org/2010/05/bunnny/movie.ogv" type="video/ogv" width="300" height="200" muted autoplay controls poster="">
+      니 브라우져는 이걸 지원하지 않아여 ;
+    </video>
+
+    <script type="video/mp4">
+      var myVideo = document.getElementById("vid");
+      function playVideo(){
+        myVideo.play();
+      }
+    </script>
+  </body>
+</html>

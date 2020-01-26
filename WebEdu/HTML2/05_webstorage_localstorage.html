@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function counter() {
+            if (('sessionStorage' in window) && window['sessionStorage'] !== null) {
+                if (sessionStorage.count) {
+                    sessionStorage.count = parseInt(sessionStorage.count) + 1;
+                } else {
+                    sessionStorage.count = 1;
+                }
+
+                document.getElementById("target").innerHTML =
+                    sessionStorage.count + '번 클릭하셨습니다~';
+            } else {
+                document.getElementById("target").innerHTML =
+                    '브라우저가 sessionStorage를 지원하지 않습니다.';
+            }
+
+
+        } //end of func counter()
+
+        function incrementCounter() {
+            if (('localStorage' in window) && window['localStorage'] !== null) {
+                if (localStorage.count) {
+                    localStorage.count++;
+                }
+                else {
+                    localStorage.count = 1;
+                }
+                document.getElementById("target").innerHTML =
+                    localStorage.count + "번 클릭하였습니다.";
+            }
+            else {
+                document.getElementById("target").innerHTML =
+                    "브라우저가 웹스토리지를 지원하지 않습니다.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="target">
+        버튼 누른 횟수: <span id="count"> </span>번
+    </div>
+    <button type="button" onclick="counter();">세션 버튼을 누르세요.</button>
+    <button type="button" onclick="incrementCounter();">로컬 버튼을 누르세요.</button>
+
+</body>
+
+</html>

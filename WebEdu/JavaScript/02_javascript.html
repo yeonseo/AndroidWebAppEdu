@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script id="10">
+        function Car(model, speed, color) {
+            this.model = model;
+            this.speed = speed;
+            this.color = color;
+            this.brake = function () {
+                this.speed -= 10;
+            }
+            this.accel = function () {
+                this.speed += 10;
+            }
+        }
+        var myCar = new Car('bmw', 10, 'red');
+
+        var b = function () {
+            var a = 10;
+            if (a > 5) {
+                a = 7;
+            }
+            alert(a);
+        }
+
+        var num = function numnum() {
+            var input = prompt("100 미만의 숫자를 입력하세요.");
+            if (input >= 100) {
+                alert("정수 " + input + "은 100보다 큽니다.");
+                numnum();
+            }
+        }
+
+        var sum = function () {
+            var i;
+            var res = 0;
+            for (i = 1; i <= 100; i++) {
+                res += i;
+            }
+            alert(res);
+        }
+
+        var planetFunc = function () {
+            var planet = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성'];
+            var i;
+            for (i = 0; i < planet.length - 1; i++) {
+                alert(planet[i]);
+            }
+            var q = confirm(planet[planet.length - 1] + "은 마지막 행성일까요? 맞으면 확인, 틀리면 취소를 눌러주세요.", "false");
+            if (q === false) {
+                alert("틀렸습니다~ 명왕성은 2006년에 행성에서 빠졌습니다 :-)");
+            } else {
+                alert("맞췄습니다! 명왕성은 2006년에 행성에서 빠졌습니다 :-)");
+            }
+        }
+
+        function Song(artist, title, length, album, year) {
+            this.artist = artist;
+            this.title = title;
+            this.length = length;
+            this.album = album;
+            this.year = year;
+
+            this.print = function () {
+                alert("선택하신 곡" + this.title + "의 정보는 다음과 같습니다. \n"
+                    + this.artist + " - " + this.title + "\n"
+                    + "재생 시간 - " + this.length + "\n"
+                    + "앨범 - " + this.album + "\n"
+                    + "발매 연도 - " + this.year + "년" + "\n"
+                );
+            }
+        }
+
+        var songs = new Array();
+
+        function inputSong() {
+            var artist = document.getElementById("artist").value;
+            var title = document.getElementById("title").value;
+            var length = document.getElementById("length").value;
+            var album = document.getElementById("album").value;
+            var year = document.getElementById("year").value;
+            songs[songs.length] = new Song(artist, title, length, album, year);
+        }
+    </script>
+
+    <button type="button" onclick="b()">연습 문제 6번 확인</button><br />
+    <button type="button" onclick="num()">연습 문제 10번 확인</button><br />
+    <button type="button" onclick="sum()">연습 문제 11번 확인</button><br />
+    <button type="button" onclick="planetFunc()">연습 문제 12번 확인</button><br />
+
+    <form action="#" method="post">
+        artist : <input type="text" id="artist" value=""><br>
+        title : <input type="text" id="title" value=""><br>
+        length : <input type="text" id="length" value=""><br>
+        album : <input type="text" id="album" value=""><br>
+        year : <input type="text" id="year" value=""><br>
+        입력 : <input type="button" onclick="inputSong()">
+    </form>
+    <!-- <button type="button" onclick="songs[Math.floor(Math.random()*(songs.length-1))].print()">연습 문제 14번 노래
+        확인</button><br /> -->
+    <button type="button" onclick="songs[0].print()">연습 문제 14번 노래
+        확인</button><br />
+</body>
+
+</html>

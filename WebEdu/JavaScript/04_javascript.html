@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./04_javascript.js"></script>
+</head>
+
+<body id="backDiv">
+    <p>Click the button to open an about:blank page in a new browser window that is 200px wide and 100px tall.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            var myWindow = window.open("", "", "width=200,height=100");
+        }
+    </script>
+
+
+    영어단어: <input type="text" id="name" size="15" onkeydown="sub();">
+    <p>입력필드를 벗어나면 소문자로 변경됩니다.</p>
+
+    <div style="background-color:yellow; width: 200px;" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        마우스가 여기를 지나면~!
+    </div>
+
+    <form name="myForm">
+        <input type="text" id="target" name="text1">
+        <input type="submit" value="input" onclick="process()">
+    </form>
+
+    <ul>
+        <li>아이템 1</li>
+        <li>아이템 2</li>
+        <li>아이템 3</li>
+        <li>아이템 4</li>
+        <li>아이템 5</li>
+    </ul>
+
+    <button type="button" onclick="changeLiColor()">Item List Alert</button><br />
+
+    <img id="image" src="./image/image1.jpeg" width="300px" height="200px" alt=""><br />
+    <div id="addTextDiv">여기는 어디일까요??? </div>
+    <button type="button" onclick="imageSrcChange();">Image Src Change</button><br />
+    <button type="button" onclick="imageVis();">Image Visible</button><br />
+    <button type="button" onclick="addText();">Text Add</button><br />
+
+    <button type="button" onclick="newWindow();">New Window</button><br />
+    <button type="button" onclick="replaceWindow();">replace Window</button><br />
+    <!-- <button type="button" onclick="moveWindow();">Move Window</button><br /> -->
+
+    <div id="backgroundColorDiv" style="padding:10px; font-size: 2rem;">testestes</div>
+    <button type="button" onclick="backgroundColor();">Background Color Start</button><br />
+    <button type="button" onclick="stopTextColor();">Background Color Stop</button><br />
+
+    <form method="POST">
+        <input type="radio" name="C1" value="v1" onclick="changeColor('lightblue')">파랑색
+        <input type="radio" name="C1" value="v2" onclick="changeColor('lightgreen')">녹색
+    </form>
+</body>
+
+</html>

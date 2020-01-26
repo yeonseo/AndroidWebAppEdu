@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My First Javascript</title>
+    <script src="./input.js"></script>
+</head>
+
+<body>
+    <script>
+        var now = new Date();
+        var backColor = 'red';
+        document.write(now);
+    </script>
+
+    <br />
+    <form action="#" method="post">
+        num1 : <input type="number" id="num1" value=""><br>
+        num2 : <input type="number" id="num2" value=""><br>
+        sum : <input type="number" id="sum" value=""><br>
+        계산하기 : <input type="button" onclick="cal();">
+    </form>
+    <button type="button" onclick="alert('반갑습니다.')">버튼을 누르세요!</button><br />
+    <button type="button" onclick="backColor=myBackground(backColor)">배경화면 ?!</button><br />
+    <button type="button" onclick="goodmorning()">시간에 따른 메세지확인</button><br />
+    <button type="button" onclick="grade()">학점 확인</button><br />
+</body>
+
+</html>

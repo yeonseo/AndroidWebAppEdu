@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./03_javascript.js"></script>
+    <script>
+        function printArray(a) {
+            document.write("[ ");
+            for (var i = 0; i < a.length; i++)
+                document.write(a[i] + " ");
+            document.write(" ] <br>");
+
+        }
+        var myArray1 = new Array();
+        myArray1[0] = "apple";
+        myArray1[1] = "banana";
+        myArray1[2] = "orange";
+
+        var myArray2 = new Array("apple", "banana", "orange");
+        var myArray3 = ["apple", "banana", "orange"];
+
+        printArray(myArray1);
+        printArray(myArray2);
+        printArray(myArray3);
+
+        function toFixedTest() {
+            var count1 = prompt("비교할 첫번째 수를 적으세요.", "-1");
+            var count2 = prompt("비교할 두번째 수를 적으세요.", "-1");
+            count1 = parseInt(count1);
+            count2 = parseInt(count2);
+            if (typeof count1 === 'number' && typeof count2 === 'number') {
+
+                if (count1.toFixed(2) === count2.toFixed(2))
+                    alert("소수점 2째 자리까지 같습니다.");
+            } else {
+                alert("입력한 값이 올바르지 않습니다.");
+            }
+        }
+
+        var numbers = [1, 2, 3, 4, 5];
+        var num = 0;
+
+        var numbersSort = [1, 32, 31, 14, 25, 119, 55, 342, 78];
+    </script>
+
+</head>
+
+<body>
+    <div id="clock"></div>
+    <button type="button" onclick="setClock()">1번 확인</button><br />
+    <button type="button" onclick="toFixedTest()">2번 확인</button><br />
+    <form name="calculator">
+        입력: <input type="text" name="number1"><br />
+        계산 결과: <input type="text" name="total"><br />
+        <input type="button" value="SIN" onclick="calc(1);">
+        <input type="button" value="LOG" onclick="calc(2);">
+        <input type="button" value="SQRT" onclick="calc(3);">
+        <input type="button" value="ABS" onclick="calc(4);">
+        <input type="button" value="만약 잘못 입력했을 경우 방어" onclick="calc(Math.floor(Math.random()*10));">
+    </form>
+
+    <div id="arrayPop"></div>
+    <button type="button" onclick="pushPopShift(num); num++;">4번 확인</button><br />
+    <button type="button" onclick="date();">5번 확인</button><br />
+
+    <div id="todayDiv"></div>
+    <button type="button" onclick="today();">6번 확인</button><br />
+
+    <h2>구입날짜:</h2>
+    <input type="date" id="pdate">
+    <button type="button" onclick="checkDate();">7번 확인</button><br />
+
+    <button type="button" onclick="strConcat();">8번 확인</button><br />
+    <button type="button" onclick="strIndexOf();">9번 확인</button><br />
+    <button type="button" onclick="randomStyle();">10번 확인</button><br />
+    <button type="button" onclick="sort1(numbersSort);">11번 확인</button><br />
+    <button type="button" onclick="sort2(numbersSort);">12번 확인</button><br />
+    <button type="button" onclick="sliceArray(numbersSort);">13번 확인</button><br />
+    <button type="button" onclick="joinArray(numbersSort);">14번 확인</button><br />
+    <button type="button" onclick="sumMillion();">15번 확인</button><br />
+
+    <input type="text" id="charText">
+    <button type="button" onclick="charBig();">16번 확인</button><br />
+    <button type="button" onclick="monthStr();">17번 확인</button><br />
+    <button type="button" onclick="movie();">18번 확인</button><br />
+    <button type="button" onclick="fruit();">19번 확인</button><br />
+
+
+</body>
+
+</html>

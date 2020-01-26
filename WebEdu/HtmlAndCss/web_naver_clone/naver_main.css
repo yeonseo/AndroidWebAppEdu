@@ -1,0 +1,160 @@
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+header, nav{
+    border-bottom: 0.2px solid #d3d3d3;
+}
+
+#header-center {
+    width: 1100px;
+    margin: 0 auto;
+}
+#header-start {
+    text-align: right;
+}
+#header-start a {
+    text-decoration: none;
+    color: silver;
+}
+#header-start a:hover {
+    text-decoration: underline;
+    color: darkgray;
+}
+
+header #junior-naver {
+    display: inline-block;
+    width: 58px;
+    height: 11px;
+    background-position: 0 -158px;
+    background-image: url(./images/sp_main_v191212.png);
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+header #naver-image {
+    display: inline-block;
+    width: 300px;
+    height: 70px;
+    background-position: -10px -50px;
+    background-image: url(./images/naver_logo.jpg);
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+#header-search {
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+}
+
+#header-search a {
+    display: inline-block;
+    width: 0px;
+}
+
+fieldset {
+    display: inline-block;
+    border: 0;
+    position: relative;
+    top: -25px;
+    left: 300px;
+}
+fieldset button {
+    float: left;
+    position: relative;
+    left: 520px;
+    width: 49px;
+    height: 49px;
+    margin-left: -2px;
+    padding: 0;
+    border: 0;
+    background-color: #03cf5d;
+    cursor: pointer;
+}
+button #search-image{
+    display: inline-block;
+    margin: 8px 0 0 0;
+    width: 28px;
+    height: 28px;
+    background-position: -200px 0px;
+    background-image: url(./images/sp_main_v191212.png);
+    background-repeat: no-repeat;
+}
+
+.green-window{
+    display: inline-block;
+    width: 470px;
+    height: 45px;
+    border: 2px solid #03cf5d;
+    background-color: #fff;
+}
+
+.green-window input {
+    margin: 12px 0 0 9px;
+    width: 405px;
+    height: 23px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+header #junior-naver:hover {
+    background-position: -68px -158px;
+    background-image: url(./images/sp_main_v191212.png);
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.area_links .al_happybean {
+    float: left;
+    padding: 5px;
+}
+
+#nav-center {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#nav-center ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+#nav-center li {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 30px;
+    font-weight: bold;
+}
+#nav-center a:link, #nav-center a:visited {
+    text-decoration: none;
+    color: darkgrey;
+}
+
+#nav-left {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+#nav-left h3 {
+    margin: 0;
+    padding: 0;
+}

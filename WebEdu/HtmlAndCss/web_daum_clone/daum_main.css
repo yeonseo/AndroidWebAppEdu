@@ -1,0 +1,453 @@
+* {
+    border: 0px solid #d3d3d3;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h2, h3 {
+    float: left;
+    padding: 0;
+    line-height: 15px;
+    margin: 15px 10px 6px 10px;
+    font-size: 1rem;
+}
+
+div {
+    display: inline-block;
+}
+
+h2.frontHeader {
+    clear: both;
+    color: dodgerblue;
+}
+
+h2.rightHeader {
+    float: right;
+}
+
+ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 10px 10px;
+}
+
+p, .articleList li {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    height: 2rem;
+    font-size: 0.8rem;
+}
+
+.articleList li {
+    height: 1rem;
+    padding: 4px 0;
+}
+
+article {
+    float: left;
+    padding: 0 3px;
+}
+
+/* header is header page */
+/* header is header page */
+/* header is header page */
+
+header {
+    height: 184px;
+    border-bottom: 1px solid gray;
+    padding: 0px;
+}
+header #headerDiv {
+    display: block;
+    margin: 0 auto;
+    width: 990px;
+    height: 150px;
+}
+
+
+/* headerLeft is logo page */
+/* headerLeft is logo page */
+/* headerLeft is logo page */
+
+header div#headerLeft {
+    float: left;
+    width: 140px;
+    height: 150px;
+}
+header div#headerLeft a {
+    float: left;
+    width: 180px;
+    margin: 10px;
+}
+header div#headerLeft a:link {
+    font-size: 0.8rem;
+    color: gray;
+}
+header div#headerLeft img {
+    float: left;
+    width: 120px;
+    height: 50px;
+    margin: 15px 10px 15px 0;
+}
+
+
+/* headerRight is headerSearch page */
+/* headerRight is headerSearch page */
+/* headerRight is headerSearch page */
+
+header #headerRight  {
+    width: 510px;
+}
+header #headerRight div#headerSearch {
+    margin-top: 50px;
+    width: 510px;
+    height: 100%;
+}
+
+header #headerRight div#searchBar {
+    float: left;
+    border: 1px solid #0089ff;
+    width: 100%;
+    height: 44px;
+}
+
+header #headerRight input#searchInput {
+    float: left;
+    margin: 10px 80px auto 10px;
+    width: 340px;
+    height: 24px;
+    font-size: 1.3rem;
+    border: none;
+}
+header #headerRight input#searchInput:focus {
+    outline-width: 0;
+}
+
+header #headerRight #searchButton {
+    float: right;
+    width: 49px;
+    height: 44px;
+    background-color: #0089ff;
+    color: honeydew;
+    font-size: 2rem;
+}
+
+header #headerRight ul.listFavorsch {
+    width: 100%;
+    padding: 0;
+}
+header #headerRight ul.listFavorsch a:link {
+    color: gray;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+header #headerBottom {
+    display: inline-block;
+    margin: 0 auto;
+    width: 990px;
+}
+
+header #headerBottom ul {
+    display: inline-block;
+    clear: both;
+    width: 750px;
+    padding: 0;
+}
+
+
+header #headerBottom ul li {
+    float: left;
+    padding: 0 15px 0 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+header #headerBottom ul li #navMore {
+    padding: 0;
+}
+
+header #headerBottom ul li a:link{
+    text-decoration: none;
+    color: black;
+}
+
+header #headerBottom #navWeather {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 240px;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+header #headerBottom #navWeather #weather {
+    visibility: hidden;
+    width: 300px;
+    height: 154px;
+    background-color: #fafafa;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.8rem;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 28%;
+    margin-left: -133px;
+}
+
+header #headerBottom #navWeather:hover #weather{
+    visibility : visible;
+}
+
+#weatherIcon {
+    background-position: -700px -200px;
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-left: 22px;
+    background-image: url(./images/ico_wm_1801023.png);
+    background-repeat: no-repeat;
+    text-indent: -99
+}
+
+#weatherTemp, #weatherDesc {
+    display: block;
+    float: right;
+    margin-right: 50px;
+}
+
+#weatherTemp { 
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+#weather #dusty, #weather #air{
+    width: 148px;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #d3d3d3;
+}
+strong {
+    color: seagreen;
+}
+
+/* daumContent is main left page */
+/* daumContent is main left page */
+/* daumContent is main left page */
+
+#daumContent {
+    margin: 15px auto;
+    width: 1000px;
+}
+
+#mainBannerLogin .cardLeft {
+    float: left;
+    position: relative;
+    width: 655px;
+    height: 120px;
+    margin-right: 35px;
+}
+
+#mainBannerLogin .cardLeft #mBannerImage {
+    width: 100%;
+    height: 100%;
+}
+#mainBannerLogin .cardRight {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 120px;
+    background-color: #fafafa;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+}
+#mainBannerLogin .cardRight>div {
+    margin: 0px 15px;
+}
+
+#loginID, .cardRight #kakaoButton {
+    margin: 10px 0;
+    clear: both;
+    float: left;
+}
+
+.cardRight #kakaoButton {
+    margin: 7px 0;
+    padding: 3px 6px;
+    background-color: gold;
+    border-radius: 12px;
+}
+
+#loginButton, .cardRight ul#loginCenter {
+    margin: 10px 0;
+    float: right;
+    padding: 0;
+}
+.cardRight ul#loginCenter li {
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    padding: 0;
+}
+.cardRight ul#loginCenter li #mainNum{
+    padding: 1px 3px;
+    background-color: crimson;
+    border-radius: 50%;
+    color: white;
+}
+
+.cardRight #loginBottom ul{
+    width: 100%;
+    height: 45px;
+    padding: 0;
+}
+
+.cardRight #loginBottom ul>li{
+    float: left;
+    width: 88px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 5px 0;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+
+/* mainLeft is news and content */
+/* mainLeft is news and content */
+/* mainLeft is news and content */
+
+#mainLeft {
+    float: left;
+    position: relative;
+    width: 655px;
+    margin-right: 35px;
+}
+#mainLeft div#newsTop {
+    width: 655px;
+}
+
+#mainLeft .newsCard {
+    width: 655px;
+    clear: both;
+    display: inline-block;
+    margin: auto 8px;
+}
+
+#mainLeft .newsCard article {
+    display: inline-block;
+    width: 154px;
+}
+
+#mainLeft .newsCard article.articleList ul, #mainLeft .newsCardBottom .articleList ul {
+    float: left;
+    list-style: none;
+    width: 308px;
+    margin: 0;
+    padding: 0 0 10px 10px;
+}
+
+#mainLeft article img{
+    width: 154px;
+    height: 94px;
+}
+
+#mainLeft article p {
+    display: inline-block;
+    width: 154px;
+}
+
+#mainLeft .contentTab {
+    display: inline-block;
+    width: 655px;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+}
+
+#mainLeft #newsBottom, #mainLeft .newsCardBottom {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #dddddd;
+    background-color: #fafafa;
+}
+
+#mainLeft #newsBottom h2 , #mainLeft #newsBottom h3{
+    float: left;
+    font-size: 0.8rem;
+}
+
+
+/* mainRight is news and content */
+/* mainRight is news and content */
+/* mainRight is news and content */
+
+#mainRight {
+    float: left;
+    position: relative;
+    width: 300px;
+}
+
+#mainRight #adBrandingStation {
+    margin-top: 15px;
+}
+
+/* daumMainBottom is photo content */
+/* daumMainBottom is photo content */
+/* daumMainBottom is photo content */
+
+#daumMainBottom {
+    margin: 20px auto;
+}
+#daumMainBottom img{
+    width: 990px;
+}
+
+/* footer is main bottom */
+footer {
+    border-top: 1px solid gray;
+}
+
+footer #footerDiv {
+    display: block;
+    width: 990px;
+    margin: 30px auto;
+    vertical-align: middle;
+}
+
+footer #footerDiv #footerUpper {
+    display: inline-block;
+    width: 990px;
+    margin: 30px auto;
+    font-size: 0.8rem;
+    height: 25px;
+}
+
+footer #footerDiv #footerUpper > * {
+    vertical-align: text-bottom;
+}
+#footerUpper #footerService>strong {
+    float: right;
+}
+
+#footerDiv img {
+    width: 70px;
+    height: 25px;
+    margin-right: 30px;
+}
+
+#footerDiv p ,footer strong {
+    color: gray;
+    height: 20px;
+}

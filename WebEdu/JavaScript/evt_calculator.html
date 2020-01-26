@@ -1,0 +1,51 @@
+﻿<html>
+
+<head>
+    <script>
+        var cal = "";
+
+        function add(input) {
+            cal = cal + input;
+            document.getElementById("inputText").value = cal;
+        }
+        function compute() {
+            document.getElementById("inputText").value = eval(cal);
+        }
+        function clearDisplay() {
+            cal = "";
+            document.getElementById("inputText").value = "0";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input id="inputText" type="text">
+    <div>
+        <button onclick="add('1');" style="width: 30px;">1</button>
+        <button onclick="add('2');" style="width: 30px;">2</button>
+        <button onclick="add('3');" style="width: 30px;">3</button>
+        <button onclick="add('/');" style="width: 30px;">/</button>
+    </div>
+    <div>
+        <button onclick="add('4');" style="width: 30px;">4</button>
+        <button onclick="add('5');" style="width: 30px;">5</button>
+        <button onclick="add('6');" style="width: 30px;">6</button>
+        <button onclick="add('*');" style="width: 30px;">*</button>
+    </div>
+    <div>
+        <button onclick="add('7');" style="width: 30px;">7</button>
+        <button onclick="add('8');" style="width: 30px;">8</button>
+        <button onclick="add('9');" style="width: 30px;">9</button>
+        <button onclick="add('-');" style="width: 30px;">-</button>
+    </div>
+    <div>
+        <button onclick="add('0');" style="width: 30px;">0</button>
+        <button onclick="add('+');" style="width: 30px;">+</button>
+        <button onclick="compute();" style="width: 30px;">enter</button>
+        <button onclick="clearDisplay();" style="width: 30px;">clear</button>
+    </div>
+</body>
+
+</html>

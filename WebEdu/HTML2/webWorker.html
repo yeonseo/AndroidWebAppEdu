@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        let w;
+        function startWorker() {
+            let $result = document.getElementById("result");
+            if (typeof (Worker) !== "undefined") {
+                if (typeof w === "undefined") {
+                    w = new Worker("worker.js");
+                }
+                w.onmessage = function (event) {
+                    $result.innerHTML = event.data;
+                };
+            } else {
+                $result.innerHTML = "웹 워커가 작동이 안됩니다.";
+            }
+
+        }
+
+        if (!window.Worker) {
+            alert('웹 워커를 지원하는 브라우저입니다.');
+        } else {
+            alert('웹 워커를 지원하지 않는 브라우저입니다.');
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" name="button" onclick="startWorker()">웹워커 시작</button>
+    <button type="button" name="button" onclick="stopWorker()">웹워커 종료</button>
+    <p>현재까지 발견된 큰 소수는
+        <output id="result"></output>
+    </p>
+</body>
+
+</html>

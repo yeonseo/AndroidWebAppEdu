@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+    <style>
+        #shopping_cart {
+            width: 500px;
+            height: 100px;
+            padding: 10px;
+            border: 2px dotted red;
+        }
+
+        #shopping_cart_out {
+            width: 500px;
+            height: 100px;
+            padding: 10px;
+            border: 2px dotted blue;
+        }
+    </style>
+    <script>
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function handleDragStart(e) {
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData("Text", e.target.id);
+        }
+        function handleDrop(e) {
+            e.preventDefault();
+            var src = e.dataTransfer.getData("Text");
+            e.target.appendChild(document.getElementById(src));
+        }
+
+        //리브도 선언하면 왜 오류남...???
+        function leaveDrop(e) {
+            e.preventDefault();
+            var src = e.dataTransfer.getData("Text");
+            e.target.removeChild(document.getElementById(src));
+        }
+    </script>
+
+
+    <!--Web Worker -->
+    <script type="text/javascript">
+        let w;
+        function startWorker() {
+            let $result = document.getElementById("result");
+            if (typeof (Worker) !== "undefined") {
+                if (typeof w === "undefined") {
+                    w = new Worker("03_jQurey.js");
+                }
+                w.onmessage = function (event) {
+                    $result.innerHTML = event.data;
+                };
+            } else {
+                $result.innerHTML = "웹 워커가 작동이 안됩니다.";
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Drag() and Drop() -->
+    <div id="shopping_cart" ondrop="handleDrop(event)" ondragover="allowDrop(event)"></div>
+    <div id="shopping_cart_out" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+        <img id="img1" src="./image/tv.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+        <img id="img2" src="./image/audio.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+        <img id="Img3" src="./image/camera.png" draggable="true" ondragstart="handleDragStart(event)" width="150"
+            height="100">
+    </div>
+
+
+    <!-- get Location Information -->
+    <button onclick="getGeolocation()">위치 정보 얻기</button>
+    <div id="target"></div>
+    <script>
+        let myDiv = document.getElementById("target");
+        function getGeolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showLocation);
+            } else {
+                navigator.geolocation.getCurrentPosition(showMessage);
+            }
+        }
+        function showLocation(location) {
+            myDiv.innerHTML = `위도: ${location.coords.latitude} , 경도: ${location.coords.longitude}`;
+        }
+
+        //이렇게 하면 안됨~~~~ api
+        function showLocationTwo(location) {
+            let position = `${location.coords.latitude}, ${location.coords.longitude}`;
+            let url = "http://maps.googleapis.com/maps/api/staticmap?center="
+                + position + "&zoom=14&size=500x300&sensor=false";
+            window.open(url);
+        }
+
+        function showMessage() {
+            myDiv.innerHTML = "No...."
+        }
+    </script>
+
+    <!--Web Worker -->
+    <button type="button" name="button" onclick="startWorker()">웹워커 시작</button>
+    <button type="button" name="button" onclick="stopWorker()">웹워커 종료</button>
+    <p>현재까지 발견된 큰 소수는
+        <output id="result"></output>
+    </p>
+
+
+</html>
