@@ -103,3 +103,16 @@ function TestClass() {
     }
 
 }
+function testLogin() {
+    let id, pass;
+    id = $('#inputID').val();
+    pass = $('#inputPassword').val();
+
+    if (id === "matzip1" && pass === "A12341234") {
+        alert("환영합니다. :-)");
+    } else {
+        alert("아이디와 비밀번호가 틀렸습니다.");
+    }
+
+}
+
